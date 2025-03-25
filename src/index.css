@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cm-gutters {
+  padding: 0px;
+  background: inherit !important;
+}
+
+@layer base {
+  :root {
+    /* Radix UI Gray (Light Mode) */
+    --background: 0 0% 98%;
+    /* gray1 */
+    --foreground: 0 0% 9%;
+    /* gray12 */
+
+    --card: 0 0% 100%;
+    /* white */
+    --card-foreground: 0 0% 9%;
+    /* gray12 */
+
+    --muted: 0 0% 96.1%;
+    /* gray3 */
+    --muted-foreground: 0 0% 45.1%;
+    /* gray9 */
+
+    --accent: 0 0% 96.1%;
+    /* gray3 */
+    --accent-foreground: 0 0% 9%;
+    /* gray12 */
+
+    /* Radix Blue (Light Mode) */
+    --primary: hsl(206 100% 50%);
+    /* blue9 */
+    --primary-foreground: hsl(0 0% 100%);
+    /* white */
+
+    /* Radix Gray */
+    --secondary: hsl(220 9% 46%);
+    /* gray9 */
+    --secondary-foreground: hsl(0 0% 100%);
+    /* white */
+
+    /* Radix Teal/Green/Red/Amber/Cyan/Violet (Light Mode) */
+    --success: hsl(152 60% 40%);
+    /* green9 */
+    --success-foreground: hsl(0 0% 100%);
+    /* white */
+
+    --danger: hsl(358 75% 59%);
+    /* red9 */
+    --danger-foreground: hsl(0 0% 100%);
+    /* white */
+
+    --warning: hsl(38 92% 50%);
+    /* amber9 */
+    --warning-foreground: hsl(0 0% 100%);
+    /* white */
+
+    --info: hsl(192 85% 44%);
+    /* cyan9 */
+    --info-foreground: hsl(0 0% 100%);
+    /* white */
+
+    --help: hsl(264 74% 62%);
+    /* violet9 */
+    --help-foreground: hsl(0 0% 100%);
+    /* white */
+
+    --light: hsl(220 14% 96%);
+    /* gray2 */
+    --light-foreground: hsl(220 9% 15%);
+    /* gray11 */
+
+    --dark: hsl(220 9% 15%);
+    /* gray11 */
+    --dark-foreground: hsl(0 0% 100%);
+    /* white */
+
+    --border: 0 0% 89.8%;
+    /* gray4 */
+    --input: 0 0% 89.8%;
+    /* gray4 */
+    --ring: 0 0% 9%;
+    /* gray12 */
+
+    --radius: 0.5rem;
+    --icon-color: hsl(220 9% 20%);
+    /* gray10 */
+  }
+
+  .dark {
+    /* Radix UI Gray (Dark Mode) */
+    --background: 0 0% 9%;
+    /* gray12 */
+    --foreground: 0 0% 98%;
+    /* gray1 */
+
+    --card: 0 0% 7%;
+    /* gray11 */
+    --card-foreground: 0 0% 98%;
+    /* gray1 */
+
+    /* Radix Blue (Dark Mode) */
+    --primary: hsl(211 100% 48%);
+    /* blue10 */
+    --primary-foreground: hsl(0 0% 100%);
+    /* white */
+
+    /* Radix Gray (Dark Mode) */
+    --secondary: hsl(215 14% 25%);
+    /* gray8 */
+    --secondary-foreground: hsl(0 0% 100%);
+    /* white */
+
+    /* Radix Teal/Green/Red/Amber/Cyan/Violet (Dark Mode) */
+    --success: hsl(151 55% 42%);
+    /* green10 */
+    --success-foreground: hsl(0 0% 100%);
+    /* white */
+
+    --danger: hsl(358 65% 55%);
+    /* red10 */
+    --danger-foreground: hsl(0 0% 100%);
+    /* white */
+
+    --warning: hsl(32 94% 44%);
+    /* amber10 */
+    --warning-foreground: hsl(0 0% 100%);
+    /* white */
+
+    --info: hsl(193 82% 42%);
+    /* cyan10 */
+    --info-foreground: hsl(0 0% 100%);
+    /* white */
+
+    --help: hsl(264 70% 58%);
+    /* violet10 */
+    --help-foreground: hsl(0 0% 100%);
+    /* white */
+
+    --light: hsl(220 7% 10%);
+    /* gray10 */
+    --light-foreground: hsl(0 0% 100%);
+    /* white */
+
+    --dark: hsl(220 9% 5%);
+    /* gray12 */
+    --dark-foreground: hsl(0 0% 100%);
+    /* white */
+
+    --muted: 0 0% 15%;
+    /* gray8 */
+    --muted-foreground: 0 0% 65%;
+    /* gray4 */
+
+    --accent: 0 0% 15%;
+    /* gray8 */
+    --accent-foreground: 0 0% 98%;
+    /* gray1 */
+
+    --destructive: 0 84% 28%;
+    /* red11 */
+    --destructive-foreground: 0 0% 98%;
+    /* gray1 */
+
+    --border: 0 0% 20%;
+    /* gray7 */
+    --input: 0 0% 20%;
+    /* gray7 */
+    --ring: 0 0% 83.1%;
+    /* gray3 */
+
+    --icon-color: hsl(215 14% 65%);
+    /* gray5 */
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--icon-color);
+    border-radius: 5px;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--icon-color) transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+    ::-webkit-scrollbar-thumb {
+        background: hsl(215 14% 65%);
+        /* gray5 */
+    }
+
+    * {
+        scrollbar-color: hsl(215 14% 65%) transparent;
+        /* gray5 */
+    }
+}
+}
