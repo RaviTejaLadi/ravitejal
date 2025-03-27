@@ -3,22 +3,25 @@ import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Home from './pages/Home.tsx';
-import About from './pages/About.tsx';
+import { TooltipProvider } from './components/ui/tooltip.tsx';
+// import Home from './pages/Home.tsx';
+// import About from './pages/About.tsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    children: [
-      { path: '/', element: <Home /> },
-      { path: '/about', element: <About /> },
-    ],
+    // children: [
+    //   { path: '/', element: <Home /> },
+    //   { path: '/about', element: <About /> },
+    // ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <TooltipProvider>
+      <RouterProvider router={router} />
+    </TooltipProvider>
   </React.StrictMode>,
 );

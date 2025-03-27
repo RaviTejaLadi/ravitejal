@@ -1,22 +1,19 @@
-import { Outlet, Link } from "react-router-dom";
+import NavBar from './layout/NavBar';
+import ProjectsSection from './pages/ProjectsSection';
+import Footer from './layout/Footer';
+import AboutSection from './pages/AboutSection';
+import ResumeSection from './pages/ResumeSection';
+import TechnologiesSection from './pages/TechnologiesSection';
 
 function App() {
   return (
-    <div className="min-h-screen bg-red-500">
-      <nav className="bg-white shadow-sm">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex space-x-8">
-          <Link to="/" className="text-gray-900  hover:text-blue-600">
-            Home
-          </Link>
-          <Link to="/about" className="text-gray-900 hover:text-blue-600">
-            About
-          </Link>
-        </div>
-      </nav>
-
-      <main className="max-w-6xl mx-auto px-4 py-8">
-        <Outlet />
-      </main>
+    <div className="min-h-screen bg-background">
+      <NavBar />
+      <AboutSection />
+      <TechnologiesSection />
+      <ProjectsSection />
+      <ResumeSection />
+      <Footer />
     </div>
   );
 }

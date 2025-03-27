@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  scroll-behavior: smooth;
+}
 
 .cm-gutters {
   padding: 0px;
@@ -12,36 +15,36 @@
 @layer base {
   :root {
     /* Radix UI Gray (Light Mode) */
-    --background: 0 0% 98%;
+    --background: 0 0% 100%;
     /* gray1 */
-    --foreground: 0 0% 9%;
+    --foreground: 224 71.4% 4.1%;
     /* gray12 */
 
     --card: 0 0% 100%;
     /* white */
-    --card-foreground: 0 0% 9%;
+    --card-foreground: 224 71.4% 4.1%;
     /* gray12 */
 
-    --muted: 0 0% 96.1%;
+    --muted: 220 14.3% 95.9%;
     /* gray3 */
-    --muted-foreground: 0 0% 45.1%;
+    --muted-foreground: 220 8.9% 46.1%;
     /* gray9 */
 
-    --accent: 0 0% 96.1%;
+    --accent: 220 14.3% 95.9%;
     /* gray3 */
-    --accent-foreground: 0 0% 9%;
+    --accent-foreground: 220.9 39.3% 11%;
     /* gray12 */
 
     /* Radix Blue (Light Mode) */
-    --primary: hsl(206 100% 50%);
+    --primary: 220.9 39.3% 11%;
     /* blue9 */
-    --primary-foreground: hsl(0 0% 100%);
+    --primary-foreground: 210 20% 98%;
     /* white */
 
     /* Radix Gray */
-    --secondary: hsl(220 9% 46%);
+    --secondary: 220 14.3% 95.9%;
     /* gray9 */
-    --secondary-foreground: hsl(0 0% 100%);
+    --secondary-foreground: 220.9 39.3% 11%;
     /* white */
 
     /* Radix Teal/Green/Red/Amber/Cyan/Violet (Light Mode) */
@@ -80,40 +83,49 @@
     --dark-foreground: hsl(0 0% 100%);
     /* white */
 
-    --border: 0 0% 89.8%;
+    --border: 220 13% 91%;
     /* gray4 */
-    --input: 0 0% 89.8%;
+    --input: 220 13% 91%;
     /* gray4 */
-    --ring: 0 0% 9%;
+    --ring: 224 71.4% 4.1%;
     /* gray12 */
 
     --radius: 0.5rem;
     --icon-color: hsl(220 9% 20%);
     /* gray10 */
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
   }
 
   .dark {
     /* Radix UI Gray (Dark Mode) */
-    --background: 0 0% 9%;
+    --background: 224 71.4% 4.1%;
     /* gray12 */
-    --foreground: 0 0% 98%;
+    --foreground: 210 20% 98%;
     /* gray1 */
 
-    --card: 0 0% 7%;
+    --card: 224 71.4% 4.1%;
     /* gray11 */
-    --card-foreground: 0 0% 98%;
+    --card-foreground: 210 20% 98%;
     /* gray1 */
 
     /* Radix Blue (Dark Mode) */
-    --primary: hsl(211 100% 48%);
+    --primary: 210 20% 98%;
     /* blue10 */
-    --primary-foreground: hsl(0 0% 100%);
+    --primary-foreground: 220.9 39.3% 11%;
     /* white */
 
     /* Radix Gray (Dark Mode) */
-    --secondary: hsl(215 14% 25%);
+    --secondary: 215 27.9% 16.9%;
     /* gray8 */
-    --secondary-foreground: hsl(0 0% 100%);
+    --secondary-foreground: 210 20% 98%;
     /* white */
 
     /* Radix Teal/Green/Red/Amber/Cyan/Violet (Dark Mode) */
@@ -152,59 +164,76 @@
     --dark-foreground: hsl(0 0% 100%);
     /* white */
 
-    --muted: 0 0% 15%;
+    --muted: 215 27.9% 16.9%;
     /* gray8 */
-    --muted-foreground: 0 0% 65%;
+    --muted-foreground: 217.9 10.6% 64.9%;
     /* gray4 */
 
-    --accent: 0 0% 15%;
+    --accent: 215 27.9% 16.9%;
     /* gray8 */
-    --accent-foreground: 0 0% 98%;
+    --accent-foreground: 210 20% 98%;
     /* gray1 */
 
-    --destructive: 0 84% 28%;
+    --destructive: 0 62.8% 30.6%;
     /* red11 */
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 210 20% 98%;
     /* gray1 */
 
-    --border: 0 0% 20%;
+    --border: 215 27.9% 16.9%;
     /* gray7 */
-    --input: 0 0% 20%;
+    --input: 215 27.9% 16.9%;
     /* gray7 */
-    --ring: 0 0% 83.1%;
+    --ring: 216 12.2% 83.9%;
     /* gray3 */
 
     --icon-color: hsl(215 14% 65%);
     /* gray5 */
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
   }
 
   ::-webkit-scrollbar {
     width: 5px;
-}
+  }
 
-::-webkit-scrollbar-track {
+  ::-webkit-scrollbar-track {
     background: transparent;
-}
+  }
 
-::-webkit-scrollbar-thumb {
+  ::-webkit-scrollbar-thumb {
     background: var(--icon-color);
     border-radius: 5px;
-}
+  }
 
-* {
+  * {
     scrollbar-width: thin;
     scrollbar-color: var(--icon-color) transparent;
-}
+  }
 
-@media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme: dark) {
     ::-webkit-scrollbar-thumb {
-        background: hsl(215 14% 65%);
-        /* gray5 */
+      background: hsl(215 14% 65%);
+      /* gray5 */
     }
 
     * {
-        scrollbar-color: hsl(215 14% 65%) transparent;
-        /* gray5 */
+      scrollbar-color: hsl(215 14% 65%) transparent;
+      /* gray5 */
     }
+  }
 }
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
 }
