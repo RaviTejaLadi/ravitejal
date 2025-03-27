@@ -2,6 +2,7 @@ import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { navConfig } from '@/config/nav-config';
 import { cn } from '@/lib/utils';
+import { ThemeToggle } from '@/components/ui/ThemeToggle';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,6 +25,7 @@ const NavBar = () => {
                 <span> {link.name}</span>
               </a>
             ))}
+            <ThemeToggle/>
           </div>
 
           {/* Mobile Menu Button */}
