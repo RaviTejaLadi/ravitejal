@@ -23,7 +23,8 @@ const TechnologiesSection = () => {
               key={tab.value}
               className="w-full border rounded-md p-10"
             >
-              <div className="flex items-center gap-4 justify-center">
+              <p className='text-muted-foreground mb-5'>{tab.label}</p>
+              <div className="flex items-center gap-4 justify-start">
                 {tab.content.map((content) => (
                   <div key={content.tooltip}>
                     <Tooltip>

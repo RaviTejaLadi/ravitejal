@@ -34,6 +34,7 @@ export const technoConfig = {
   tabContent: [
     {
       value: 'mostUsed',
+      label: 'Most Used',
       content: [
         { icon: TypeScript, tooltip: 'TypeScript' },
         { icon: JavaScript, tooltip: 'JavaScript' },
@@ -46,6 +47,7 @@ export const technoConfig = {
     },
     {
       value: 'languages',
+      label: 'Languages',
       content: [
         { icon: TypeScript, tooltip: 'TypeScript' },
         { icon: JavaScript, tooltip: 'JavaScript' },
@@ -54,6 +56,7 @@ export const technoConfig = {
     },
     {
       value: 'webDev',
+      label: 'Web Dev',
       content: [
         { icon: React, tooltip: 'React' },
         { icon: Css, tooltip: 'Css' },
@@ -67,6 +70,7 @@ export const technoConfig = {
     },
     {
       value: 'devopsTools',
+      label: 'DevOps & Tools',
       content: [
         { icon: Git, tooltip: 'Git' },
         { icon: GitHub, tooltip: 'GitHub' },
