@@ -25,7 +25,7 @@ const NavBar = () => {
                 <span> {link.name}</span>
               </a>
             ))}
-            <ThemeToggle/>
+            <ThemeToggle />
           </div>
 
           {/* Mobile Menu Button */}
