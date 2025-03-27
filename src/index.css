@@ -106,7 +106,7 @@ body {
 
   .dark {
     /* Radix UI Gray (Dark Mode) */
-    --background: 224 71.4% 4.1%;
+    --background: 240, 14%, 10%;
     /* gray12 */
     --foreground: 210 20% 98%;
     /* gray1 */

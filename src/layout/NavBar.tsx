@@ -8,7 +8,7 @@ const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full bg-background/80 backdrop-blur-lg z-50 border-b shadow-sm transition-all">
+    <nav className="mx-auto fixed w-[85%] left-[7.5%] my-3 bg-background/80 backdrop-blur-sm z-50 border-b shadow-sm rounded-lg transition-all">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           <span className="text-2xl font-bold text-primary tracking-wide">{navConfig.user}</span>
