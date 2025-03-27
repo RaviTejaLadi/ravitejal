@@ -12,7 +12,7 @@ const TechnologiesSection = () => {
         <Tabs defaultValue="mostUsed" className="w-full">
           <TabsList className="w-full">
             {technoConfig.tabTriggers.map((tab) => (
-              <TabsTrigger value={tab.value} key={tab.value}>
+              <TabsTrigger value={tab.value} key={tab.value} className="w-full">
                 {tab.label}
               </TabsTrigger>
             ))}
@@ -23,7 +23,7 @@ const TechnologiesSection = () => {
               key={tab.value}
               className="w-full border rounded-md p-10"
             >
-              <p className='text-muted-foreground mb-5'>{tab.label}</p>
+              <p className="text-muted-foreground mb-5">{tab.label}</p>
               <div className="flex items-center gap-4 justify-start">
                 {tab.content.map((content) => (
                   <div key={content.tooltip}>
