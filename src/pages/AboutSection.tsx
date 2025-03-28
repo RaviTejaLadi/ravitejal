@@ -5,6 +5,7 @@ import profilePic from '../assets/avatar.jpg';
 import GitHub from '@/assets/Icons/GitHub';
 import LinkedIn from '@/assets/Icons/LinkedIn';
 import Email from '@/assets/Icons/Email';
+import { FileText } from 'lucide-react';
 
 const AboutSection = () => {
   return (
@@ -14,11 +15,24 @@ const AboutSection = () => {
         <Separator className="h-[0.5px] mb-8" />
         <div className="flex flex-col md:flex-row items-start gap-16">
           <div className="flex-1">
-            {aboutConfig.description.map((desc, index) => (
-              <p className="text-lg tracking-wide mb-4" key={index}>
-                {desc}
-              </p>
-            ))}
+            <div className="flex flex-col gap-4 items-center">
+              <div>
+                {aboutConfig.description.map((desc, index) => (
+                  <p className="text-lg tracking-wide mb-4" key={index}>
+                    {desc}
+                  </p>
+                ))}
+              </div>
+              <div>
+                <a
+                  href="#resume"
+                  className="flex items-center gap-2 hover:underline underline-offset-2 border py-2 px-3 rounded-md"
+                >
+                  <FileText className="size-4" />
+                  <span>Resume</span>
+                </a>
+              </div>
+            </div>
           </div>
 
           <div className="flex-1 flex flex-col items-center  gap-6">
