@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { FileText } from 'lucide-react';
+import Resume from './Resume';
 
 const ResumeSection = () => {
   return (
@@ -40,7 +41,7 @@ const ResumeSection = () => {
             Download Full Resume
           </Button>
         </div>
-      </div>
+      </div><Resume/>
     </section>
   );
 };
