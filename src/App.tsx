@@ -4,6 +4,7 @@ import Footer from './layout/Footer';
 import AboutSection from './pages/AboutSection';
 import ResumeSection from './pages/ResumeSection';
 import TechnologiesSection from './pages/TechnologiesSection';
+import ScrollTop from './components/ui/ScrollTop';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <ProjectsSection />
       <ResumeSection />
       <Footer />
+      <ScrollTop />
     </div>
   );
 }
