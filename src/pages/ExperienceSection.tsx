@@ -3,11 +3,11 @@ import { Separator } from '@/components/ui/separator';
 import { FileText } from 'lucide-react';
 import Resume from './Resume';
 
-const ResumeSection = () => {
+const ExperienceSection = () => {
   return (
     <section id="resume" className="py-16 px-4 bg-muted/50">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold mb-8">Resume</h2>
+        <h2 className="text-3xl font-bold mb-8">Experience</h2>
         <div className="max-w-3xl mx-auto">
           <div className="mb-8">
             <h3 className="text-xl font-semibold mb-4">Experience</h3>
@@ -46,4 +46,4 @@ const ResumeSection = () => {
   );
 };
 
-export default ResumeSection;
+export default ExperienceSection;

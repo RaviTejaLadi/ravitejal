@@ -6,7 +6,7 @@ import { technoConfig } from '@/config/techno-config';
 const TechnologiesSection = () => {
   return (
     <section id="about" className="py-28 px-4 bg-muted/50">
-      <div className="container mx-auto">
+      <div className=" container mx-auto">
         <h2 className="text-4xl font-bold tracking-wide mb-8">{technoConfig.title}</h2>
         <Separator className="h-[0.5px] mb-8" />
         <Tabs defaultValue="mostUsed" className="w-full">
@@ -21,10 +21,10 @@ const TechnologiesSection = () => {
             <TabsContent
               value={tab.value}
               key={tab.value}
-              className="w-full border rounded-md p-10"
+              className="w-full border rounded-md overflow-x-auto p-10"
             >
               <p className="text-muted-foreground mb-5">{tab.label}</p>
-              <div className="flex items-center gap-4 justify-start">
+              <div className="flex items-center flex-wrap gap-4 justify-start">
                 {tab.content.map((content) => (
                   <div key={content.tooltip}>
                     <Tooltip>

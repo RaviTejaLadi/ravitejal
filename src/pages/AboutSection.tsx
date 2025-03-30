@@ -6,11 +6,13 @@ import GitHub from '@/assets/Icons/GitHub';
 import LinkedIn from '@/assets/Icons/LinkedIn';
 import Email from '@/assets/Icons/Email';
 import { FileText } from 'lucide-react';
+import { GradientBackground } from '@/components/ui/GradientBackground';
 
 const AboutSection = () => {
   return (
     <section id="about" className="py-28 px-4 bg-muted/50">
-      <div className="container mx-auto">
+      <GradientBackground/>
+      <div className="relative container mx-auto">
         <h2 className="text-4xl font-bold tracking-wide mb-8">{aboutConfig.title}</h2>
         <Separator className="h-[0.5px] mb-8" />
         <div className="flex flex-col md:flex-row items-start gap-16">
