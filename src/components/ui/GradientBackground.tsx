@@ -139,7 +139,7 @@ export const GradientBackground: React.FC = () => {
     //     <div ref={particlesContainerRef} className="absolute inset-0 z-3 pointer-events-none"></div>
     //   </div>
     // </div>
-    <div className="absolute inset-0 h-full overflow-hidden bg-[#050505]">
+    <div className="absolute inset-0 h-full overflow-hidden bg-background">
     <div className="absolute inset-0 z-1 h-full overflow-hidden">
       {/* Lighter pink/orange gradient */}
       <div className="gradient-sphere absolute w-[40vw] h-[40vw] rounded-full blur-[60px] bg-gradient-to-r from-[rgba(255,100,150,0.5)] to-[rgba(255,150,80,0.25)] -top-[10%] -left-[10%] animate-float-1"></div>
