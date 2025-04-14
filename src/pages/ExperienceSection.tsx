@@ -1,9 +1,33 @@
-import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
-import { FileText } from 'lucide-react';
 import Resume from './Resume';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+import {
+  Bootstrap,
+  Css,
+  Git,
+  JavaScript,
+  OpenAi,
+  PostMan,
+  React,
+  ReduxToolKit,
+} from '@/assets/technologies';
 
 const ExperienceSection = () => {
+  const IdexcelExp = [
+    'Lead Frontend Developer for InferIQ, a finance product developed from scratch over 2 years.',
+    'Managed multiple environments (dev, test, demo, sandbox) for InferIQ, ensuring smooth deployment across all development stages.',
+    'Developed high-performance services including Extraction, Bank statement analysis, and Financial statement processing, achieving 90% improvement in speed and performance.',
+    'Handled 98% of frontend work, including enhancements and bug fixes.',
+    'Designed and developed efficient React.js components, ensuring seamless integration with backend services.',
+    'Established coding standards, best practices, and code review processes.',
+    'Implemented responsive and accessible user interfaces, focusing on performance optimization.',
+  ];
+
   return (
     <section id="resume" className="py-16 px-4 bg-muted/50">
       <div className="container mx-auto">
@@ -13,17 +37,45 @@ const ExperienceSection = () => {
             <h3 className="text-xl font-semibold mb-4">Experience</h3>
             <div className="space-y-6">
               <div>
-                <h4 className="font-medium">Senior Frontend Developer</h4>
-                <p className="text-muted-foreground">Tech Corp • 2021 - Present</p>
+                <h4 className="font-medium">Senior Developer</h4>
+                <p className="text-muted-foreground">
+                  Aventisia Technologies Private Limited • sep.2024 - Present
+                </p>
                 <p className="mt-2">
                   Led the development of multiple high-impact web applications.
                 </p>
               </div>
               <Separator />
               <div>
-                <h4 className="font-medium">Full Stack Developer</h4>
-                <p className="text-muted-foreground">StartUp Inc • 2019 - 2021</p>
-                <p className="mt-2">Developed and maintained various client projects.</p>
+                <h4 className="font-medium">Software Engineer</h4>
+                <p className="text-muted-foreground">
+                  Idexcel Technologies Private Limited • oct.2022 - aug.2024 • 1year 10 months
+                </p>
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger>My Responsibilities</AccordionTrigger>
+                    <AccordionContent>
+                      {IdexcelExp.map((item, index) => {
+                        return (
+                          <p className="mt-2 tracking-wide text-muted-foreground" key={index}>
+                            • {item}
+                          </p>
+                        );
+                      })}
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+                <p className="mt-2 tracking-wide text-muted-foreground flex items-center gap-2">
+                  Technologies used:
+                  <React className="w-h h-4" />
+                  <ReduxToolKit className="w-h h-4" />
+                  <Css className="w-h h-4" />
+                  <Bootstrap className="w-h h-4" />
+                  <Git className="w-h h-4" />
+                  <JavaScript className="w-h h-4" />
+                  <OpenAi className="w-h h-4" />
+                  <PostMan className="w-h h-4" /> etc...
+                </p>
               </div>
             </div>
           </div>
@@ -31,17 +83,15 @@ const ExperienceSection = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">Education</h3>
             <div>
-              <h4 className="font-medium">BSc in Computer Science</h4>
-              <p className="text-muted-foreground">University of Technology • 2015 - 2019</p>
+              <h4 className="font-medium">B.Tech in Mechanical Engineering</h4>
+              <p className="text-muted-foreground">
+                Centurion University of Technology and Management • 2019 - 2020
+              </p>
             </div>
           </div>
-
-          <Button className="mt-8" variant="outline">
-            <FileText className="mr-2 h-4 w-4" />
-            Download Full Resume
-          </Button>
         </div>
-      </div><Resume/>
+      </div>
+      <Resume />
     </section>
   );
 };

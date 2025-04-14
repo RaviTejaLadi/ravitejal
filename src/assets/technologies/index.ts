@@ -20,6 +20,7 @@ import Vercel from './Vercel';
 import Jira from './Jira';
 import Vite from './Vite';
 import VsCode from './VsCode';
+
 export {
   Tailwind,
   OpenAi,
