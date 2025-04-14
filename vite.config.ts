@@ -9,5 +9,12 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
+  }, server: {
+    port: 2345,
+    open: true,
+    watch: {
+      usePolling: true,
+      interval: 50,
+    },
   },
 });
