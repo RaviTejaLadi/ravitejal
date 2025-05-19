@@ -1,5 +1,4 @@
 import { Button } from '@/components/ui/button';
-import { Separator } from '@/components/ui/separator';
 import { aboutConfig } from '@/config/about-config';
 import profilePic from '../assets/avatar.jpg';
 import GitHub from '@/assets/Icons/GitHub';
@@ -18,10 +17,12 @@ const AboutSection = () => {
     <section id="about" className="py-28 px-4 bg-muted/50">
       <GradientBackground />
       <div className="relative container mx-auto">
-        <h2 className="text-4xl font-bold tracking-wide mb-8">
-          {aboutConfig.title} - Immediate joiner
-        </h2>
-        <Separator className="h-[0.5px] mb-8" />
+        <div className="flex items-center mb-12">
+          <h2 className="text-4xl font-bold tracking-tight">
+            {aboutConfig.title} - Immediate joiner
+          </h2>
+          <div className="ml-4 h-px bg-gradient-to-r from-primary/60 to-transparent flex-grow" />
+        </div>
         <div className="flex flex-col md:flex-row items-start gap-16">
           <div className="flex-1">
             <div className="flex flex-col gap-4 items-center">
@@ -55,10 +56,10 @@ const AboutSection = () => {
               <p className="text-lg text-muted-foreground mb-1">{aboutConfig.designation}</p>
             </div>
             <div className="flex gap-3">
-              <Button variant="outline" onClick={handleGithub} size="icon">
+              <Button variant="ghost" onClick={handleGithub} size="icon">
                 <GitHub className="h-5 w-5" />
               </Button>
-              <Button variant="outline" onClick={handleLinkedIn} size="icon">
+              <Button variant="ghost" onClick={handleLinkedIn} size="icon">
                 <LinkedIn className="h-5 w-5" />
               </Button>
             </div>

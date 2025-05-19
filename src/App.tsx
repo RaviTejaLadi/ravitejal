@@ -6,6 +6,8 @@ import ExperienceSection from './pages/ExperienceSection';
 import TechnologiesSection from './pages/TechnologiesSection';
 import ScrollTop from './components/ui/ScrollTop';
 import Resume from './pages/Resume';
+import EducationSection from './pages/EducationSection';
+import AchievementsSection from './pages/AchievementsSection';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <TechnologiesSection />
       <ProjectsSection />
       <ExperienceSection />
+      <EducationSection />
+      <AchievementsSection />
       <Resume />
       <Footer />
       <ScrollTop />

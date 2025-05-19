@@ -32,7 +32,7 @@ export interface Education {
   yearOfCompletion: number;
 }
 
-export interface Certification {
+export interface Achievements {
   name: string;
   issuedBy: string;
   year: number;
@@ -56,7 +56,7 @@ export interface ResumeConfig {
   workExperience: Experience[];
   projects: Project[];
   education: Education[];
-  certifications?: Certification[];
+  Achievements?: Achievements[];
   openSourceContributions?: OpenSourceContribution[];
   languages?: { language: string; proficiency: string }[];
   additionalInfo?: {
@@ -70,7 +70,7 @@ export const resumeConfig: ResumeConfig = {
     fullName: 'Ravi Teja',
     title: 'Software Developer',
     location: 'India',
-    summary: `Experienced Software Developer specializing in modern web development,
+    summary: `Experienced Software Developer with more than 3 years of experience and specializing in modern web development,
      with a strong focus on building scalable and efficient front-end applications using React.js.
       Proven expertise in crafting intuitive user interfaces, implementing responsive design principles,
        Adept in JavaScript, TypeScript, and associated frameworks, with hands-on experience in state management (zustand, Redux-toolkit, Context API), routing (React Router), and performance optimization. Demonstrated ability to collaborate across teams, solve complex technical problems, and deliver high-quality software solutions aligned with business goals.`,
@@ -83,14 +83,13 @@ export const resumeConfig: ResumeConfig = {
   },
   skills: [
     // Technical Skills
-    { name: 'JavaScript', category: 'Technical' },
     { name: 'TypeScript', category: 'Technical' },
+    { name: 'JavaScript', category: 'Technical' },
     { name: 'React', category: 'Technical' },
     { name: 'Tailwind', category: 'Technical' },
-    { name: 'Next.js', category: 'Technical' },
-    { name: 'AWS', category: 'Technical' },
-    { name: 'Azure', category: 'Technical' },
-    { name: 'Python', category: 'Technical' },
+    { name: 'Vs Code', category: 'Technical' },
+    { name: 'Git', category: 'Technical' },
+    { name: 'GitHub', category: 'Technical' },
 
     // Soft Skills
     { name: 'Problem Solving', category: 'Soft' },
@@ -104,9 +103,12 @@ export const resumeConfig: ResumeConfig = {
       title: 'Senior Software Developer',
       duration: 'Sep 2024 - Present',
       responsibilities: [
-        'Developed microservices using Python and GoLang',
-        'Integrated AI-driven solutions into existing applications',
-        'Optimized cloud infrastructure reducing operational costs by 20%',
+        'Led the development of a digital trade financing platform, enabling seamless transactions between stakeholders in short-term trade finance.',
+        'Owned 90% of the frontend responsibilities, including new feature development, enhancements, and bug fixes.',
+        'Built and maintained key features such as user authentication, interactive dashboards, data-driven UI components. and come core features like trade, trade partner etc...',
+        'Collaborated closely with cross-functional teams (backend, product, and design) to define, design, and deliver high-quality features.',
+        'Integrated RESTful APIs and third-party libraries to enhance platform functionality and streamline the user experience.',
+        'Established and enforced frontend coding standards, implemented best practices, and led code review processes to ensure code quality and maintainability.',
       ],
     },
     {
@@ -127,17 +129,14 @@ export const resumeConfig: ResumeConfig = {
   ],
   projects: [
     {
-      name: 'FlowPandas',
-      technologies: ['Python', 'Microservices'],
-      description: 'Developed a data processing microservice to streamline workflow management',
-      role: 'Lead Developer',
+      name: 'Kalki UI - open source component library',
+      technologies: ['React', 'Typescript', 'Tailwind'],
+      description: `Component library built with React and Tailwind CSS, providing reusable UI components for developers.`,
     },
     {
-      name: 'AI Voice Assistant',
-      technologies: ['Python', 'Machine Learning', 'NLP'],
-      description:
-        'Built an intelligent voice-based assistant with natural language processing capabilities',
-      role: 'Full Stack Developer',
+      name: 'Kalki UI Toast - open source component library',
+      technologies: ['React', 'Typescript', 'Tailwind'],
+      description: 'Built a customizable toast notification component for React applications',
     },
   ],
   education: [
@@ -147,21 +146,26 @@ export const resumeConfig: ResumeConfig = {
       yearOfCompletion: 2020,
     },
   ],
-  certifications: [
+  Achievements: [
+    {
+      name: 'Quarterly Award',
+      issuedBy: 'Idexcel Technologies Private Limited',
+      year: 2023,
+    },
     {
       name: 'AWS Certified Developer - Associate',
-      issuedBy: 'Amazon Web Services',
-      year: 2022,
+      issuedBy: 'Idexcel Technologies Private Limited',
+      year: 2024,
+    },
+    {
+      name: 'Certificate of Appreciation',
+      issuedBy: 'Aventisia Technologies Private Limited',
+      year: 2025,
     },
   ],
   languages: [
     { language: 'Telegu', proficiency: 'Native' },
     { language: 'English', proficiency: 'Full Professional Proficiency' },
     { language: 'Hindi', proficiency: 'Speak' },
-    { language: 'Odia', proficiency: 'Speak' },
   ],
-  additionalInfo: {
-    awards: ['Best Innovative Project - University Hackathon 2018'],
-    interests: ['Open Source Contribution', 'Machine Learning', 'Tech Innovation'],
-  },
 };

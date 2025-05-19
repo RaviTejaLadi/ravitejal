@@ -15,7 +15,6 @@ import {
 } from 'lucide-react';
 import { ResumeConfig, resumeConfig } from '@/config/resumeConfig';
 import { Badge } from '@/components/ui/badge';
-import { Separator } from '@/components/ui/separator';
 
 interface ResumeProps {
   config?: ResumeConfig;
@@ -29,7 +28,7 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
     workExperience,
     projects,
     education,
-    certifications,
+    Achievements,
     languages,
   } = config;
 
@@ -46,8 +45,10 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
   return (
     <section id="resume" className="py-12 md:py-28 px-4 bg-muted/50">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold mb-8">Resume</h2>
-        <Separator className="h-[0.5px] mb-8" />
+        <div className="flex items-center mb-12">
+          <h2 className="text-4xl font-bold tracking-tight">Resume</h2>
+          <div className="ml-4 h-px bg-gradient-to-r from-primary/60 to-transparent flex-grow" />
+        </div>
         <div className="container mx-auto my-4 rounded-md flex flex-col lg:flex-row">
           {/* Sidebar - Hidden on mobile unless toggled, Visible on large screens */}
           <div
@@ -201,13 +202,13 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
               </section>
             )}
 
-            {/* Certifications */}
-            {certifications && certifications.length > 0 && (
+            {/* Achievements */}
+            {Achievements && Achievements.length > 0 && (
               <section>
                 <h2 className="text-xl md:text-2xl font-semibold text-foreground flex items-center mb-4">
-                  <Award className="mr-2 flex-shrink-0" /> Certifications
+                  <Award className="mr-2 flex-shrink-0" /> Achievements
                 </h2>
-                {certifications.map((cert, index) => (
+                {Achievements.map((cert, index) => (
                   <div key={index} className="mb-4">
                     <h3 className="text-base md:text-lg font-semibold text-foreground">
                       {cert.name}
