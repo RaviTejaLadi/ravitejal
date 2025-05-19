@@ -18,7 +18,9 @@ const AboutSection = () => {
     <section id="about" className="py-28 px-4 bg-muted/50">
       <GradientBackground />
       <div className="relative container mx-auto">
-        <h2 className="text-4xl font-bold tracking-wide mb-8">{aboutConfig.title}</h2>
+        <h2 className="text-4xl font-bold tracking-wide mb-8">
+          {aboutConfig.title} - Immediate joiner
+        </h2>
         <Separator className="h-[0.5px] mb-8" />
         <div className="flex flex-col md:flex-row items-start gap-16">
           <div className="flex-1">
@@ -36,7 +38,7 @@ const AboutSection = () => {
                   className="flex items-center gap-2 hover:underline underline-offset-2 border py-2 px-3 rounded-md"
                 >
                   <FileText className="size-4" />
-                  <span>Resume</span>
+                  <span>My Resume</span>
                 </a>
               </div>
             </div>

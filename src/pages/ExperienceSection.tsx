@@ -32,9 +32,9 @@ const ExperienceSection = () => {
     <section id="experience" className="py-16 px-4 bg-muted/50">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold mb-8">Experience</h2>
+        <Separator className="h-[0.5px] mb-8" />
         <div className="max-w-3xl mx-auto">
           <div className="mb-8">
-            <h3 className="text-xl font-semibold mb-4">Experience</h3>
             <div className="space-y-6">
               <div>
                 <h4 className="font-medium">Senior Developer</h4>
