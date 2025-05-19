@@ -2,9 +2,9 @@ import { React, SchadCn, Tailwind, TypeScript, Vite } from '@/assets/technologie
 
 const Footer = () => {
   return (
-    <footer className=" flex items-center justify-between py-8 px-4 md:px-10 lg:px-20 ">
+    <footer className=" flex items-center justify-between py-4 border-t px-4 md:px-10 lg:px-20 ">
       <div className="text-muted-foreground">
-        <p>© 2025 Ravi Teja. All rights reserved.</p>
+        <p>@ Designed and developed Ravi Teja Ladi.</p>
       </div>
       <div className="text-muted-foreground">
         <p className="flex gap-2">

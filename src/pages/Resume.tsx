@@ -42,9 +42,10 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
   };
 
   return (
-    <div className="flex min-h-screen container mx-auto my-4 rounded-md ">
-      {/* Sidebar (Fixed) */}
-      <div className="w-1/3 bg-background p-8 space-y-6 ">
+    <section id="resume" className="py-28 px-4 bg-muted/50">
+      <div className="flex min-h-screen container mx-auto my-4 rounded-md ">
+        {/* Sidebar (Fixed) */}
+        <div className="w-1/3 bg-background p-8 space-y-6 ">
           {/* Header Section */}
           <div className="text-center">
             <h1 className="text-3xl font-bold text-foreground">{personalInfo.fullName}</h1>
@@ -91,9 +92,9 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
             </h2>
             <div className="flex flex-wrap gap-2">{renderSkillSection('Soft')}</div>
           </div>
-      </div>
-      {/* Scrollable Main Content */}
-      <div className="w-2/3 ml-1/3 p-8 space-y-8 overflow-y-auto max-h-screen">
+        </div>
+        {/* Scrollable Main Content */}
+        <div className="w-2/3 ml-1/3 p-8 space-y-8 overflow-y-auto max-h-screen">
           {/* Summary */}
           <section>
             <h2 className="text-2xl font-semibold text-foreground flex items-center mb-4">
@@ -183,8 +184,9 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
               ))}
             </section>
           )}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

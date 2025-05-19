@@ -5,16 +5,17 @@ import AboutSection from './pages/AboutSection';
 import ExperienceSection from './pages/ExperienceSection';
 import TechnologiesSection from './pages/TechnologiesSection';
 import ScrollTop from './components/ui/ScrollTop';
-import { GradientBackground } from './components/ui/GradientBackground';
+import Resume from './pages/Resume';
 
 function App() {
   return (
     <div className="min-h-screen bg-background">
       <NavBar />
-        <AboutSection />
-        <TechnologiesSection />
-        <ProjectsSection />
-        <ExperienceSection />
+      <AboutSection />
+      <TechnologiesSection />
+      <ProjectsSection />
+      <ExperienceSection />
+      <Resume />
       <Footer />
       <ScrollTop />
     </div>

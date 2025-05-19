@@ -1,4 +1,4 @@
-import { Code, FileCode2, LucideIcon, User } from 'lucide-react';
+import { Code, FileCode2, LucideIcon, User, UserCheck } from 'lucide-react';
 
 export interface NavLinks {
   name: string;
@@ -17,11 +17,13 @@ export const navConfig: UserLinks = {
   links: [
     { name: 'About', href: '#about', icon: User },
     { name: 'Projects', href: '#projects', icon: Code },
+    { name: 'Experience', href: '#experience', icon: UserCheck },
     { name: 'Resume', href: '#resume', icon: FileCode2 },
   ],
   mobileLinks: [
     { name: 'About', href: '#about', icon: User },
     { name: 'Projects', href: '#projects', icon: Code },
+    { name: 'Experience', href: '#experience', icon: UserCheck },
     { name: 'Resume', href: '#resume', icon: FileCode2 },
   ],
 };

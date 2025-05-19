@@ -70,15 +70,16 @@ export const resumeConfig: ResumeConfig = {
     fullName: 'Ravi Teja',
     title: 'Software Developer',
     location: 'India',
-    summary:
-      'Experienced Software Developer with a strong background web development. Skilled in multiple programming languages and frameworks, with a proven track record of developing innovative AI-driven solutions and enhancing operational efficiency through cutting-edge technologies.',
+    summary: `Experienced Software Developer specializing in modern web development,
+     with a strong focus on building scalable and efficient front-end applications using React.js.
+      Proven expertise in crafting intuitive user interfaces, implementing responsive design principles,
+       Adept in JavaScript, TypeScript, and associated frameworks, with hands-on experience in state management (zustand, Redux-toolkit, Context API), routing (React Router), and performance optimization. Demonstrated ability to collaborate across teams, solve complex technical problems, and deliver high-quality software solutions aligned with business goals.`,
   },
   contact: {
     phone: '+91 8847819634',
-    email: 'andrew.sameh@example.com',
-    linkedin: '/in/andrewsameh',
-    github: '/andrewsameh',
-    portfolio: 'https://andrewsameh.dev',
+    email: 'ladi.ravi884781@gmail.com',
+    linkedin: 'https://www.linkedin.com/in/ravi-teja-2a2989145/',
+    github: 'https://github.com/RaviTejaLadi',
   },
   skills: [
     // Technical Skills
@@ -86,7 +87,6 @@ export const resumeConfig: ResumeConfig = {
     { name: 'TypeScript', category: 'Technical' },
     { name: 'React', category: 'Technical' },
     { name: 'Tailwind', category: 'Technical' },
-    { name: '', category: 'Technical' },
     { name: 'Next.js', category: 'Technical' },
     { name: 'AWS', category: 'Technical' },
     { name: 'Azure', category: 'Technical' },
@@ -100,9 +100,9 @@ export const resumeConfig: ResumeConfig = {
   ],
   workExperience: [
     {
-      company: 'Valsoft - Aspire Software',
-      title: 'Software Developer',
-      duration: 'Jan 2022 - Present',
+      company: 'Aventisia Technologies Private Limited',
+      title: 'Senior Software Developer',
+      duration: 'Sep 2024 - Present',
       responsibilities: [
         'Developed microservices using Python and GoLang',
         'Integrated AI-driven solutions into existing applications',
@@ -110,13 +110,18 @@ export const resumeConfig: ResumeConfig = {
       ],
     },
     {
-      company: 'FlairsTech',
-      title: 'Full Stack Developer',
-      duration: 'Jun 2020 - Dec 2021',
+      company: 'Idexcel Technologies private ltd',
+      title: 'Software Developer',
+      duration: 'Oct 2022 - Aug 2024',
       responsibilities: [
-        'Created responsive web applications using Next.js and TypeScript',
-        'Implemented state management solutions with Redux',
-        'Conducted code reviews and mentored junior developers',
+        'Created responsive web applications using React and JavaScript',
+        'Managed multiple environments (dev, test, demo, sandbox) for InferIQ, ensuring smooth deployment across all development stages.',
+        'Developed high-performance services including Extraction, Bank statement analysis, and Financial statement processing, achieving 90% improvement in speed and performance.',
+        'Handled 98% of frontend work, including enhancements and bug fixes.',
+        'Collaborated with cross-functional teams to define, design, and ship new features',
+        'Implemented state management solutions with Redux-toolkit and Zustand',
+        'Worked with RESTful APIs and integrated third-party libraries',
+        'Established coding standards, best practices, and code review processes',
       ],
     },
   ],
@@ -137,9 +142,9 @@ export const resumeConfig: ResumeConfig = {
   ],
   education: [
     {
-      degree: 'Bachelor of Computer Science',
-      university: 'Cairo University',
-      yearOfCompletion: 2019,
+      degree: 'B.Tech in Mechanical Engineering',
+      university: 'Centurion University of Technology and Management',
+      yearOfCompletion: 2020,
     },
   ],
   certifications: [

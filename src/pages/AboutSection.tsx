@@ -4,14 +4,19 @@ import { aboutConfig } from '@/config/about-config';
 import profilePic from '../assets/avatar.jpg';
 import GitHub from '@/assets/Icons/GitHub';
 import LinkedIn from '@/assets/Icons/LinkedIn';
-import Email from '@/assets/Icons/Email';
 import { FileText } from 'lucide-react';
 import { GradientBackground } from '@/components/ui/GradientBackground';
 
 const AboutSection = () => {
+  const handleGithub = () => {
+    window.location.href = 'https://github.com/RaviTejaLadi';
+  };
+  const handleLinkedIn = () => {
+    window.location.href = 'https://www.linkedin.com/in/ravi-teja-2a2989145/';
+  };
   return (
     <section id="about" className="py-28 px-4 bg-muted/50">
-      <GradientBackground/>
+      <GradientBackground />
       <div className="relative container mx-auto">
         <h2 className="text-4xl font-bold tracking-wide mb-8">{aboutConfig.title}</h2>
         <Separator className="h-[0.5px] mb-8" />
@@ -46,17 +51,13 @@ const AboutSection = () => {
             <div className="text-center ">
               <h3 className="text-2xl font-semibold mb-1">{aboutConfig.userName}</h3>
               <p className="text-lg text-muted-foreground mb-1">{aboutConfig.designation}</p>
-              <p className="text-lg text-muted-foreground">{aboutConfig.company}.</p>
             </div>
             <div className="flex gap-3">
-              <Button variant="outline" size="icon">
+              <Button variant="outline" onClick={handleGithub} size="icon">
                 <GitHub className="h-5 w-5" />
               </Button>
-              <Button variant="outline" size="icon">
+              <Button variant="outline" onClick={handleLinkedIn} size="icon">
                 <LinkedIn className="h-5 w-5" />
-              </Button>
-              <Button variant="outline" size="icon">
-                <Email className="h-5 w-5" />
               </Button>
             </div>
           </div>
