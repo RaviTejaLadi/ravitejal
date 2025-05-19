@@ -1,5 +1,5 @@
-import * as React from "react";
-import { JSX } from "react/jsx-runtime";
+import * as React from 'react';
+import { JSX } from 'react/jsx-runtime';
 const VsCode = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 128 128" className="h-10 w-10" {...props}>
     <mask
@@ -10,7 +10,7 @@ const VsCode = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) 
       y={0}
       maskUnits="userSpaceOnUse"
       style={{
-        maskType: "alpha",
+        maskType: 'alpha',
       }}
     >
       <path
@@ -44,7 +44,7 @@ const VsCode = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) 
         clipRule="evenodd"
         opacity={0.25}
         style={{
-          mixBlendMode: "overlay",
+          mixBlendMode: 'overlay',
         }}
       />
     </g>
@@ -67,16 +67,8 @@ const VsCode = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) 
         <feOffset />
         <feGaussianBlur stdDeviation={4.167} />
         <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-        <feBlend
-          in2="BackgroundImageFix"
-          mode="overlay"
-          result="effect1_dropShadow_1_36"
-        />
-        <feBlend
-          in="SourceGraphic"
-          in2="effect1_dropShadow_1_36"
-          result="shape"
-        />
+        <feBlend in2="BackgroundImageFix" mode="overlay" result="effect1_dropShadow_1_36" />
+        <feBlend in="SourceGraphic" in2="effect1_dropShadow_1_36" result="shape" />
       </filter>
       <filter
         id="c"
@@ -96,16 +88,8 @@ const VsCode = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) 
         <feOffset />
         <feGaussianBlur stdDeviation={4.167} />
         <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-        <feBlend
-          in2="BackgroundImageFix"
-          mode="overlay"
-          result="effect1_dropShadow_1_36"
-        />
-        <feBlend
-          in="SourceGraphic"
-          in2="effect1_dropShadow_1_36"
-          result="shape"
-        />
+        <feBlend in2="BackgroundImageFix" mode="overlay" result="effect1_dropShadow_1_36" />
+        <feBlend in="SourceGraphic" in2="effect1_dropShadow_1_36" result="shape" />
       </filter>
       <linearGradient
         id="d"

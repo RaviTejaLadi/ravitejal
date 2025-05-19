@@ -18,14 +18,14 @@ import {
 
 const ExperienceSection = () => {
   const IdexcelExp = [
-        'Created responsive web applications using React and JavaScript',
-        'Managed multiple environments (dev, test, demo, sandbox) for InferIQ, ensuring smooth deployment across all development stages.',
-        'Developed high-performance services including Extraction, Bank statement analysis, and Financial statement processing, achieving 90% improvement in speed and performance.',
-        'Handled 98% of frontend work, including enhancements and bug fixes.',
-        'Collaborated with cross-functional teams to define, design, and ship new features',
-        'Implemented state management solutions with Redux-toolkit and Zustand',
-        'Worked with RESTful APIs and integrated third-party libraries',
-        'Established coding standards, best practices, and code review processes',
+    'Created responsive web applications using React and JavaScript',
+    'Managed multiple environments (dev, test, demo, sandbox) for InferIQ, ensuring smooth deployment across all development stages.',
+    'Developed high-performance services including Extraction, Bank statement analysis, and Financial statement processing, achieving 90% improvement in speed and performance.',
+    'Handled 98% of frontend work, including enhancements and bug fixes.',
+    'Collaborated with cross-functional teams to define, design, and ship new features',
+    'Implemented state management solutions with Redux-toolkit and Zustand',
+    'Worked with RESTful APIs and integrated third-party libraries',
+    'Established coding standards, best practices, and code review processes',
   ];
 
   return (
@@ -49,9 +49,9 @@ const ExperienceSection = () => {
               <div>
                 <h4 className="font-medium">Software Engineer</h4>
                 <p className="text-muted-foreground">
-                  Idexcel Technologies Private Limited • Oct.2022 - Aug.2024 
+                  Idexcel Technologies Private Limited • Oct.2022 - Aug.2024
                 </p>
-                <Accordion type="single" collapsible  className="w-full">
+                <Accordion type="single" collapsible className="w-full">
                   <AccordionItem value="item-1">
                     <AccordionTrigger>My Responsibilities</AccordionTrigger>
                     <AccordionContent>
@@ -85,7 +85,7 @@ const ExperienceSection = () => {
             <div>
               <h4 className="font-medium">B.Tech in Mechanical Engineering</h4>
               <p className="text-muted-foreground">
-                Centurion University of Technology and Management •  2020
+                Centurion University of Technology and Management • 2020
               </p>
             </div>
           </div>

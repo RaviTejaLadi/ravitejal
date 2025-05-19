@@ -1,5 +1,5 @@
-import * as React from "react";
-import { JSX } from "react/jsx-runtime";
+import * as React from 'react';
+import { JSX } from 'react/jsx-runtime';
 const GitHub = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => (
   <svg
     stroke="currentColor"

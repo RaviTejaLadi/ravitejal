@@ -1,5 +1,5 @@
-import * as React from "react";
-import { JSX } from "react/jsx-runtime";
+import * as React from 'react';
+import { JSX } from 'react/jsx-runtime';
 const Bash = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 128 128" className="h-10 w-10" {...props}>
     <path fill="none" d="M4.24 4.24h119.53v119.53H4.24z" />

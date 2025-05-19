@@ -129,28 +129,28 @@ export const GradientBackground: React.FC = () => {
 
   return (
     <div className="absolute inset-0 h-full overflow-hidden bg-background">
-    <div className="absolute inset-0 z-1 h-full overflow-hidden">
-      {/* Lighter pink/orange gradient */}
-      <div className="gradient-sphere absolute w-[40vw] h-[40vw] rounded-full blur-[60px] bg-gradient-to-r from-[rgba(255,100,150,0.5)] to-[rgba(255,150,80,0.25)] -top-[10%] -left-[10%] animate-float-1"></div>
-      
-      {/* Lighter blue gradient */}
-      <div className="gradient-sphere absolute w-[45vw] h-[45vw] rounded-full blur-[60px] bg-gradient-to-r from-[rgba(100,80,255,0.5)] to-[rgba(80,200,255,0.25)] -bottom-[20%] -right-[10%] animate-float-2"></div>
-      
-      {/* Lighter purple gradient */}
-      <div className="gradient-sphere absolute w-[30vw] h-[30vw] rounded-full blur-[60px] bg-gradient-to-r from-[rgba(150,120,255,0.3)] to-[rgba(130,220,255,0.2)] top-[60%] left-[20%] animate-float-3"></div>
-      
-      {/* Central glow - lighter */}
-      <div className="absolute w-[40vw] h-[40vh] bg-[radial-gradient(circle,rgba(100,80,255,0.1),transparent_70%)] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-2 animate-pulse blur-[30px]"></div>
-      
-      {/* Grid overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px] z-2"></div>
-      
-      {/* Noise texture - lighter */}
-      <div className="absolute inset-0 opacity-3 z-5 bg-[url('data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.65\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E')]"></div>
-      
-      {/* Particles container */}
-      <div ref={particlesContainerRef} className="absolute inset-0 z-3 pointer-events-none"></div>
+      <div className="absolute inset-0 z-1 h-full overflow-hidden">
+        {/* Lighter pink/orange gradient */}
+        <div className="gradient-sphere absolute w-[40vw] h-[40vw] rounded-full blur-[60px] bg-gradient-to-r from-[rgba(255,100,150,0.5)] to-[rgba(255,150,80,0.25)] -top-[10%] -left-[10%] animate-float-1"></div>
+
+        {/* Lighter blue gradient */}
+        <div className="gradient-sphere absolute w-[45vw] h-[45vw] rounded-full blur-[60px] bg-gradient-to-r from-[rgba(100,80,255,0.5)] to-[rgba(80,200,255,0.25)] -bottom-[20%] -right-[10%] animate-float-2"></div>
+
+        {/* Lighter purple gradient */}
+        <div className="gradient-sphere absolute w-[30vw] h-[30vw] rounded-full blur-[60px] bg-gradient-to-r from-[rgba(150,120,255,0.3)] to-[rgba(130,220,255,0.2)] top-[60%] left-[20%] animate-float-3"></div>
+
+        {/* Central glow - lighter */}
+        <div className="absolute w-[40vw] h-[40vh] bg-[radial-gradient(circle,rgba(100,80,255,0.1),transparent_70%)] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-2 animate-pulse blur-[30px]"></div>
+
+        {/* Grid overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px] z-2"></div>
+
+        {/* Noise texture - lighter */}
+        <div className="absolute inset-0 opacity-3 z-5 bg-[url('data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.65\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E')]"></div>
+
+        {/* Particles container */}
+        <div ref={particlesContainerRef} className="absolute inset-0 z-3 pointer-events-none"></div>
+      </div>
     </div>
-  </div>
   );
 };
