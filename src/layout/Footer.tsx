@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className=" flex items-center justify-between py-4 border-t px-4 md:px-10 lg:px-20 ">
       <div className="text-muted-foreground">
-        <p>@ Designed and developed Ravi Teja Ladi.</p>
+        <p>@ Designed and developed by Ravi Teja Ladi.</p>
       </div>
       <div className="text-muted-foreground">
         <p className="flex gap-2">
