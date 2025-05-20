@@ -99,7 +99,6 @@ export const resumeConfig: ResumeConfig = {
     { name: 'Team Collaboration', category: 'Soft' },
     { name: 'Communication', category: 'Soft' },
     { name: 'Adaptability', category: 'Soft' },
-
   ],
   workExperience: [
     {
