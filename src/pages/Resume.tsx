@@ -60,7 +60,10 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
                 {personalInfo.fullName}
               </h1>
               <p className="text-sm md:text-base text-muted-foreground">
-                {personalInfo.title} | {personalInfo.location}
+                {personalInfo.title} 
+              </p>
+               <p className="text-sm md:text-base text-muted-foreground">
+                Bangalore/Hyderabad
               </p>
             </div>
 
