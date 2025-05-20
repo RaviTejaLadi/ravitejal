@@ -46,12 +46,14 @@ const AchievementsSection = () => {
     <section id="achievements" className="py-16 px-4 bg-muted/50">
       <div className="container mx-auto">
         <div className="flex items-center mb-12">
-          <h2 className="text-4xl font-bold tracking-tight">Achievements</h2>
-          <div className="ml-4 h-px bg-gradient-to-r from-primary/60 to-transparent flex-grow" />
+          <h2 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            Achievements
+          </h2>
+          <div className="ml-4 h-px bg-gradient-to-r from-purple-600 to-pink-600/30 flex-grow" />
         </div>
         {awards.map((company, index) => (
           <div key={index} className="mb-8">
-            <h3 className="text-xl font-semibold text-foreground mb-4">{company.company}</h3>
+            <h3 className="text-xl font-semibold  mb-4 text-foreground">{company.company}</h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {company.accolades.map((award) => (
@@ -101,57 +103,6 @@ const AchievementsSection = () => {
             </div>
           </div>
         ))}
-        {/* <div className="max-w-3xl mx-auto p-4 ">
-          <p className="text-foreground mb-4">Idexcel Technologies Private Limited</p>
-          <ul className="space-y-3">
-            <li className="text-muted-foreground flex items-start">
-              <span className="mr-2">•</span>
-              <HoverCard>
-                <HoverCardTrigger className="cursor-pointer">
-                  <span>
-                    Received Quarterly Award for outstanding performance and contribution to project
-                    success • 2023
-                  </span>
-                </HoverCardTrigger>
-                <HoverCardContent className="bg-muted border p-2 rounded-lg">
-                  <img src="https://my-dev-story.vercel.app/assets/myAward1-DaZWPjWx.jpg" alt="" />
-                </HoverCardContent>
-              </HoverCard>
-            </li>
-            <li className="text-muted-foreground flex items-start">
-              <span className="mr-2">•</span>
-              <HoverCard>
-                <HoverCardTrigger>
-                  <span>
-                    Honored with the Award of Excellence in recognition of exceptional skills and
-                    dedication to quality work • 2024
-                  </span>
-                </HoverCardTrigger>
-                <HoverCardContent className="bg-muted border p-2 rounded-lg">
-                  <img src="https://my-dev-story.vercel.app/assets/myAward2-BkC0BwqC.jpg" alt="" />
-                </HoverCardContent>
-              </HoverCard>
-              <span></span>
-            </li>
-          </ul>
-          <p className="text-foreground my-4">Aventisia Technologies Private Limited</p>
-          <ul className="space-y-3">
-            <li className="text-muted-foreground flex items-start">
-              <span className="mr-2">•</span>
-              <HoverCard>
-                <HoverCardTrigger>
-                  <span>
-                    Honored with the certifications of appreciation in recognition of hard work,
-                    dedication, and passion to carry out your job responsibilities. • 2025
-                  </span>
-                </HoverCardTrigger>
-                <HoverCardContent className="bg-muted">
-                  The React Framework – created and maintained by @vercel.
-                </HoverCardContent>
-              </HoverCard>
-            </li>
-          </ul>
-        </div> */}
       </div>
     </section>
   );

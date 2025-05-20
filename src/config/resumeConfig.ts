@@ -117,7 +117,7 @@ export const resumeConfig: ResumeConfig = {
       ],
     },
     {
-      company: 'Idexcel Technologies private ltd',
+      company: 'Idexcel Technologies Private Limited',
       title: 'Software Developer',
       duration: 'Oct 2022 - Aug 2024',
       responsibilities: [

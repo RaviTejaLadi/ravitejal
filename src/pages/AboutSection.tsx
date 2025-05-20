@@ -18,10 +18,11 @@ const AboutSection = () => {
       <GradientBackground />
       <div className="relative container mx-auto">
         <div className="flex items-center mb-12">
-          <h2 className="text-4xl font-bold tracking-tight">
+          <div className="ml-4 h-px bg-gradient-to-r from-purple-600 to-pink-600/30 flex-grow" />
+          <h2 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
             {aboutConfig.title} - Immediate joiner
           </h2>
-          <div className="ml-4 h-px bg-gradient-to-r from-primary/60 to-transparent flex-grow" />
+          <div className="ml-4 h-px bg-gradient-to-r from-purple-600 to-pink-600/30 flex-grow" />
         </div>
         <div className="flex flex-col md:flex-row items-start gap-16">
           <div className="flex-1">

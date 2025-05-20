@@ -67,8 +67,10 @@ const ProjectsSection = () => {
     <section id="projects" className="py-20 px-4 bg-gradient-to-b from-background to-background/80">
       <div className="container mx-auto max-w-6xl">
         <div className="flex items-center mb-12">
-          <h2 className="text-4xl font-bold tracking-tight">Open Source Featured Projects </h2>
-          <div className="ml-4 h-px bg-gradient-to-r from-primary/60 to-transparent flex-grow" />
+          <h2 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            Open Source Featured Projects
+          </h2>
+          <div className="ml-4 h-px bg-gradient-to-r from-purple-600 to-pink-600/30 flex-grow" />
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

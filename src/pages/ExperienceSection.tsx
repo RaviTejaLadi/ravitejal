@@ -30,7 +30,7 @@ const ExperienceSection = () => {
     'Integrated RESTful APIs and third-party libraries to enhance platform functionality and streamline the user experience.',
     'Established and enforced frontend coding standards, implemented best practices, and led code review processes to ensure code quality and maintainability.',
   ];
-  
+
   const IdexcelExp = [
     'Created responsive web applications using React and JavaScript',
     'Managed multiple environments (dev, test, demo, sandbox) for InferIQ, ensuring smooth deployment across all development stages.',
@@ -46,8 +46,10 @@ const ExperienceSection = () => {
     <section id="experience" className="py-16 px-4 bg-muted/50">
       <div className="container mx-auto">
         <div className="flex items-center mb-12">
-          <h2 className="text-4xl font-bold tracking-tight">Experience</h2>
-          <div className="ml-4 h-px bg-gradient-to-r from-primary/60 to-transparent flex-grow" />
+          <h2 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            Experience
+          </h2>
+          <div className="ml-4 h-px bg-gradient-to-r from-purple-600 to-pink-600/30 flex-grow" />
         </div>
 
         <div className="max-w-3xl mx-auto">
@@ -65,7 +67,7 @@ const ExperienceSection = () => {
                   businesses of all sizes to unlock liquidity, mitigate risks, and accelerate growth
                   through trust, transparency, and cutting-edge technology.
                 </p>
-                <Accordion type="single" collapsible className="w-full" defaultValue='item-1'>
+                <Accordion type="single" collapsible className="w-full" defaultValue="item-1">
                   <AccordionItem value="item-1">
                     <AccordionTrigger>My Responsibilities at Aventisia</AccordionTrigger>
                     <AccordionContent>
@@ -108,7 +110,7 @@ const ExperienceSection = () => {
                   unstructured data from various document types, including PDFs, handwritten forms,
                   images, and scanned documents. etc...
                 </p>
-                <Accordion type="single" collapsible className="w-full" defaultValue='item-1'>
+                <Accordion type="single" collapsible className="w-full" defaultValue="item-1">
                   <AccordionItem value="item-1">
                     <AccordionTrigger>My Responsibilities at Idexcel</AccordionTrigger>
                     <AccordionContent>

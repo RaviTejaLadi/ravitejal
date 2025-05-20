@@ -32,22 +32,46 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
     languages,
   } = config;
 
+  // Define icon colors for different sections
+  const iconColors = {
+    contact: {
+      phone: '#4f46e5', // indigo
+      mail: '#0ea5e9', // sky blue
+      linkedin: '#0077b5', // linkedin blue
+      github: '#6366f1', // purple
+    },
+    skills: {
+      technical: '#ec4899', // pink
+      soft: '#8b5cf6', // violet
+    },
+    sections: {
+      languages: '#f59e0b', // amber
+      achievements: '#10b981', // emerald
+      summary: '#3b82f6', // blue
+      work: '#ef4444', // red
+      education: '#0d9488', // teal
+      projects: '#f97316', // orange
+    },
+  };
+
   const renderSkillSection = (category: 'Technical' | 'Soft') => {
     return skills
       .filter((skill) => skill.category === category)
       .map((skill) => (
-        <Badge key={skill.name} className="mb-2">
+        <Badge key={skill.name} variant={'outline'} className="mb-2">
           {skill.name}
         </Badge>
       ));
   };
 
   return (
-    <section id="resume" className="py-12 md:py-28 px-4 bg-muted/50">
+    <section id="resume" className="py-12 md:py-28 px-4 bg-muted/30">
       <div className="container mx-auto">
         <div className="flex items-center mb-12">
-          <h2 className="text-4xl font-bold tracking-tight">Resume</h2>
-          <div className="ml-4 h-px bg-gradient-to-r from-primary/60 to-transparent flex-grow" />
+          <h2 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            Resume
+          </h2>
+          <div className="ml-4 h-px bg-gradient-to-r from-purple-600 to-pink-600/30 flex-grow" />
         </div>
         <div className="container mx-auto my-4 rounded-md  flex flex-col lg:flex-row">
           {/* Sidebar - Hidden on mobile unless toggled, Visible on large screens */}
@@ -66,16 +90,25 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
             {/* Contact Information */}
             <div className="space-y-2">
               <div className="flex items-center text-muted-foreground text-sm md:text-base">
-                <Phone className="mr-2 w-4 h-4 flex-shrink-0" />
+                <Phone
+                  className="mr-2 w-4 h-4 flex-shrink-0"
+                  style={{ color: iconColors.contact.phone }}
+                />
                 <span className="break-all">{contact.phone}</span>
               </div>
               <div className="flex items-center text-muted-foreground text-sm md:text-base">
-                <Mail className="mr-2 w-4 h-4 flex-shrink-0" />
+                <Mail
+                  className="mr-2 w-4 h-4 flex-shrink-0"
+                  style={{ color: iconColors.contact.mail }}
+                />
                 <span className="break-all">{contact.email}</span>
               </div>
               {contact.linkedin && (
-                <div className="flex items-center text-muted-foreground text-sm md:text-base hover:underline hover:underline-offset-2">
-                  <Linkedin className="mr-2 w-4 h-4 flex-shrink-0" />
+                <div className="flex items-center text-muted-foreground text-sm md:text-base hover:text-purple-500 hover:underline hover:underline-offset-2">
+                  <Linkedin
+                    className="mr-2 w-4 h-4 flex-shrink-0"
+                    style={{ color: iconColors.contact.linkedin }}
+                  />
                   <a
                     href={contact.linkedin}
                     target="_blank"
@@ -87,8 +120,11 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
                 </div>
               )}
               {contact.github && (
-                <div className="flex items-center text-muted-foreground text-sm md:text-base hover:underline hover:underline-offset-2">
-                  <Github className="mr-2 w-4 h-4 flex-shrink-0" />
+                <div className="flex items-center text-muted-foreground text-sm md:text-base hover:text-purple-500 hover:underline hover:underline-offset-2">
+                  <Github
+                    className="mr-2 w-4 h-4 flex-shrink-0"
+                    style={{ color: iconColors.contact.github }}
+                  />
                   <a
                     href={contact.github}
                     target="_blank"
@@ -104,19 +140,28 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
             {/* Skills Section */}
             <div>
               <h2 className="text-lg md:text-xl font-semibold text-foreground flex items-center mb-4">
-                <Code className="mr-2 flex-shrink-0" /> Technical Skills
+                <Code
+                  className="mr-2 flex-shrink-0"
+                  style={{ color: iconColors.skills.technical }}
+                />{' '}
+                Technical Skills
               </h2>
               <div className="flex flex-wrap gap-2">{renderSkillSection('Technical')}</div>
 
               <h2 className="text-lg md:text-xl font-semibold text-foreground flex items-center mt-4 mb-4">
-                <Brain className="mr-2 flex-shrink-0" /> Soft Skills
+                <Brain className="mr-2 flex-shrink-0" style={{ color: iconColors.skills.soft }} />{' '}
+                Soft Skills
               </h2>
               <div className="flex flex-wrap gap-2">{renderSkillSection('Soft')}</div>
 
               {languages && languages.length > 0 && (
                 <section>
                   <h2 className="text-xl md:text-2xl font-semibold text-foreground flex items-center mt-4 mb-4">
-                    <Languages className="mr-2 flex-shrink-0" /> Languages
+                    <Languages
+                      className="mr-2 flex-shrink-0"
+                      style={{ color: iconColors.sections.languages }}
+                    />{' '}
+                    Languages
                   </h2>
                   <div className="space-y-2">
                     {languages.map((lang, index) => (
@@ -131,7 +176,11 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
               {Achievements && Achievements.length > 0 && (
                 <section>
                   <h2 className="text-xl md:text-2xl font-semibold text-foreground flex items-center mt-4 mb-4">
-                    <Award className="mr-2 flex-shrink-0" /> Achievements
+                    <Award
+                      className="mr-2 flex-shrink-0"
+                      style={{ color: iconColors.sections.achievements }}
+                    />{' '}
+                    Achievements
                   </h2>
                   {Achievements.map((cert, index) => (
                     <div key={index} className="mb-4">
@@ -153,7 +202,11 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
             {/* Summary */}
             <section>
               <h2 className="text-xl md:text-2xl font-semibold text-foreground flex items-center mb-4">
-                <Target className="mr-2 flex-shrink-0" /> Professional Summary
+                <Target
+                  className="mr-2 flex-shrink-0"
+                  style={{ color: iconColors.sections.summary }}
+                />{' '}
+                Professional Summary
               </h2>
               <p className="text-sm md:text-base text-muted-foreground">{personalInfo.summary}</p>
             </section>
@@ -161,7 +214,11 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
             {/* Work Experience */}
             <section>
               <h2 className="text-xl md:text-2xl font-semibold text-foreground flex items-center mb-4">
-                <Rocket className="mr-2 flex-shrink-0" /> Work Experience
+                <Rocket
+                  className="mr-2 flex-shrink-0"
+                  style={{ color: iconColors.sections.work }}
+                />{' '}
+                Work Experience
               </h2>
               {workExperience.map((exp, index) => (
                 <div key={index} className="mb-6">
@@ -183,7 +240,11 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
             {/* Education */}
             <section>
               <h2 className="text-xl md:text-2xl font-semibold text-foreground flex items-center mb-4">
-                <Book className="mr-2 flex-shrink-0" /> Education
+                <Book
+                  className="mr-2 flex-shrink-0"
+                  style={{ color: iconColors.sections.education }}
+                />{' '}
+                Education
               </h2>
               {education.map((edu, index) => (
                 <div key={index} className="mb-4">
@@ -200,7 +261,11 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
             {/* Projects */}
             <section>
               <h2 className="text-xl md:text-2xl font-semibold text-foreground flex items-center mb-4">
-                <Star className="mr-2 flex-shrink-0" /> Projects
+                <Star
+                  className="mr-2 flex-shrink-0"
+                  style={{ color: iconColors.sections.projects }}
+                />{' '}
+                Featured Projects
               </h2>
               {projects.map((project, index) => (
                 <div key={index} className="mb-6">
