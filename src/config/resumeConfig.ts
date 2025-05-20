@@ -87,6 +87,9 @@ export const resumeConfig: ResumeConfig = {
     { name: 'JavaScript', category: 'Technical' },
     { name: 'React', category: 'Technical' },
     { name: 'Tailwind', category: 'Technical' },
+    { name: 'Node js', category: 'Technical' },
+    { name: 'Express js', category: 'Technical' },
+    { name: 'Mongo DB', category: 'Technical' },
     { name: 'Vs Code', category: 'Technical' },
     { name: 'Git', category: 'Technical' },
     { name: 'GitHub', category: 'Technical' },
@@ -104,6 +107,7 @@ export const resumeConfig: ResumeConfig = {
       duration: 'Sep 2024 - Present',
       responsibilities: [
         'Led the development of a digital trade financing platform, enabling seamless transactions between stakeholders in short-term trade finance.',
+        'The project architecture follows a micro-frontend approach, where each feature is developed and deployed as an independent micro-frontend.',
         'Owned 90% of the frontend responsibilities, including new feature development, enhancements, and bug fixes.',
         'Built and maintained key features such as user authentication, interactive dashboards, data-driven UI components. and come core features like trade, trade partner etc...',
         'Collaborated closely with cross-functional teams (backend, product, and design) to define, design, and deliver high-quality features.',

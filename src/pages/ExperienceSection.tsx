@@ -23,6 +23,7 @@ import {
 const ExperienceSection = () => {
   const AventisiaExp = [
     'Led the development of a digital trade financing platform, enabling seamless transactions between stakeholders in short-term trade finance.',
+    'The project architecture follows a micro-frontend approach, where each feature is developed and deployed as an independent micro-frontend.',
     'Owned 90% of the frontend responsibilities, including new feature development, enhancements, and bug fixes.',
     'Built and maintained key features such as user authentication, interactive dashboards, data-driven UI components. and come core features like trade, trade partner etc...',
     'Collaborated closely with cross-functional teams (backend, product, and design) to define, design, and deliver high-quality features.',
