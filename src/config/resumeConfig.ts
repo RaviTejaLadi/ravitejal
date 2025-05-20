@@ -70,7 +70,7 @@ export const resumeConfig: ResumeConfig = {
     fullName: 'Ravi Teja Ladi',
     title: 'Senior Software Developer',
     location: 'India',
-    summary: `Experienced Software Developer with more than 3 years of experience and specializing in modern web development,
+    summary: `Senior Software Developer with more than 3 years of experience and specializing in modern web development,
      with a strong focus on building scalable and efficient front-end applications using React.js.
       Proven expertise in crafting intuitive user interfaces, implementing responsive design principles,
        Adept in JavaScript, TypeScript, and associated frameworks, with hands-on experience in state management (zustand, Redux-toolkit, Context API), routing (React Router), and performance optimization. Demonstrated ability to collaborate across teams, solve complex technical problems, and deliver high-quality software solutions aligned with business goals.`,
