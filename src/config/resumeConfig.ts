@@ -67,7 +67,7 @@ export interface ResumeConfig {
 
 export const resumeConfig: ResumeConfig = {
   personalInfo: {
-    fullName: 'Ravi Teja',
+    fullName: 'Ravi Teja Ladi',
     title: 'Senior Software Developer',
     location: 'India',
     summary: `Experienced Software Developer with more than 3 years of experience and specializing in modern web development,
@@ -109,8 +109,8 @@ export const resumeConfig: ResumeConfig = {
         'Led the development of a digital trade financing platform, enabling seamless transactions between stakeholders in short-term trade finance.',
         'The project architecture follows a micro-frontend approach, where each feature is developed and deployed as an independent micro-frontend.',
         'Owned 90% of the frontend responsibilities, including new feature development, enhancements, and bug fixes.',
-        'Built and maintained key features such as user authentication, interactive dashboards, data-driven UI components. and come core features like trade, trade partner etc...',
-        'Collaborated closely with cross-functional teams (backend, product, and design) to define, design, and deliver high-quality features.',
+        'Built and maintained key features such as user authentication, interactive dashboards, data-driven UI components and core features like trade, trade partner, etc...',
+        'Collaborated closely with cross-functional teams (backend and design) to define, design, and deliver high-quality features.',
         'Integrated RESTful APIs and third-party libraries to enhance platform functionality and streamline the user experience.',
         'Established and enforced frontend coding standards, implemented best practices, and led code review processes to ensure code quality and maintainability.',
       ],

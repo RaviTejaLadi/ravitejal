@@ -12,14 +12,14 @@ const ProjectsSection = () => {
       title: 'Kalki UI',
       description: `Kalki UI showcases a React UI component library designed to provide developers with a collection of reusable components for building modern web applications. While specific details about the library's features, components, and documentation are not provided in the available sources, the site likely offers insights into the design philosophy, component offerings, and usage guidelines for Kalki UI.`,
       image: kalkiUi,
-      tags: ['npm', 'React', 'Typescript', 'Tailwind'],
+      tags: ['React', 'Typescript', 'CSS', 'Tailwind', 'npm'],
       link: 'https://kalki-ui.vercel.app/',
     },
     {
       title: 'Kalki UI Toast',
       description: `Kalki UI Toast is a beautiful toast notifications.A lightweight, customizable, and accessible toast notification system built with React and Tailwind CSS.`,
       image: kalkiUiToast,
-      tags: ['npm', 'React', 'Typescript', 'Tailwind'],
+      tags: ['React', 'Typescript', 'CSS', 'Tailwind', 'npm'],
       link: 'https://kalki-ui-toast-docs.vercel.app/',
     },
     {
@@ -27,7 +27,7 @@ const ProjectsSection = () => {
       description:
         'React UI Essentials serves as a curated reference for developers working with React. It provides an organized collection of popular React UI component libraries, offering a centralized hub to explore and compare various UI frameworks.',
       image: rue,
-      tags: ['npm', 'React', 'Javascript', 'Css'],
+      tags: ['React', 'Javascript', 'Css', 'npm'],
       link: 'https://react-ui-essentials.vercel.app/',
     },
     {
@@ -35,7 +35,7 @@ const ProjectsSection = () => {
       description:
         'react-ui-essentials-icons is a lightweight React library that provides a comprehensive set of icons for your React applications. Designed for ease of use and flexibility, this package allows you to quickly integrate high-quality icons into your project',
       image: ruei,
-      tags: ['npm', 'React', 'Javascript', 'Css'],
+      tags: ['React', 'Javascript', 'Css', 'npm'],
       link: 'https://react-ui-essentials-icons.vercel.app/',
     },
   ];
@@ -54,41 +54,42 @@ const ProjectsSection = () => {
               key={index}
               className="overflow-hidden border border-border/40 bg-muted/50 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 group"
             >
-              <div className="relative h-56 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4">
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-foreground  p-2 rounded-full hover:text-purple-600 transition-colors"
-                  >
-                    <ExternalLink className="text[--icon-color]" size={18} />
-                  </a>
+              <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+                <div className="relative h-56 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-foreground  p-2 rounded-full hover:text-purple-600 transition-colors"
+                    >
+                      <ExternalLink className="text[--icon-color]" size={18} />
+                    </a>
+                  </div>
                 </div>
-              </div>
-
-              <CardContent className="p-6 space-y-4">
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+                <CardContent className="p-6 space-y-4">
                   <h3 className="text-xl font-semibold tracking-tight transition-colors duration-200 group-hover:text-primary">
                     {project.title}
                   </h3>
-                </a>
 
-                <p className="text-muted-foreground text-sm line-clamp-3">{project.description}</p>
+                  <p className="text-muted-foreground text-sm line-clamp-3">
+                    {project.description}
+                  </p>
 
-                <div className="flex flex-wrap gap-2 pt-2">
-                  {project.tags.map((tag, tagIndex) => (
-                    <Badge key={tagIndex} variant={'outline'}>
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    {project.tags.map((tag, tagIndex) => (
+                      <Badge key={tagIndex} variant={'outline'}>
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>{' '}
+              </a>
             </Card>
           ))}
         </div>

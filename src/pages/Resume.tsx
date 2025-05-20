@@ -78,7 +78,7 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
                 <span className="break-all">{contact.email}</span>
               </div>
               {contact.linkedin && (
-                <div className="flex items-center text-muted-foreground text-sm md:text-base">
+                <div className="flex items-center text-muted-foreground text-sm md:text-base hover:underline hover:underline-offset-2">
                   <Linkedin className="mr-2 w-4 h-4 flex-shrink-0" />
                   <a
                     href={contact.linkedin}
@@ -91,7 +91,7 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
                 </div>
               )}
               {contact.github && (
-                <div className="flex items-center text-muted-foreground text-sm md:text-base">
+                <div className="flex items-center text-muted-foreground text-sm md:text-base hover:underline hover:underline-offset-2">
                   <Github className="mr-2 w-4 h-4 flex-shrink-0" />
                   <a
                     href={contact.github}
