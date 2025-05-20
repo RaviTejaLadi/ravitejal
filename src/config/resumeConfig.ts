@@ -157,7 +157,7 @@ export const resumeConfig: ResumeConfig = {
       year: 2023,
     },
     {
-      name: 'AWS Certified Developer - Associate',
+      name: 'Award of Excellence',
       issuedBy: 'Idexcel Technologies Private Limited',
       year: 2024,
     },
