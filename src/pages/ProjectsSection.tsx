@@ -4,7 +4,6 @@ import kalkiUi from '../assets/kalkiUi.png';
 import kalkiUiToast from '../assets/kalkiUiToast.png';
 import ruei from '../assets/ruei.png';
 import { ExternalLink } from 'lucide-react';
-import { useState } from 'react';
 import { Badge } from '@/components/ui/badge';
 
 const ProjectsSection = () => {
@@ -41,8 +40,6 @@ const ProjectsSection = () => {
     },
   ];
 
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
   return (
     <section id="projects" className="py-20 px-4 bg-gradient-to-b from-background to-background/80">
       <div className="container mx-auto max-w-6xl">
@@ -56,8 +53,6 @@ const ProjectsSection = () => {
             <Card
               key={index}
               className="overflow-hidden border border-border/40 bg-muted/50 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 group"
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
             >
               <div className="relative h-56 overflow-hidden">
                 <img
