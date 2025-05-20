@@ -5,6 +5,7 @@ import kalkiUiToast from '../assets/kalkiUiToast.png';
 import ruei from '../assets/ruei.png';
 import { ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { Css, JavaScript, React, Tailwind, TypeScript } from '@/assets/technologies';
 
 const ProjectsSection = () => {
   const projects = [
@@ -12,14 +13,26 @@ const ProjectsSection = () => {
       title: 'Kalki UI',
       description: `Kalki UI showcases a React UI component library designed to provide developers with a collection of reusable components for building modern web applications. While specific details about the library's features, components, and documentation are not provided in the available sources, the site likely offers insights into the design philosophy, component offerings, and usage guidelines for Kalki UI.`,
       image: kalkiUi,
-      tags: ['React', 'Typescript', 'CSS', 'Tailwind', 'npm'],
+      tags: [
+        <React className="w-h h-4" />,
+        <Tailwind className="w-h h-4" />,
+        <TypeScript className="w-h h-4" />,
+        <Css className="w-h h-4" />,
+        'npm',
+      ],
       link: 'https://kalki-ui.vercel.app/',
     },
     {
       title: 'Kalki UI Toast',
       description: `Kalki UI Toast is a beautiful toast notifications.A lightweight, customizable, and accessible toast notification system built with React and Tailwind CSS.`,
       image: kalkiUiToast,
-      tags: ['React', 'Typescript', 'CSS', 'Tailwind', 'npm'],
+      tags: [
+        <React className="w-h h-4" />,
+        <Tailwind className="w-h h-4" />,
+        <TypeScript className="w-h h-4" />,
+        <Css className="w-h h-4" />,
+        'npm',
+      ],
       link: 'https://kalki-ui-toast-docs.vercel.app/',
     },
     {
@@ -27,7 +40,12 @@ const ProjectsSection = () => {
       description:
         'React UI Essentials serves as a curated reference for developers working with React. It provides an organized collection of popular React UI component libraries, offering a centralized hub to explore and compare various UI frameworks.',
       image: rue,
-      tags: ['React', 'Javascript', 'Css', 'npm'],
+      tags: [
+        <React className="w-h h-4" />,
+        <JavaScript className="w-h h-4" />,
+        <Css className="w-h h-4" />,
+        'npm',
+      ],
       link: 'https://react-ui-essentials.vercel.app/',
     },
     {
@@ -35,7 +53,12 @@ const ProjectsSection = () => {
       description:
         'react-ui-essentials-icons is a lightweight React library that provides a comprehensive set of icons for your React applications. Designed for ease of use and flexibility, this package allows you to quickly integrate high-quality icons into your project',
       image: ruei,
-      tags: ['React', 'Javascript', 'Css', 'npm'],
+      tags: [
+        <React className="w-h h-4" />,
+        <JavaScript className="w-h h-4" />,
+        <Css className="w-h h-4" />,
+        'npm',
+      ],
       link: 'https://react-ui-essentials-icons.vercel.app/',
     },
   ];
@@ -80,13 +103,16 @@ const ProjectsSection = () => {
                   <p className="text-muted-foreground text-sm line-clamp-3">
                     {project.description}
                   </p>
+                  <div>
+                    <p className="text-xs text-muted-foreground">Tech stack:</p>
 
-                  <div className="flex flex-wrap gap-2 pt-2">
-                    {project.tags.map((tag, tagIndex) => (
-                      <Badge key={tagIndex} variant={'outline'}>
-                        {tag}
-                      </Badge>
-                    ))}
+                    <div className="flex flex-wrap gap-2 pt-2">
+                      {project.tags.map((tag, tagIndex) => (
+                        <Badge key={tagIndex} variant={'outline'}>
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
                   </div>
                 </CardContent>{' '}
               </a>

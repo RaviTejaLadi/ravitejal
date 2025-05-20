@@ -30,6 +30,7 @@ const ExperienceSection = () => {
     'Integrated RESTful APIs and third-party libraries to enhance platform functionality and streamline the user experience.',
     'Established and enforced frontend coding standards, implemented best practices, and led code review processes to ensure code quality and maintainability.',
   ];
+  
   const IdexcelExp = [
     'Created responsive web applications using React and JavaScript',
     'Managed multiple environments (dev, test, demo, sandbox) for InferIQ, ensuring smooth deployment across all development stages.',
@@ -64,7 +65,7 @@ const ExperienceSection = () => {
                   businesses of all sizes to unlock liquidity, mitigate risks, and accelerate growth
                   through trust, transparency, and cutting-edge technology.
                 </p>
-                <Accordion type="single" collapsible className="w-full">
+                <Accordion type="single" collapsible className="w-full" defaultValue='item-1'>
                   <AccordionItem value="item-1">
                     <AccordionTrigger>My Responsibilities at Aventisia</AccordionTrigger>
                     <AccordionContent>
@@ -107,7 +108,7 @@ const ExperienceSection = () => {
                   unstructured data from various document types, including PDFs, handwritten forms,
                   images, and scanned documents. etc...
                 </p>
-                <Accordion type="single" collapsible className="w-full">
+                <Accordion type="single" collapsible className="w-full" defaultValue='item-1'>
                   <AccordionItem value="item-1">
                     <AccordionTrigger>My Responsibilities at Idexcel</AccordionTrigger>
                     <AccordionContent>

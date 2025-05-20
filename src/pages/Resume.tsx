@@ -49,22 +49,18 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
           <h2 className="text-4xl font-bold tracking-tight">Resume</h2>
           <div className="ml-4 h-px bg-gradient-to-r from-primary/60 to-transparent flex-grow" />
         </div>
-        <div className="container mx-auto my-4 rounded-md flex flex-col lg:flex-row">
+        <div className="container mx-auto my-4 rounded-md  flex flex-col lg:flex-row">
           {/* Sidebar - Hidden on mobile unless toggled, Visible on large screens */}
           <div
-            className={` lg:block w-full lg:w-1/3 bg-background p-4 md:p-8 space-y-6 rounded-lg lg:rounded-l-lg lg:rounded-r-none`}
+            className={` lg:block w-full lg:w-1/3 bg-background p-4 md:p-8 shadow-lg space-y-6 rounded-lg lg:rounded-l-lg lg:rounded-r-none`}
           >
             {/* Header Section */}
             <div className="text-center">
               <h1 className="text-2xl md:text-3xl font-bold text-foreground">
                 {personalInfo.fullName}
               </h1>
-              <p className="text-sm md:text-base text-muted-foreground">
-                {personalInfo.title} 
-              </p>
-               <p className="text-sm md:text-base text-muted-foreground">
-                Bangalore/Hyderabad
-              </p>
+              <p className="text-sm md:text-base text-muted-foreground">{personalInfo.title}</p>
+              <p className="text-sm md:text-base text-muted-foreground">Bangalore/Hyderabad</p>
             </div>
 
             {/* Contact Information */}
@@ -116,11 +112,44 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
                 <Brain className="mr-2 flex-shrink-0" /> Soft Skills
               </h2>
               <div className="flex flex-wrap gap-2">{renderSkillSection('Soft')}</div>
+
+              {languages && languages.length > 0 && (
+                <section>
+                  <h2 className="text-xl md:text-2xl font-semibold text-foreground flex items-center mt-4 mb-4">
+                    <Languages className="mr-2 flex-shrink-0" /> Languages
+                  </h2>
+                  <div className="space-y-2">
+                    {languages.map((lang, index) => (
+                      <p key={index} className="text-sm md:text-base text-muted-foreground">
+                        <span className="font-medium">{lang.language}</span> - {lang.proficiency}
+                      </p>
+                    ))}
+                  </div>
+                </section>
+              )}
+              {/* Achievements */}
+              {Achievements && Achievements.length > 0 && (
+                <section>
+                  <h2 className="text-xl md:text-2xl font-semibold text-foreground flex items-center mt-4 mb-4">
+                    <Award className="mr-2 flex-shrink-0" /> Achievements
+                  </h2>
+                  {Achievements.map((cert, index) => (
+                    <div key={index} className="mb-4">
+                      <h5 className="text-sm md:text-sm font-semibold text-foreground">
+                        {cert.name}
+                      </h5>
+                      <p className="text-sm md:text-base text-muted-foreground">
+                        {cert.issuedBy} | {cert.year}
+                      </p>
+                    </div>
+                  ))}
+                </section>
+              )}
             </div>
           </div>
 
           {/* Main Content */}
-          <div className="w-full lg:w-2/3 p-4 md:p-8 space-y-6 bg-background rounded-b-lg lg:rounded-l-none lg:rounded-r-lg overflow-y-auto">
+          <div className="w-full lg:w-2/3 p-4 md:p-8 space-y-6 bg-background rounded-b-lg shadow-lg lg:rounded-l-none lg:rounded-r-lg overflow-y-auto">
             {/* Summary */}
             <section>
               <h2 className="text-xl md:text-2xl font-semibold text-foreground flex items-center mb-4">
@@ -151,6 +180,23 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
               ))}
             </section>
 
+            {/* Education */}
+            <section>
+              <h2 className="text-xl md:text-2xl font-semibold text-foreground flex items-center mb-4">
+                <Book className="mr-2 flex-shrink-0" /> Education
+              </h2>
+              {education.map((edu, index) => (
+                <div key={index} className="mb-4">
+                  <h3 className="text-base md:text-lg font-semibold text-foreground">
+                    {edu.degree}
+                  </h3>
+                  <p className="text-sm md:text-base text-muted-foreground">
+                    {edu.university} | {edu.yearOfCompletion}
+                  </p>
+                </div>
+              ))}
+            </section>
+
             {/* Projects */}
             <section>
               <h2 className="text-xl md:text-2xl font-semibold text-foreground flex items-center mb-4">
@@ -171,58 +217,6 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
                 </div>
               ))}
             </section>
-
-            {/* Education */}
-            <section>
-              <h2 className="text-xl md:text-2xl font-semibold text-foreground flex items-center mb-4">
-                <Book className="mr-2 flex-shrink-0" /> Education
-              </h2>
-              {education.map((edu, index) => (
-                <div key={index} className="mb-4">
-                  <h3 className="text-base md:text-lg font-semibold text-foreground">
-                    {edu.degree}
-                  </h3>
-                  <p className="text-sm md:text-base text-muted-foreground">
-                    {edu.university} | {edu.yearOfCompletion}
-                  </p>
-                </div>
-              ))}
-            </section>
-
-            {/* Languages */}
-            {languages && languages.length > 0 && (
-              <section>
-                <h2 className="text-xl md:text-2xl font-semibold text-foreground flex items-center mb-4">
-                  <Languages className="mr-2 flex-shrink-0" /> Languages
-                </h2>
-                <div className="space-y-2">
-                  {languages.map((lang, index) => (
-                    <p key={index} className="text-sm md:text-base text-muted-foreground">
-                      <span className="font-medium">{lang.language}</span> - {lang.proficiency}
-                    </p>
-                  ))}
-                </div>
-              </section>
-            )}
-
-            {/* Achievements */}
-            {Achievements && Achievements.length > 0 && (
-              <section>
-                <h2 className="text-xl md:text-2xl font-semibold text-foreground flex items-center mb-4">
-                  <Award className="mr-2 flex-shrink-0" /> Achievements
-                </h2>
-                {Achievements.map((cert, index) => (
-                  <div key={index} className="mb-4">
-                    <h3 className="text-base md:text-lg font-semibold text-foreground">
-                      {cert.name}
-                    </h3>
-                    <p className="text-sm md:text-base text-muted-foreground">
-                      {cert.issuedBy} | {cert.year}
-                    </p>
-                  </div>
-                ))}
-              </section>
-            )}
           </div>
         </div>
       </div>
