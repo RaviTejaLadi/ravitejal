@@ -4,7 +4,7 @@ import profilePic from '../assets/avatar.jpg';
 import GitHub from '@/assets/Icons/GitHub';
 import LinkedIn from '@/assets/Icons/LinkedIn';
 import { FileText } from 'lucide-react';
-import { GradientBackground } from '@/components/ui/GradientBackground';
+// import { GradientBackground } from '@/components/ui/GradientBackground';
 
 const AboutSection = () => {
   const handleGithub = () => {
@@ -15,12 +15,12 @@ const AboutSection = () => {
   };
   return (
     <section id="about" className="py-28 px-4 bg-muted/50">
-      <GradientBackground />
+      {/* <GradientBackground /> */}
       <div className="relative container mx-auto">
         <div className="flex items-center mb-12">
           <div className="ml-4 h-px bg-gradient-to-r from-purple-600 to-pink-600/30 flex-grow" />
           <h2 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-            {aboutConfig.title} - Immediate joiner
+            {aboutConfig.title}
           </h2>
           <div className="ml-4 h-px bg-gradient-to-r from-purple-600 to-pink-600/30 flex-grow" />
         </div>
@@ -55,6 +55,7 @@ const AboutSection = () => {
             <div className="text-center ">
               <h3 className="text-2xl font-semibold mb-1">{aboutConfig.userName}</h3>
               <p className="text-lg text-muted-foreground mb-1">{aboutConfig.designation}</p>
+              <p className="text-sm md:text-base text-muted-foreground">Bangalore/Hyderabad</p>
             </div>
             <div className="flex gap-3">
               <Button variant="ghost" onClick={handleGithub} size="icon">

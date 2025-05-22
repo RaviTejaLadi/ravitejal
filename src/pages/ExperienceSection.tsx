@@ -56,7 +56,7 @@ const ExperienceSection = () => {
           <div className="mb-8">
             <div className="space-y-6">
               <div>
-                <h4 className="font-medium">Senior Software Developer</h4>
+                <h4 className="font-medium">Senior Software Developer (React JS)</h4>
                 <p className="text-muted-foreground">
                   Aventisia Technologies Private Limited • sep.2024 - Present
                 </p>
@@ -99,7 +99,7 @@ const ExperienceSection = () => {
               </div>
               <Separator />
               <div>
-                <h4 className="font-medium">Software Engineer</h4>
+                <h4 className="font-medium">Software Engineer (React JS)</h4>
                 <p className="text-muted-foreground">
                   Idexcel Technologies Private Limited • Oct.2022 - Aug.2024
                 </p>
