@@ -36,6 +36,7 @@ export const technoConfig = {
       value: 'mostUsed',
       label: 'Most Used',
       content: [
+        { icon: React, tooltip: 'React' },
         { icon: TypeScript, tooltip: 'TypeScript' },
         { icon: JavaScript, tooltip: 'JavaScript' },
         { icon: Tailwind, tooltip: 'Tailwind' },
