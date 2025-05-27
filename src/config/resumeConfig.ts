@@ -68,7 +68,7 @@ export interface ResumeConfig {
 export const resumeConfig: ResumeConfig = {
   personalInfo: {
     fullName: 'Ravi Teja Ladi',
-    title: 'Senior Software Developer',
+    title: 'Senior Software Developer (React JS)',
     location: 'India',
     summary: `React JS Senior Software Developer with more than 3 years of experience and specializing in modern web development,
      with a strong focus on building scalable and efficient front-end applications using React.js.

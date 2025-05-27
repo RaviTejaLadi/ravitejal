@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { aboutConfig } from '@/config/about-config';
-import profilePic from '../assets/avatar.jpg';
+import profilePic from '../assets/avatar1.jpg';
 import GitHub from '@/assets/Icons/GitHub';
 import LinkedIn from '@/assets/Icons/LinkedIn';
 import { FileText } from 'lucide-react';
