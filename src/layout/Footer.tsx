@@ -2,13 +2,13 @@ import { React, SchadCn, Tailwind, TypeScript, Vite } from '@/assets/technologie
 
 const Footer = () => {
   return (
-    <footer className=" flex items-center justify-between py-4 border-t px-4 md:px-10 lg:px-20 ">
-      <div className="text-muted-foreground">
-        <p>@ Designed and developed by Ravi Teja Ladi.</p>
+    <footer className="flex flex-col md:flex-row items-center justify-between gap-4 py-4 border-t px-4 md:px-10 lg:px-20">
+      <div className="text-muted-foreground text-center md:text-left">
+        <p>© Designed and developed by Ravi Teja Ladi.</p>
       </div>
-      <div className="text-muted-foreground">
-        <p className="flex gap-2">
-          Powered by.
+      <div className="text-muted-foreground text-center md:text-right">
+        <div className="flex flex-col sm:flex-row items-center gap-2">
+          <span>Powered by</span>
           <div className="flex gap-2 items-center">
             <React className="size-4" />
             <TypeScript className="size-4" />
@@ -16,7 +16,7 @@ const Footer = () => {
             <SchadCn className="size-4" />
             <Vite className="size-4" />
           </div>
-        </p>
+        </div>
       </div>
     </footer>
   );

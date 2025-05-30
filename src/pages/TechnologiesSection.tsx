@@ -17,7 +17,7 @@ const TechnologiesSection = () => {
         <Tabs defaultValue="mostUsed" className="w-full">
           <TabsList className="w-full">
             {technoConfig.tabTriggers.map((tab) => (
-              <TabsTrigger value={tab.value} key={tab.value} className="w-full">
+              <TabsTrigger value={tab.value} key={tab.value} className="w-full ">
                 {tab.label}
               </TabsTrigger>
             ))}

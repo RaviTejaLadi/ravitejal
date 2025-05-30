@@ -25,6 +25,26 @@ const AboutSection = () => {
           <div className="ml-4 h-px bg-gradient-to-r from-purple-600 to-pink-600/30 flex-grow" />
         </div>
         <div className="flex flex-col md:flex-row items-start gap-16">
+          <div className="flex-1 flex flex-col items-center mx-auto gap-6">
+            <img
+              src={profilePic}
+              alt="Profile"
+              className="h-64 w-64 md:h-80 md:w-80 object-cover rounded-full"
+            />
+            <div className="text-center">
+              <h3 className="text-2xl font-semibold mb-1">{aboutConfig.userName}</h3>
+              <p className="text-lg text-muted-foreground mb-1">{aboutConfig.designation}</p>
+              <p className="text-sm md:text-base text-muted-foreground">Bangalore/Hyderabad</p>
+            </div>
+            <div className="flex gap-3">
+              <Button variant="ghost" onClick={handleGithub} size="icon">
+                <GitHub className="h-5 w-5" />
+              </Button>
+              <Button variant="ghost" onClick={handleLinkedIn} size="icon">
+                <LinkedIn className="h-5 w-5" />
+              </Button>
+            </div>
+          </div>
           <div className="flex-1">
             <div className="flex flex-col gap-4 items-center">
               <div>
@@ -43,27 +63,6 @@ const AboutSection = () => {
                   <span>My Resume</span>
                 </a>
               </div>
-            </div>
-          </div>
-
-          <div className="flex-1 flex flex-col items-center  gap-6">
-            <img
-              src={profilePic}
-              alt="Profile"
-              className="h-64 w-64 md:h-80 md:w-80 object-cover rounded-full"
-            />
-            <div className="text-center ">
-              <h3 className="text-2xl font-semibold mb-1">{aboutConfig.userName}</h3>
-              <p className="text-lg text-muted-foreground mb-1">{aboutConfig.designation}</p>
-              <p className="text-sm md:text-base text-muted-foreground">Bangalore/Hyderabad</p>
-            </div>
-            <div className="flex gap-3">
-              <Button variant="ghost" onClick={handleGithub} size="icon">
-                <GitHub className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" onClick={handleLinkedIn} size="icon">
-                <LinkedIn className="h-5 w-5" />
-              </Button>
             </div>
           </div>
         </div>
