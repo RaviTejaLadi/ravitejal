@@ -10,6 +10,7 @@ import {
   Css,
   Git,
   JavaScript,
+  Node,
   OpenAi,
   PostMan,
   React,
@@ -134,6 +135,21 @@ const ExperienceSection = () => {
                   <JavaScript className="w-h h-4" />
                   <OpenAi className="w-h h-4" />
                   <PostMan className="w-h h-4" /> etc...
+                </p>
+              </div>
+              <Separator />
+              <div>
+                <h4 className="font-medium">InternShip/Training (MERN stack)</h4>
+                <p className="text-muted-foreground">Test Yantra • Apr.2022 - Oct.2022</p>
+                <p className="mt-2 tracking-wide text-muted-foreground flex items-center gap-2">
+                  Tech stack:
+                  <React className="w-h h-4" />
+                  <Css className="w-h h-4" />
+                  <Bootstrap className="w-h h-4" />
+                  <Git className="w-h h-4" />
+                  <JavaScript className="w-h h-4" />
+                  <Node className="w-h h-4" />
+                  etc...
                 </p>
               </div>
             </div>
