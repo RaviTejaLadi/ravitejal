@@ -8,6 +8,7 @@ import ScrollTop from './components/ui/ScrollTop';
 import Resume from './pages/Resume';
 import EducationSection from './pages/EducationSection';
 import AchievementsSection from './pages/AchievementsSection';
+import ContactSection from './pages/ContactSection';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <EducationSection />
       <AchievementsSection />
       <Resume />
+      <ContactSection />
       <Footer />
       <ScrollTop />
     </div>

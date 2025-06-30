@@ -90,7 +90,7 @@ const AchievementsSection = () => {
                   </div>
 
                   {activeAward === award.id && award.image && (
-                    <div className="p-4 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-700">
+                    <div className="p-4  dark:bg-slate-900 border-t border-border">
                       <img
                         src={award.image}
                         alt={`${award.title} Certificate`}

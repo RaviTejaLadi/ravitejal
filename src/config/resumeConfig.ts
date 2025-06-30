@@ -168,8 +168,8 @@ export const resumeConfig: ResumeConfig = {
     },
   ],
   languages: [
-    { language: 'Telegu', proficiency: 'Native' },
     { language: 'English', proficiency: 'Full Professional Proficiency' },
     { language: 'Hindi', proficiency: 'Speak' },
+    { language: 'Telegu', proficiency: 'Native' },
   ],
 };

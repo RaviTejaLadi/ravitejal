@@ -37,12 +37,16 @@ const AboutSection = () => {
               <p className="text-sm md:text-base text-muted-foreground">Bangalore/Hyderabad</p>
             </div>
             <div className="flex gap-3">
-              <Button variant="ghost" onClick={handleGithub} size="icon">
-                <GitHub className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" onClick={handleLinkedIn} size="icon">
-                <LinkedIn className="h-5 w-5" />
-              </Button>
+              <div className="flex items-center justify-center  bg-gradient-to-r from-purple-500 to-pink-300 rounded-lg mr-4 group-hover:scale-110 transition-transform">
+                <Button variant="ghost" onClick={handleGithub} size="icon">
+                  <GitHub className="h-5 w-5 " />
+                </Button>
+              </div>
+              <div className="flex items-center justify-center  bg-gradient-to-r from-purple-500 to-pink-300 rounded-lg mr-4 group-hover:scale-110 transition-transform">
+                <Button variant="ghost" onClick={handleLinkedIn} size="icon">
+                  <LinkedIn className="h-5 w-5 " />
+                </Button>
+              </div>
             </div>
           </div>
           <div className="flex-1">
@@ -57,7 +61,7 @@ const AboutSection = () => {
               <div>
                 <a
                   href="#resume"
-                  className="flex items-center gap-2 hover:underline underline-offset-2 border py-2 px-3 rounded-md"
+                  className="flex items-center gap-2 hover:underline underline-offset-2 border border-border py-2 px-3 rounded-md"
                 >
                   <FileText className="size-4" />
                   <span>My Resume</span>
