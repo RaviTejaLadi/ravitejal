@@ -1,14 +1,74 @@
 import { Card } from '@/components/ui/card';
-import ReactJson from 'react-json-view';
 
 const OpenToWork = () => {
-  const openToWorkData = {
-    name: 'Ravi Teja',
-    openToWork: true,
-    jobTitles: ['React Developer', 'Frontend Developer', 'Senior Frontend Developer'],
-    locations: ['Bengaluru', 'Hyderabad', 'Vishakapatanam'],
-    employmentType: 'Full Time',
-    startDate: 'Immediately, I am actively applying',
+  const renderJsonWithHighlight = () => {
+    return (
+      <div className=" text-green-400 p-6 rounded-lg overflow-x-auto font-mono text-sm">
+        <div className="whitespace-pre">
+          <span className="text-gray-500">{'{'}</span>
+          <div className="ml-4">
+            <span className="text-blue-400">"name"</span>
+            <span className="text-white">: </span>
+            <span className="text-yellow-300">"Ravi Teja 👨‍💻"</span>
+            <span className="text-white">,</span>
+          </div>
+          <div className="ml-4">
+            <span className="text-blue-400">"openToWork"</span>
+            <span className="text-white">: </span>
+            <span className="text-orange-400">true</span>
+            <span className="text-white">,</span>
+          </div>
+          <div className="ml-4">
+            <span className="text-blue-400">"jobTitles"</span>
+            <span className="text-white">: </span>
+            <span className="text-gray-500">[</span>
+            <div className="ml-4">
+              <span className="text-yellow-300">"React Developer ⚛️"</span>
+              <span className="text-white">,</span>
+            </div>
+            <div className="ml-4">
+              <span className="text-yellow-300">"Frontend Developer 🌐"</span>
+              <span className="text-white">,</span>
+            </div>
+            <div className="ml-4">
+              <span className="text-yellow-300">"Senior Frontend Developer 🚀"</span>
+            </div>
+            <span className="text-gray-500">]</span>
+            <span className="text-white">,</span>
+          </div>
+          <div className="ml-4">
+            <span className="text-blue-400">"locations"</span>
+            <span className="text-white">: </span>
+            <span className="text-gray-500">[</span>
+            <div className="ml-4">
+              <span className="text-yellow-300">"Bengaluru 🏙️"</span>
+              <span className="text-white">,</span>
+            </div>
+            <div className="ml-4">
+              <span className="text-yellow-300">"Hyderabad 🌆"</span>
+              <span className="text-white">,</span>
+            </div>
+            <div className="ml-4">
+              <span className="text-yellow-300">"Vishakapatanam 🌊"</span>
+            </div>
+            <span className="text-gray-500">]</span>
+            <span className="text-white">,</span>
+          </div>
+          <div className="ml-4">
+            <span className="text-blue-400">"employmentType"</span>
+            <span className="text-white">: </span>
+            <span className="text-yellow-300">"Full Time 🕒"</span>
+            <span className="text-white">,</span>
+          </div>
+          <div className="ml-4">
+            <span className="text-blue-400">"startDate"</span>
+            <span className="text-white">: </span>
+            <span className="text-yellow-300">"Immediately, I am actively applying 📩"</span>
+          </div>
+          <span className="text-gray-500">{'}'}</span>
+        </div>
+      </div>
+    );
   };
 
   return (
@@ -21,25 +81,7 @@ const OpenToWork = () => {
           <div className="ml-4 h-px bg-gradient-to-r from-purple-600 to-pink-600/30 flex-grow" />
         </div>
 
-        <Card className="mx-auto bg-inherit p-5 w-1/2">
-          <ReactJson
-            src={openToWorkData}
-            theme="ocean"
-            displayDataTypes={false}
-            displayObjectSize={false}
-            enableClipboard={false}
-            collapsed={false}
-            name={null}
-            style={{
-              fontFamily: 'Monaco, Menlo, "Ubuntu Mono", monospace',
-              fontSize: '14px',
-              lineHeight: '1.5',
-              backgroundColor: 'inherit',
-              padding: '5px',
-              border: '5px',
-            }}
-          />
-        </Card>
+        <Card className="bg-inherit w-1/2 mx-auto">{renderJsonWithHighlight()}</Card>
       </div>
     </section>
   );
