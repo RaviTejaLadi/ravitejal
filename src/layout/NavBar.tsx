@@ -11,7 +11,14 @@ const NavBar = () => {
     <nav className="mx-auto fixed w-[85%] left-[7.5%] my-3 bg-background/80 border backdrop-blur-sm z-50 border-b shadow-sm rounded-lg transition-all">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          <span className="text-2xl font-bold text-primary tracking-wide">{navConfig.user}</span>
+          <span className="text-2xl font-bold text-primary tracking-wide">
+            <a
+              className="badge-base__link LI-simple-link"
+              href="https://in.linkedin.com/in/ravi-teja-%E2%9C%A8-2a2989145?trk=profile-badge"
+            >
+              {navConfig.user}
+            </a>
+          </span>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">

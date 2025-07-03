@@ -13,7 +13,7 @@ interface UserLinks {
 }
 
 export const navConfig: UserLinks = {
-  user: 'Ravi Teja',
+  user: 'RAVI TEJA ✨',
   links: [
     { name: 'About', href: '#about', icon: User },
     { name: 'Projects', href: '#projects', icon: Code },
