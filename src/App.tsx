@@ -9,6 +9,7 @@ import Resume from './pages/Resume';
 import EducationSection from './pages/EducationSection';
 import AchievementsSection from './pages/AchievementsSection';
 import ContactSection from './pages/ContactSection';
+import OpenToWork from './pages/OpenToWork';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <AchievementsSection />
       <Resume />
       <ContactSection />
+      <OpenToWork />
       <Footer />
       <ScrollTop />
     </div>
