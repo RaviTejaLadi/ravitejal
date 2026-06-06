@@ -37,14 +37,19 @@ const AboutSection = () => {
               </div>
 
               <div className="flex items-center justify-center gap-3">
-                <Button variant="outline" onClick={handleGithub} size="icon" className="rounded-full">
+                <Button
+                  variant="ghost"
+                  onClick={handleGithub}
+                  size="icon"
+                  className="rounded-full canva-gradient text-white shadow-md shadow-secondary/30 hover:brightness-105 hover:text-white"
+                >
                   <GitHub className="h-5 w-5" />
                 </Button>
                 <Button
-                  variant="outline"
+                  variant="ghost"
                   onClick={handleLinkedIn}
                   size="icon"
-                  className="rounded-full"
+                  className="rounded-full canva-gradient text-white shadow-md shadow-secondary/30 hover:brightness-105 hover:text-white"
                 >
                   <LinkedIn className="h-5 w-5" />
                 </Button>
