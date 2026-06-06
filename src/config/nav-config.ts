@@ -13,9 +13,10 @@ interface UserLinks {
 }
 
 export const navConfig: UserLinks = {
-  user: 'RAVI TEJA ✨',
+  user: 'RAVI TEJA',
   links: [
     { name: 'About', href: '#about', icon: User },
+    { name: 'Tech Stack', href: '#technologies', icon: FileCode2 },
     { name: 'Projects', href: '#projects', icon: Code },
     { name: 'Experience', href: '#experience', icon: UserCheck },
     { name: 'Resume', href: '#resume', icon: FileCode2 },
@@ -23,6 +24,7 @@ export const navConfig: UserLinks = {
   ],
   mobileLinks: [
     { name: 'About', href: '#about', icon: User },
+    { name: 'Tech Stack', href: '#technologies', icon: FileCode2 },
     { name: 'Projects', href: '#projects', icon: Code },
     { name: 'Experience', href: '#experience', icon: UserCheck },
     { name: 'Resume', href: '#resume', icon: FileCode2 },

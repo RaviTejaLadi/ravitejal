@@ -14,65 +14,76 @@ const AboutSection = () => {
     window.location.href = 'https://www.linkedin.com/in/ravi-teja-ladi/';
   };
   return (
-    <section id="about" className="py-28 px-4 bg-muted/50">
-      {/* <GradientBackground /> */}
-      <div className="relative container mx-auto">
-        <div className="flex items-center mb-12">
-          <div className="ml-4 h-px bg-gradient-to-r from-purple-600 to-pink-600/30 flex-grow" />
-          <h2 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-            {aboutConfig.title}
-          </h2>
-          <div className="ml-4 h-px bg-gradient-to-r from-purple-600 to-pink-600/30 flex-grow" />
+    <section id="about" className="section-shell">
+      <div className="section-container">
+        <div className="section-heading">
+          <h2 className="section-title">{aboutConfig.title}</h2>
+          <div className="section-line" />
         </div>
-        <div className="flex flex-col md:flex-row items-start gap-16">
-          <div className="flex-1 flex flex-col items-center mx-auto gap-6">
+
+        <div className="glass-card canva-gradient-soft p-6 sm:p-8 lg:p-10">
+          <div className="flex flex-col gap-10 lg:flex-row lg:items-start">
+            <div className="flex-1 flex flex-col items-center gap-5 text-center lg:sticky lg:top-32">
             <img
               src={profilePic}
               alt="Profile"
-              className="h-64 w-64 md:h-80 md:w-80 object-cover rounded-full"
+                className="h-44 w-44 sm:h-56 sm:w-56 lg:h-64 lg:w-64 object-cover rounded-full border-4 border-primary/30 shadow-xl shadow-secondary/20"
             />
-            <div className="text-center">
-              <h3 className="text-2xl font-semibold mb-1">{aboutConfig.userName}</h3>
-              <p className="text-lg text-muted-foreground mb-1">{aboutConfig.designation}</p>
-              <p className="text-sm text-muted-foreground mb-1">@ {aboutConfig.company}</p>
-              <p className="text-sm md:text-base text-muted-foreground">{aboutConfig.location}</p>
-            </div>
-            <div className="flex gap-3">
-              <div className="flex items-center justify-center  bg-gradient-to-r from-purple-500 to-pink-300 rounded-lg mr-4 group-hover:scale-110 transition-transform">
-                <Button variant="ghost" onClick={handleGithub} size="icon">
-                  <GitHub className="h-5 w-5 " />
-                </Button>
-              </div>
-              <div className="flex items-center justify-center  bg-gradient-to-r from-purple-500 to-pink-300 rounded-lg mr-4 group-hover:scale-110 transition-transform">
-                <Button variant="ghost" onClick={handleLinkedIn} size="icon">
-                  <LinkedIn className="h-5 w-5 " />
-                </Button>
-              </div>
-            </div>
-          </div>
-          <div className="flex-1">
-            <div className="flex flex-col gap-5 items-start max-w-xl mx-auto md:mx-0">
-              <p className="text-lg tracking-wide text-foreground leading-relaxed">{aboutConfig.intro}</p>
-              {aboutConfig.paragraphs.map((paragraph) => (
-                <p key={paragraph} className="text-base text-muted-foreground tracking-wide leading-relaxed">
-                  {paragraph}
-                </p>
-              ))}
-              <ul className="space-y-2.5 pt-1">
-                {aboutConfig.highlights.map((item) => (
-                  <li key={item} className="text-base text-muted-foreground tracking-wide">
-                    {item}
-                  </li>
-                ))}
-              </ul>
               <div>
-                <a
-                  href="#resume"
-                  className="flex items-center gap-2 hover:underline underline-offset-2 border border-border py-2 px-3 rounded-md"
+                <h3 className="text-xl sm:text-2xl font-semibold mb-1">{aboutConfig.userName}</h3>
+                <p className="text-sm sm:text-base text-muted-foreground mb-1">{aboutConfig.designation}</p>
+                <p className="text-sm text-muted-foreground mb-1">{aboutConfig.company}</p>
+                <p className="text-sm sm:text-base text-muted-foreground">{aboutConfig.location}</p>
+              </div>
+
+              <div className="flex items-center justify-center gap-3">
+                <Button variant="outline" onClick={handleGithub} size="icon" className="rounded-full">
+                  <GitHub className="h-5 w-5" />
+                </Button>
+                <Button
+                  variant="outline"
+                  onClick={handleLinkedIn}
+                  size="icon"
+                  className="rounded-full"
                 >
-                  <FileText className="size-4" />
-                  <span>My Resume</span>
-                </a>
+                  <LinkedIn className="h-5 w-5" />
+                </Button>
+              </div>
+            </div>
+
+            <div className="flex-1">
+              <div className="max-w-2xl mx-auto space-y-5">
+                <div className="flex flex-wrap gap-2">
+                  <span className="premium-chip">Frontend Architecture</span>
+                  <span className="premium-chip">React + TypeScript</span>
+                  <span className="premium-chip">Performance Engineering</span>
+                </div>
+                <p className="text-base sm:text-lg tracking-wide text-foreground leading-relaxed">
+                  {aboutConfig.intro}
+                </p>
+                {aboutConfig.paragraphs.map((paragraph) => (
+                  <p key={paragraph} className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                    {paragraph}
+                  </p>
+                ))}
+
+                <ul className="space-y-2 pt-1">
+                  {aboutConfig.highlights.map((item) => (
+                    <li key={item} className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+
+                <div>
+                  <a
+                    href="#resume"
+                    className="inline-flex items-center gap-2 rounded-md border border-primary/30 bg-background/70 px-4 py-2 text-sm sm:text-base font-medium transition-colors hover:bg-primary/10"
+                  >
+                    <FileText className="size-4" />
+                    <span>View Resume</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

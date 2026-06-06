@@ -55,23 +55,21 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" className="py-16 px-4 bg-muted/50">
-      <div className="container mx-auto">
-        <div className="flex items-center mb-12">
-          <h2 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-            Experience
-          </h2>
-          <div className="ml-4 h-px bg-gradient-to-r from-purple-600 to-pink-600/30 flex-grow" />
+    <section id="experience" className="section-shell bg-muted/20">
+      <div className="section-container">
+        <div className="section-heading">
+          <h2 className="section-title">Experience</h2>
+          <div className="section-line" />
         </div>
 
-        <div className="max-w-3xl mx-auto">
-          <div className="mb-8">
-            <div className="space-y-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="glass-card canva-gradient-soft p-5 sm:p-7 lg:p-8">
+            <div className="space-y-7">
               <div>
-                <h4 className="font-medium">Sr. Software Developer</h4>
-                <p className="text-muted-foreground">FluidFit.ai • July 2025 - Present</p>
-                <p className="my-2 font-medium text-muted-foreground">About Product:</p>
-                <p className="text-base text-muted-foreground">
+                <h4 className="text-lg font-semibold">Sr. Software Developer</h4>
+                <p className="text-sm sm:text-base text-muted-foreground">FluidFit.ai • July 2025 - Present</p>
+                <p className="my-2 text-sm sm:text-base font-medium text-muted-foreground">About Product:</p>
+                <p className="text-sm sm:text-base text-muted-foreground">
                   FluidFit.ai is an AI-powered platform where I own and drive the frontend
                   architecture, building scalable, high-performance web applications that translate
                   product and AI requirements into production-ready user experiences.
@@ -82,7 +80,7 @@ const ExperienceSection = () => {
                     <AccordionContent>
                       {FluidFitExp.map((item, index) => {
                         return (
-                          <p className="mt-2 tracking-wide text-muted-foreground" key={index}>
+                          <p className="mt-2 text-sm sm:text-base tracking-wide text-muted-foreground" key={index}>
                             • {item}
                           </p>
                         );
@@ -91,26 +89,26 @@ const ExperienceSection = () => {
                   </AccordionItem>
                 </Accordion>
 
-                <p className="mt-2 tracking-wide text-muted-foreground flex items-center gap-2">
+                <p className="mt-2 tracking-wide text-sm sm:text-base text-muted-foreground flex flex-wrap items-center gap-2">
                   Tech stack:
-                  <React className="w-h h-4" />
-                  <TypeScript className="w-h h-4" />
-                  <Tailwind className="w-h h-4" />
-                  <Zustand className="w-h h-4" />
-                  <SchadCn className="w-h h-4" />
-                  <Git className="w-h h-4" />
-                  <JavaScript className="w-h h-4" />
+                  <React className="w-4 h-4" />
+                  <TypeScript className="w-4 h-4" />
+                  <Tailwind className="w-4 h-4" />
+                  <Zustand className="w-4 h-4" />
+                  <SchadCn className="w-4 h-4" />
+                  <Git className="w-4 h-4" />
+                  <JavaScript className="w-4 h-4" />
                   etc...
                 </p>
               </div>
               <Separator />
               <div>
-                <h4 className="font-medium">Senior Software Engineer</h4>
-                <p className="text-muted-foreground">
+                <h4 className="text-lg font-semibold">Senior Software Engineer</h4>
+                <p className="text-sm sm:text-base text-muted-foreground">
                   Aventisia • September 2024 - June 2025
                 </p>
-                <p className="my-2 font-medium text-muted-foreground">About Product:</p>
-                <p className="text-base text-muted-foreground">
+                <p className="my-2 text-sm sm:text-base font-medium text-muted-foreground">About Product:</p>
+                <p className="text-sm sm:text-base text-muted-foreground">
                   Grapes Capital is a fintech firm focused on transforming global commerce by
                   providing innovative trade finance solutions. Their platform aims to empower
                   businesses of all sizes to unlock liquidity, mitigate risks, and accelerate growth
@@ -122,7 +120,7 @@ const ExperienceSection = () => {
                     <AccordionContent>
                       {AventisiaExp.map((item, index) => {
                         return (
-                          <p className="mt-2 tracking-wide text-muted-foreground" key={index}>
+                          <p className="mt-2 text-sm sm:text-base tracking-wide text-muted-foreground" key={index}>
                             • {item}
                           </p>
                         );
@@ -131,27 +129,27 @@ const ExperienceSection = () => {
                   </AccordionItem>
                 </Accordion>
 
-                <p className="mt-2 tracking-wide text-muted-foreground flex items-center gap-2">
+                <p className="mt-2 tracking-wide text-sm sm:text-base text-muted-foreground flex flex-wrap items-center gap-2">
                   Tech stack:
-                  <Css className="w-h h-4" />
-                  <Git className="w-h h-4" />
-                  <JavaScript className="w-h h-4" />
-                  <OpenAi className="w-h h-4" />
-                  <PostMan className="w-h h-4" />
-                  <React className="w-h h-4" />
-                  <Tailwind className="w-h h-4" />
-                  <TypeScript className="w-h h-4" />
-                  <SchadCn className="w-h h-4" />
-                  <Zustand className="w-h h-4" />
+                  <Css className="w-4 h-4" />
+                  <Git className="w-4 h-4" />
+                  <JavaScript className="w-4 h-4" />
+                  <OpenAi className="w-4 h-4" />
+                  <PostMan className="w-4 h-4" />
+                  <React className="w-4 h-4" />
+                  <Tailwind className="w-4 h-4" />
+                  <TypeScript className="w-4 h-4" />
+                  <SchadCn className="w-4 h-4" />
+                  <Zustand className="w-4 h-4" />
                   etc...
                 </p>
               </div>
               <Separator />
               <div>
-                <h4 className="font-medium">Software Engineer</h4>
-                <p className="text-muted-foreground">Idexcel • October 2022 - August 2024</p>
-                <p className="my-2 font-medium text-muted-foreground">About Product:</p>
-                <p className="text-muted-foreground">
+                <h4 className="text-lg font-semibold">Software Engineer</h4>
+                <p className="text-sm sm:text-base text-muted-foreground">Idexcel • October 2022 - August 2024</p>
+                <p className="my-2 text-sm sm:text-base font-medium text-muted-foreground">About Product:</p>
+                <p className="text-sm sm:text-base text-muted-foreground">
                   InferIQ is a Generative AI-powered Intelligent Document Processing (IDP) platform
                   developed by Idexcel Inc., designed to automate the extraction and processing of
                   unstructured data from various document types, including PDFs, handwritten forms,
@@ -163,7 +161,7 @@ const ExperienceSection = () => {
                     <AccordionContent>
                       {IdexcelExp.map((item, index) => {
                         return (
-                          <p className="mt-2 tracking-wide text-muted-foreground" key={index}>
+                          <p className="mt-2 text-sm sm:text-base tracking-wide text-muted-foreground" key={index}>
                             • {item}
                           </p>
                         );
@@ -171,30 +169,30 @@ const ExperienceSection = () => {
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
-                <p className="mt-2 tracking-wide text-muted-foreground flex items-center gap-2">
+                <p className="mt-2 tracking-wide text-sm sm:text-base text-muted-foreground flex flex-wrap items-center gap-2">
                   Tech stack:
-                  <React className="w-h h-4" />
-                  <ReduxToolKit className="w-h h-4" />
-                  <Css className="w-h h-4" />
-                  <Bootstrap className="w-h h-4" />
-                  <Git className="w-h h-4" />
-                  <JavaScript className="w-h h-4" />
-                  <OpenAi className="w-h h-4" />
-                  <PostMan className="w-h h-4" /> etc...
+                  <React className="w-4 h-4" />
+                  <ReduxToolKit className="w-4 h-4" />
+                  <Css className="w-4 h-4" />
+                  <Bootstrap className="w-4 h-4" />
+                  <Git className="w-4 h-4" />
+                  <JavaScript className="w-4 h-4" />
+                  <OpenAi className="w-4 h-4" />
+                  <PostMan className="w-4 h-4" /> etc...
                 </p>
               </div>
               <Separator />
               <div>
-                <h4 className="font-medium">Software Engineer Intern</h4>
-                <p className="text-muted-foreground">Test Yantra • April 2022 - October 2022</p>
-                <p className="mt-2 tracking-wide text-muted-foreground flex items-center gap-2">
+                <h4 className="text-lg font-semibold">Software Engineer Intern</h4>
+                <p className="text-sm sm:text-base text-muted-foreground">Test Yantra • April 2022 - October 2022</p>
+                <p className="mt-2 tracking-wide text-sm sm:text-base text-muted-foreground flex flex-wrap items-center gap-2">
                   Tech stack:
-                  <React className="w-h h-4" />
-                  <Css className="w-h h-4" />
-                  <Bootstrap className="w-h h-4" />
-                  <Git className="w-h h-4" />
-                  <JavaScript className="w-h h-4" />
-                  <Node className="w-h h-4" />
+                  <React className="w-4 h-4" />
+                  <Css className="w-4 h-4" />
+                  <Bootstrap className="w-4 h-4" />
+                  <Git className="w-4 h-4" />
+                  <JavaScript className="w-4 h-4" />
+                  <Node className="w-4 h-4" />
                   etc...
                 </p>
               </div>

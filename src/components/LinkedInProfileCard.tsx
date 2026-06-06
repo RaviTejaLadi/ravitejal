@@ -7,17 +7,17 @@ import { contactInfo } from '@/config/contact-config';
 
 export default function LinkedInProfileCard() {
   return (
-    <Card className="overflow-hidden bg-muted/30 m-0">
+    <Card className="overflow-hidden bg-muted/30 m-0 border-primary/20">
       {/* LinkedIn Header */}
-      <CardHeader className="bg-slate-700 py-3">
+      <CardHeader className="canva-gradient py-3">
         <div className="flex items-center gap-2">
           <div className="text-white font-bold text-lg">Linked</div>
-          <div className="bg-blue-600 text-white px-1.5 py-0.5 rounded text-sm font-bold">in</div>
+          <div className="bg-white/20 text-white px-1.5 py-0.5 rounded text-sm font-bold">in</div>
         </div>
       </CardHeader>
 
       {/* Profile Content */}
-      <CardContent className="p-6 bg-inherit space-y-4">
+      <CardContent className="p-4 sm:p-6 bg-inherit space-y-4">
         {/* Profile Picture */}
         <div className="flex justify-start">
           <Avatar className="w-20 h-20">
@@ -26,17 +26,15 @@ export default function LinkedInProfileCard() {
           </Avatar>
         </div>
 
-        {/* Name with Sparkle */}
         <div className="text-start">
-          <h2 className="text-xl font-bold flex items-center text-foreground justify-start gap-2">
-            RAVI TEJA
-            <span className="text-yellow-400">✨</span>
+          <h2 className="text-lg sm:text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            Ravi Teja
           </h2>
         </div>
 
         {/* Job Title and Skills */}
         <div className="text-start space-y-1">
-          <p className="text-sm text-muted-foreground leading-relaxed">
+          <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
             Sr. Software Engineer | 4+ yrs React.js, Next.js | TypeScript, Zustand, Redux, Hooks |
             Node.js, Express, MongoDB | Full-Stack JS Developer
           </p>

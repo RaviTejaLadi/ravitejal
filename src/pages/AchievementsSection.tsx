@@ -1,10 +1,8 @@
-import { Award, ChevronDown, Medal, Trophy } from 'lucide-react';
-import { useState } from 'react';
+import { Award, Medal, Trophy } from 'lucide-react';
+import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card';
 import Certificate from '../assets/Certificate of Appreciation.png';
 
 const AchievementsSection = () => {
-  const [activeAward, setActiveAward] = useState<number | null>(null);
-
   const awards = [
     {
       company: 'Idexcel Technologies Private Limited',
@@ -43,33 +41,28 @@ const AchievementsSection = () => {
     },
   ];
   return (
-    <section id="achievements" className="py-16 px-4 bg-muted/50">
-      <div className="container mx-auto">
-        <div className="flex items-center mb-12">
-          <h2 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-            Achievements
-          </h2>
-          <div className="ml-4 h-px bg-gradient-to-r from-purple-600 to-pink-600/30 flex-grow" />
+    <section id="achievements" className="section-shell bg-muted/20">
+      <div className="section-container">
+        <div className="section-heading">
+          <h2 className="section-title">Achievements</h2>
+          <div className="section-line" />
         </div>
         {awards.map((company, index) => (
           <div key={index} className="mb-8">
-            <h3 className="text-xl font-semibold  mb-4 text-foreground">{company.company}</h3>
+            <h3 className="text-lg sm:text-xl font-semibold mb-4 text-foreground">{company.company}</h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {company.accolades.map((award) => (
                 <div
                   key={award.id}
-                  className="relative overflow-hidden  rounded-lg  transition-all duration-300 border "
+                  className="glass-card canva-gradient-soft relative overflow-hidden transition-all duration-300 hover:-translate-y-0.5"
                 >
-                  <div
-                    className="p-5 cursor-pointer"
-                    onClick={() => setActiveAward(activeAward === award.id ? null : award.id)}
-                  >
+                  <div className="p-4 sm:p-5">
                     <div className="flex justify-between items-start mb-3">
                       <div className="flex items-center gap-3">
                         <div className="p-2  rounded-full">{award.icon}</div>
                         <div>
-                          <h4 className="font-medium text-lg text-foreground">{award.title}</h4>
+                          <h4 className="font-medium text-base sm:text-lg text-foreground">{award.title}</h4>
                         </div>
                       </div>
                       <span className="text-xs font-medium px-2 py-1 rounded-full text-muted-foreground">
@@ -77,27 +70,32 @@ const AchievementsSection = () => {
                       </span>
                     </div>
 
-                    <p className="text-muted-foreground">{award.description}</p>
+                    <p className="text-sm sm:text-base text-muted-foreground">{award.description}</p>
 
                     {award.image && (
-                      <div className="mt-3 text-indigo-600 dark:text-indigo-400 text-sm font-medium flex items-center">
-                        {activeAward === award.id ? 'Hide certificate' : 'View certificate'}
-                        <ChevronDown
-                          className={` w-4 h-4 ml-1 transition-transform ${activeAward === award.id ? 'rotate-180' : ''}`}
-                        />
-                      </div>
+                      <HoverCard openDelay={120} closeDelay={120}>
+                        <HoverCardTrigger asChild>
+                          <button
+                            type="button"
+                            className="mt-3 text-primary text-sm font-medium inline-flex items-center rounded-md transition-colors hover:text-secondary"
+                          >
+                            View certificate
+                          </button>
+                        </HoverCardTrigger>
+                        <HoverCardContent
+                          side="bottom"
+                          align="start"
+                          className="w-[18rem] sm:w-[22rem] border-primary/20 bg-background/95 p-2"
+                        >
+                          <img
+                            src={award.image}
+                            alt={`${award.title} Certificate`}
+                            className="w-full rounded-md shadow-sm"
+                          />
+                        </HoverCardContent>
+                      </HoverCard>
                     )}
                   </div>
-
-                  {activeAward === award.id && award.image && (
-                    <div className="p-4  dark:bg-slate-900 border-t border-border">
-                      <img
-                        src={award.image}
-                        alt={`${award.title} Certificate`}
-                        className="w-full rounded-md shadow-sm"
-                      />
-                    </div>
-                  )}
                 </div>
               ))}
             </div>

@@ -3,13 +3,13 @@ import { Card } from '@/components/ui/card';
 const OpenToWork = () => {
   const renderJsonWithHighlight = () => {
     return (
-      <div className=" text-green-400 p-6 rounded-lg overflow-x-auto font-mono text-sm">
+      <div className="text-green-400 p-4 sm:p-6 rounded-lg overflow-x-auto font-mono text-xs sm:text-sm">
         <div className="whitespace-pre">
           <span className="text-gray-500">{'{'}</span>
           <div className="ml-4">
             <span className="text-blue-400">"name"</span>
             <span className="text-white">: </span>
-            <span className="text-yellow-300">"Ravi Teja 👨‍💻"</span>
+            <span className="text-yellow-300">"Ravi Teja"</span>
             <span className="text-white">,</span>
           </div>
           <div className="ml-4">
@@ -23,15 +23,15 @@ const OpenToWork = () => {
             <span className="text-white">: </span>
             <span className="text-gray-500">[</span>
             <div className="ml-4">
-              <span className="text-yellow-300">"React Developer ⚛️"</span>
+              <span className="text-yellow-300">"Senior Frontend Engineer"</span>
               <span className="text-white">,</span>
             </div>
             <div className="ml-4">
-              <span className="text-yellow-300">"Frontend Developer 🌐"</span>
+              <span className="text-yellow-300">"React Developer"</span>
               <span className="text-white">,</span>
             </div>
             <div className="ml-4">
-              <span className="text-yellow-300">"Senior Frontend Developer 🚀"</span>
+              <span className="text-yellow-300">"Frontend Developer"</span>
             </div>
             <span className="text-gray-500">]</span>
             <span className="text-white">,</span>
@@ -41,15 +41,15 @@ const OpenToWork = () => {
             <span className="text-white">: </span>
             <span className="text-gray-500">[</span>
             <div className="ml-4">
-              <span className="text-yellow-300">"Bengaluru 🏙️"</span>
+              <span className="text-yellow-300">"Bengaluru"</span>
               <span className="text-white">,</span>
             </div>
             <div className="ml-4">
-              <span className="text-yellow-300">"Hyderabad 🌆"</span>
+              <span className="text-yellow-300">"Hyderabad"</span>
               <span className="text-white">,</span>
             </div>
             <div className="ml-4">
-              <span className="text-yellow-300">"Vishakapatanam 🌊"</span>
+              <span className="text-yellow-300">"Visakhapatnam"</span>
             </div>
             <span className="text-gray-500">]</span>
             <span className="text-white">,</span>
@@ -57,13 +57,13 @@ const OpenToWork = () => {
           <div className="ml-4">
             <span className="text-blue-400">"employmentType"</span>
             <span className="text-white">: </span>
-            <span className="text-yellow-300">"Full Time 🕒"</span>
+            <span className="text-yellow-300">"Full-time"</span>
             <span className="text-white">,</span>
           </div>
           <div className="ml-4">
             <span className="text-blue-400">"startDate"</span>
             <span className="text-white">: </span>
-            <span className="text-yellow-300">"Immediately, I am actively applying 📩"</span>
+            <span className="text-yellow-300">"Immediate"</span>
           </div>
           <span className="text-gray-500">{'}'}</span>
         </div>
@@ -72,16 +72,14 @@ const OpenToWork = () => {
   };
 
   return (
-    <section className="py-12 md:py-28 px-4 bg-muted/30">
-      <div className="container mx-auto">
-        <div className="flex items-center mb-12">
-          <h2 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-            Open To Work
-          </h2>
-          <div className="ml-4 h-px bg-gradient-to-r from-purple-600 to-pink-600/30 flex-grow" />
+    <section className="section-shell">
+      <div className="section-container">
+        <div className="section-heading">
+          <h2 className="section-title">Open To Work</h2>
+          <div className="section-line" />
         </div>
 
-        <Card className="bg-inherit w-1/2 mx-auto">{renderJsonWithHighlight()}</Card>
+        <Card className="glass-card bg-slate-950 max-w-3xl mx-auto w-full">{renderJsonWithHighlight()}</Card>
       </div>
     </section>
   );

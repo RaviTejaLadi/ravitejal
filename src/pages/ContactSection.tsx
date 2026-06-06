@@ -1,98 +1,117 @@
 import LinkedInProfileCard from '@/components/LinkedInProfileCard';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card';
+import { Button } from '@/components/ui/button';
 import { contactInfo } from '@/config/contact-config';
 import { Mail, Phone, Github, Linkedin } from 'lucide-react';
 
 const ContactSection = () => {
+  const cardClassName =
+    'glass-card flex items-center p-4 sm:p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10';
+
   return (
-    <section id="contact-info" className="py-12 md:py-28 px-4 bg-muted/30">
-      <div className="container mx-auto ">
-        <div className="flex items-center mb-12">
-          <h2 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-            Contact Information
-          </h2>
-          <div className="ml-4 h-px bg-gradient-to-r from-purple-600 to-pink-600/30 flex-grow" />
+    <section id="contact-info" className="section-shell">
+      <div className="section-container">
+        <div className="section-heading">
+          <h2 className="section-title">Contact Information</h2>
+          <div className="section-line" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Email */}
+        <div className="mb-6 rounded-xl border border-primary/20 bg-primary/5 px-4 py-3 sm:px-5 sm:py-4">
+          <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+            Open to full-time frontend opportunities and impactful product teams. Reach out through
+            email, phone, LinkedIn, or GitHub.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
           <div className="group">
             <a
               href={`mailto:${contactInfo.email}`}
-              className="flex items-center p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-border"
+              className={cardClassName}
             >
-              <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg mr-4 group-hover:scale-110 transition-transform">
-                <Mail className="w-6 h-6 text-[--icon-color]" />
+              <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 canva-gradient rounded-lg mr-4 group-hover:scale-110 transition-transform">
+                <Mail className="w-6 h-6 text-white" />
               </div>
               <div>
                 <h3 className="font-semibold text-muted-foreground mb-1">Email</h3>
-                <p className="text-purple-600 hover:text-purple-700 hover:underline transition-colors">
+                <p className="text-sm sm:text-base text-primary hover:text-secondary hover:underline transition-colors break-all">
                   {contactInfo.email}
                 </p>
               </div>
             </a>
           </div>
 
-          {/* Phone */}
           <div className="group">
             <a
               href={`tel:+91${contactInfo.phone}`}
-              className="flex items-center p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-border"
+              className={cardClassName}
             >
-              <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg mr-4 group-hover:scale-110 transition-transform">
-                <Phone className="w-6 h-6 text-[--icon-color]" />
+              <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 canva-gradient rounded-lg mr-4 group-hover:scale-110 transition-transform">
+                <Phone className="w-6 h-6 text-white" />
               </div>
               <div>
                 <h3 className="font-semibold text-muted-foreground mb-1">Phone</h3>
-                <p className="text-purple-600 hover:text-purple-700 hover:underline transition-colors">
+                <p className="text-sm sm:text-base text-primary hover:text-secondary hover:underline transition-colors">
                   +91 {contactInfo.phone}
                 </p>
               </div>
             </a>
           </div>
 
-          {/* LinkedIn */}
-          <Popover>
-            <PopoverTrigger>
+          <HoverCard openDelay={120} closeDelay={120}>
+            <HoverCardTrigger asChild>
               <div className="group">
-                <div className="flex items-center p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-border">
-                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg mr-4 group-hover:scale-110 transition-transform">
-                    <Linkedin className="w-6 h-6 text-[--icon-color]" />
+                <div className={cardClassName}>
+                  <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 canva-gradient rounded-lg mr-4 group-hover:scale-110 transition-transform">
+                    <Linkedin className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-muted-foreground mb-1">LinkedIn</h3>
-
-                    <p className="text-purple-600 hover:text-purple-700 hover:underline transition-colors">
+                    <p className="text-primary hover:text-secondary hover:underline transition-colors">
                       View Profile
                     </p>
                   </div>
                 </div>
-              </div>{' '}
-            </PopoverTrigger>
-            <PopoverContent className="bg-muted border-none p-0 w-[30rem]">
+              </div>
+            </HoverCardTrigger>
+            <HoverCardContent
+              side="bottom"
+              align="start"
+              className="bg-muted border-none p-0 w-[calc(100vw-2rem)] max-w-[30rem]"
+            >
               <LinkedInProfileCard />
-            </PopoverContent>
-          </Popover>
+            </HoverCardContent>
+          </HoverCard>
 
-          {/* GitHub */}
           <div className="group">
             <a
               href={contactInfo.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-border"
+              className={cardClassName}
             >
-              <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg mr-4 group-hover:scale-110 transition-transform">
-                <Github className="w-6 h-6 text-[--icon-color]" />
+              <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 canva-gradient rounded-lg mr-4 group-hover:scale-110 transition-transform">
+                <Github className="w-6 h-6 text-white" />
               </div>
               <div>
                 <h3 className="font-semibold text-muted-foreground mb-1">GitHub</h3>
-                <p className="text-purple-600 hover:text-purple-700 hover:underline transition-colors">
+                <p className="text-sm sm:text-base text-primary hover:text-secondary hover:underline transition-colors">
                   View Repositories
                 </p>
               </div>
             </a>
           </div>
+        </div>
+
+        <div className="mt-6 flex flex-wrap items-center gap-3">
+          <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
+            <a href={`mailto:${contactInfo.email}`}>Hire Me</a>
+          </Button>
+          <Button asChild variant="outline">
+            <a href={contactInfo.LinkedIn} target="_blank" rel="noopener noreferrer">
+              Connect on LinkedIn
+            </a>
+          </Button>
         </div>
       </div>
     </section>

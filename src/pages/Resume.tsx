@@ -36,22 +36,22 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
   // Define icon colors for different sections
   const iconColors = {
     contact: {
-      phone: '#4f46e5', // indigo
-      mail: '#0ea5e9', // sky blue
+      phone: '#3969e7',
+      mail: '#00c4cc',
       linkedin: '#0077b5', // linkedin blue
-      github: '#6366f1', // purple
+      github: '#7d2ae7',
     },
     skills: {
-      technical: '#ec4899', // pink
-      soft: '#8b5cf6', // violet
+      technical: '#3969e7',
+      soft: '#7d2ae7',
     },
     sections: {
-      languages: '#f59e0b', // amber
-      achievements: '#10b981', // emerald
-      summary: '#3b82f6', // blue
-      work: '#ef4444', // red
-      education: '#0d9488', // teal
-      projects: '#f97316', // orange
+      languages: '#00c4cc',
+      achievements: '#7d2ae7',
+      summary: '#3969e7',
+      work: '#7d2ae7',
+      education: '#00c4cc',
+      projects: '#3969e7',
     },
   };
 
@@ -66,20 +66,16 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
   };
 
   return (
-    <section id="resume" className="py-12 md:py-28 px-4 bg-muted/30">
-      <div className="container mx-auto">
-        <div className="flex items-center mb-12">
-          <h2 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-            Resume
-          </h2>
-          <div className="ml-4 h-px bg-gradient-to-r from-purple-600 to-pink-600/30 flex-grow" />
+    <section id="resume" className="section-shell bg-muted/20">
+      <div className="section-container">
+        <div className="section-heading">
+          <h2 className="section-title">Resume</h2>
+          <div className="section-line" />
         </div>
-        <div className="container mx-auto my-4 rounded-md  flex flex-col lg:flex-row">
-          {/* Sidebar - Hidden on mobile unless toggled, Visible on large screens */}
+        <div className="my-4 rounded-md flex flex-col lg:flex-row gap-4">
           <div
-            className={` lg:block w-full lg:w-1/3 bg-background p-4 md:p-8 shadow-lg space-y-6 rounded-lg lg:rounded-l-lg lg:rounded-r-none`}
+            className={`glass-card canva-gradient-soft lg:block w-full lg:w-1/3 p-4 md:p-7 space-y-6 rounded-lg lg:rounded-l-lg lg:rounded-r-none`}
           >
-            {/* Header Section */}
             <div className="text-center">
               <h1 className="text-2xl md:text-3xl font-bold text-foreground">
                 {personalInfo.fullName}
@@ -88,7 +84,6 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
               <p className="text-sm md:text-base text-muted-foreground">{personalInfo.location}</p>
             </div>
 
-            {/* Contact Information */}
             <div className="space-y-2">
               <div className="flex items-center text-muted-foreground text-sm md:text-base">
                 <Phone
@@ -105,7 +100,7 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
                 <span className="break-all">{contact.email}</span>
               </div>
               {contact.linkedin && (
-                <div className="flex items-center text-muted-foreground text-sm md:text-base hover:text-purple-500 hover:underline hover:underline-offset-2">
+                <div className="flex items-center text-muted-foreground text-sm md:text-base hover:text-sky-500 hover:underline hover:underline-offset-2">
                   <Linkedin
                     className="mr-2 w-4 h-4 flex-shrink-0"
                     style={{ color: iconColors.contact.linkedin }}
@@ -121,7 +116,7 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
                 </div>
               )}
               {contact.github && (
-                <div className="flex items-center text-muted-foreground text-sm md:text-base hover:text-purple-500 hover:underline hover:underline-offset-2">
+                <div className="flex items-center text-muted-foreground text-sm md:text-base hover:text-sky-500 hover:underline hover:underline-offset-2">
                   <Github
                     className="mr-2 w-4 h-4 flex-shrink-0"
                     style={{ color: iconColors.contact.github }}
@@ -138,7 +133,6 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
               )}
             </div>
 
-            {/* Skills Section */}
             <div>
               <h2 className="text-lg md:text-xl font-semibold text-foreground flex items-center mb-4">
                 <Code
@@ -217,8 +211,7 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
           </div>
 
           {/* Main Content */}
-          <div className="w-full lg:w-2/3 p-4 md:p-8 space-y-6 bg-background rounded-b-lg shadow-lg lg:rounded-l-none lg:rounded-r-lg overflow-y-auto">
-            {/* Summary */}
+          <div className="glass-card canva-gradient-soft w-full lg:w-2/3 p-4 md:p-7 space-y-6 rounded-b-lg lg:rounded-l-none lg:rounded-r-lg overflow-y-auto">
             <section>
               <h2 className="text-xl md:text-2xl font-semibold text-foreground flex items-center mb-4">
                 <Target
@@ -230,7 +223,6 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
               <p className="text-sm md:text-base text-muted-foreground">{personalInfo.summary}</p>
             </section>
 
-            {/* Work Experience */}
             <section>
               <h2 className="text-xl md:text-2xl font-semibold text-foreground flex items-center mb-4">
                 <Rocket
@@ -256,7 +248,6 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
               ))}
             </section>
 
-            {/* Education */}
             <section>
               <h2 className="text-xl md:text-2xl font-semibold text-foreground flex items-center mb-4">
                 <Book
@@ -278,7 +269,6 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
               ))}
             </section>
 
-            {/* Projects */}
             <section>
               <h2 className="text-xl md:text-2xl font-semibold text-foreground flex items-center mb-4">
                 <Star

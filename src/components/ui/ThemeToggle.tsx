@@ -10,7 +10,7 @@ export const ThemeToggle: React.FC = () => {
     <Button
       variant="ghost"
       onClick={toggleTheme}
-      className="rounded-full"
+      className="rounded-full border border-border/50 bg-background/40 backdrop-blur-sm hover:bg-accent"
       aria-label="Toggle theme"
     >
       {theme === 'light' ? (

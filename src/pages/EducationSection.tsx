@@ -18,20 +18,18 @@ const education = [
 
 const EducationSection = () => {
   return (
-    <section id="eud" className="py-16 px-4 bg-muted/50">
-      <div className="container mx-auto">
-        <div className="flex items-center mb-12">
-          <h2 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-            Education
-          </h2>
-          <div className="ml-4 h-px bg-gradient-to-r from-purple-600 to-pink-600/30 flex-grow" />
+    <section id="education" className="section-shell">
+      <div className="section-container">
+        <div className="section-heading">
+          <h2 className="section-title">Education</h2>
+          <div className="section-line" />
         </div>
 
-        <div className="max-w-3xl mx-auto space-y-6">
+        <div className="max-w-4xl mx-auto space-y-4">
           {education.map((item) => (
-            <div key={item.institution}>
-              <h4 className="font-medium">{item.degree}</h4>
-              <p className="text-muted-foreground">
+            <div key={item.institution} className="glass-card p-4 sm:p-5">
+              <h4 className="text-base sm:text-lg font-semibold">{item.degree}</h4>
+              <p className="text-sm sm:text-base text-muted-foreground">
                 {item.institution} • {item.duration}
               </p>
             </div>

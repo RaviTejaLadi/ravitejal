@@ -5,19 +5,21 @@ import { technoConfig } from '@/config/techno-config';
 
 const TechnologiesSection = () => {
   return (
-    <section id="about" className="py-28 px-4 bg-muted/50">
-      <div className=" container mx-auto">
-        <div className="flex items-center mb-12">
-          <h2 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-            {technoConfig.title}
-          </h2>
-          <div className="ml-4 h-px bg-gradient-to-r from-purple-600 to-pink-600/30 flex-grow" />
+    <section id="technologies" className="section-shell bg-muted/20">
+      <div className="section-container">
+        <div className="section-heading">
+          <h2 className="section-title">{technoConfig.title}</h2>
+          <div className="section-line" />
         </div>
-        <Separator className="h-[0.5px] mb-8" />
+        <Separator className="h-px mb-6 bg-gradient-to-r from-primary/30 via-secondary/30 to-transparent" />
         <Tabs defaultValue="mostUsed" className="w-full">
-          <TabsList className="w-full">
+          <TabsList className="w-full grid grid-cols-2 md:grid-cols-4 h-auto gap-2 bg-transparent p-0">
             {technoConfig.tabTriggers.map((tab) => (
-              <TabsTrigger value={tab.value} key={tab.value} className="w-full ">
+              <TabsTrigger
+                value={tab.value}
+                key={tab.value}
+                className="w-full rounded-md border border-border bg-card/90 px-3 py-2 text-xs sm:text-sm data-[state=active]:canva-gradient data-[state=active]:text-white"
+              >
                 {tab.label}
               </TabsTrigger>
             ))}
@@ -26,16 +28,16 @@ const TechnologiesSection = () => {
             <TabsContent
               value={tab.value}
               key={tab.value}
-              className="w-full border rounded-md overflow-x-auto p-10"
+              className="glass-card canva-gradient-soft w-full p-4 sm:p-6 md:p-8 mt-4"
             >
-              <p className="text-muted-foreground mb-5">{tab.label}</p>
-              <div className="flex items-center flex-wrap gap-4 justify-start">
+              <p className="text-sm sm:text-base text-muted-foreground mb-4">{tab.label}</p>
+              <div className="grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-8 gap-3 sm:gap-4">
                 {tab.content.map((content) => (
-                  <div key={content.tooltip}>
+                  <div key={content.tooltip} className="flex justify-center">
                     <Tooltip>
                       <TooltipTrigger>
-                        <div className="border p-2 rounded-md hover:border-green-400">
-                          <content.icon className="w-12 h-12" />
+                        <div className="rounded-xl border border-border/80 bg-background/85 p-2 sm:p-3 transition-all hover:-translate-y-0.5 hover:border-primary/60 hover:shadow-md hover:shadow-primary/20">
+                          <content.icon className="w-8 h-8 sm:w-10 sm:h-10" />
                         </div>
                       </TooltipTrigger>
                       <TooltipContent>
