@@ -14,7 +14,7 @@ const NavBar = () => {
           <span className="text-2xl font-bold text-primary tracking-wide">
             <a
               className="badge-base__link LI-simple-link"
-              href="https://in.linkedin.com/in/ravi-teja-%E2%9C%A8-2a2989145?trk=profile-badge"
+              href="https://www.linkedin.com/in/ravi-teja-ladi/"
             >
               {navConfig.user}
             </a>

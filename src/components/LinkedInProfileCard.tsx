@@ -37,15 +37,15 @@ export default function LinkedInProfileCard() {
         {/* Job Title and Skills */}
         <div className="text-start space-y-1">
           <p className="text-sm text-muted-foreground leading-relaxed">
-            Software Engineer | 3+ yrs ReactJs | Zustand, Redux, Hooks | NodeJs, Express, MongoDB |
-            Full-Stack JS Developer
+            Sr. Software Engineer | 4+ yrs React.js, Next.js | TypeScript, Zustand, Redux, Hooks |
+            Node.js, Express, MongoDB | Full-Stack JS Developer
           </p>
         </div>
 
         {/* Education */}
         <div className="text-start">
           <p className="text-sm text-muted-foreground">
-            Aventisia | Centurion University of Technology and Management
+            FluidFit.ai | Centurion University of Technology and Management
           </p>
         </div>
 

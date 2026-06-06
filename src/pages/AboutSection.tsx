@@ -11,7 +11,7 @@ const AboutSection = () => {
     window.location.href = 'https://github.com/RaviTejaLadi';
   };
   const handleLinkedIn = () => {
-    window.location.href = 'https://www.linkedin.com/in/ravi-teja-2a2989145/';
+    window.location.href = 'https://www.linkedin.com/in/ravi-teja-ladi/';
   };
   return (
     <section id="about" className="py-28 px-4 bg-muted/50">
@@ -34,7 +34,8 @@ const AboutSection = () => {
             <div className="text-center">
               <h3 className="text-2xl font-semibold mb-1">{aboutConfig.userName}</h3>
               <p className="text-lg text-muted-foreground mb-1">{aboutConfig.designation}</p>
-              <p className="text-sm md:text-base text-muted-foreground">Bangalore/Hyderabad</p>
+              <p className="text-sm text-muted-foreground mb-1">@ {aboutConfig.company}</p>
+              <p className="text-sm md:text-base text-muted-foreground">{aboutConfig.location}</p>
             </div>
             <div className="flex gap-3">
               <div className="flex items-center justify-center  bg-gradient-to-r from-purple-500 to-pink-300 rounded-lg mr-4 group-hover:scale-110 transition-transform">
@@ -50,14 +51,20 @@ const AboutSection = () => {
             </div>
           </div>
           <div className="flex-1">
-            <div className="flex flex-col gap-4 items-center">
-              <div>
-                {aboutConfig.description.map((desc, index) => (
-                  <p className="text-lg tracking-wide mb-4" key={index}>
-                    {desc}
-                  </p>
+            <div className="flex flex-col gap-5 items-start max-w-xl mx-auto md:mx-0">
+              <p className="text-lg tracking-wide text-foreground leading-relaxed">{aboutConfig.intro}</p>
+              {aboutConfig.paragraphs.map((paragraph) => (
+                <p key={paragraph} className="text-base text-muted-foreground tracking-wide leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
+              <ul className="space-y-2.5 pt-1">
+                {aboutConfig.highlights.map((item) => (
+                  <li key={item} className="text-base text-muted-foreground tracking-wide">
+                    {item}
+                  </li>
                 ))}
-              </div>
+              </ul>
               <div>
                 <a
                   href="#resume"

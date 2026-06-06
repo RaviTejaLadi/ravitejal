@@ -1,11 +1,20 @@
 export const aboutConfig = {
   userName: 'Ravi Teja ✨',
-  designation: '🚀 Senior Software Developer',
-  company: 'Aventisia Technologies Pvt Ltd',
+  designation: '🚀 Sr. Software Engineer',
+  company: 'FluidFit.ai',
+  location: '📍 Bengaluru, Karnataka, India',
   title: 'About Me',
-  description: [
-    'I’m a React JS Senior Software Developer 👨‍💻 with 3+ years of experience ⏳, passionate about web development 🌐 and crafting innovative 💡, efficient ⚡ solutions. I’ve built projects that push boundaries 🚀.',
-    'As a dedicated React.js developer ⚛️, I specialize in building dynamic 🔄, responsive 📱, and user-friendly 🤝 interfaces. I’m skilled at translating complex designs 🎨 into scalable 📈, modular applications while collaborating effectively with cross-functional teams 🤝.',
-    'I have a strong foundation in JavaScript 📜, HTML 📝, and CSS 🎨, and I’m committed to continuous learning 📚 and staying current with industry trends 📈. A natural problem-solver 🧠, I focus on clean 🧹, efficient ⚡ code and thrive in collaborative environments 🤝.',
+  intro:
+    '👨‍💻 Full-stack JS developer with 4+ years of experience building fast, scalable, and user-centric web applications.',
+  paragraphs: [
+    'Currently at FluidFit.ai 🚀, where I own the frontend architecture — designing complex UI workflows, optimizing performance, and shipping production-ready components with React, TypeScript, and modern tooling.',
+    '🎓 B.Tech in Mechanical Engineering from Centurion University — successfully transitioned into software engineering. I collaborate closely with cross-functional teams, solve hard frontend problems, and contribute to open-source projects that support the developer community.',
+  ],
+  highlights: [
+    '🏗️ Frontend architecture, performance & scalability',
+    '⚛️ React · Next.js · TypeScript · Zustand · Redux',
+    '🛠️ Node.js · Express · MongoDB · Tailwind · shadcn/ui',
+    '🤝 End-to-end delivery with product, backend & AI teams',
+    '🌐 Open-source contributor · clean code · code reviews',
   ],
 };

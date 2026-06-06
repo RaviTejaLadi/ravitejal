@@ -29,7 +29,8 @@ export interface Project {
 export interface Education {
   degree: string;
   university: string;
-  yearOfCompletion: number;
+  yearOfCompletion?: number;
+  duration?: string;
 }
 
 export interface Achievements {
@@ -57,6 +58,7 @@ export interface ResumeConfig {
   projects: Project[];
   education: Education[];
   Achievements?: Achievements[];
+  certifications?: string[];
   openSourceContributions?: OpenSourceContribution[];
   languages?: { language: string; proficiency: string }[];
   additionalInfo?: {
@@ -68,33 +70,37 @@ export interface ResumeConfig {
 export const resumeConfig: ResumeConfig = {
   personalInfo: {
     fullName: 'Ravi Teja Ladi',
-    title: 'Senior Software Developer (React JS)',
-    location: 'India',
-    summary: `React JS Senior Software Developer with more than 3 years of experience and specializing in modern web development,
-     with a strong focus on building scalable and efficient front-end applications using React.js.
-      Proven expertise in crafting intuitive user interfaces, implementing responsive design principles,
-       Adept in JavaScript, TypeScript, and associated frameworks, with hands-on experience in state management (zustand, Redux-toolkit, Context API), routing (React Router), and performance optimization. Demonstrated ability to collaborate across teams, solve complex technical problems, and deliver high-quality software solutions aligned with business goals.`,
+    title:
+      'Sr. Software Engineer | 4+ yrs React.js, Next.js | TypeScript, Zustand, Redux, Hooks | Node.js, Express, MongoDB | Full-Stack JS Developer',
+    location: 'Bengaluru, Karnataka, India',
+    summary: `Passionate software engineer specializing in scalable front-end solutions with JavaScript, React.js, and Node.js to deliver seamless user experiences. I worked closely with cross-functional teams to enhance application maintainability, drive high-performance outcomes, and meet project goals. With a Bachelor of Technology in Mechanical Engineering from Centurion University, I successfully transitioned into software engineering to create impactful digital solutions. I bring strong expertise in modern frameworks like React.js and Node.js, with a focus on problem-solving, team collaboration, and building user-centric applications. I'm passionate about fostering teamwork and delivering meaningful digital experiences.`,
   },
   contact: {
     phone: '+91 8847819634',
     email: 'ladi.ravi884781@gmail.com',
-    linkedin: 'https://www.linkedin.com/in/ravi-teja-2a2989145/',
+    linkedin: 'https://www.linkedin.com/in/ravi-teja-ladi/',
     github: 'https://github.com/RaviTejaLadi',
+    portfolio: 'https://ravitejaladi.vercel.app/',
   },
   skills: [
-    // Technical Skills
-    { name: 'TypeScript', category: 'Technical' },
     { name: 'JavaScript', category: 'Technical' },
+    { name: 'TypeScript', category: 'Technical' },
     { name: 'React', category: 'Technical' },
-    { name: 'Tailwind', category: 'Technical' },
-    { name: 'Node js', category: 'Technical' },
-    { name: 'Express js', category: 'Technical' },
-    { name: 'Mongo DB', category: 'Technical' },
-    { name: 'Vs Code', category: 'Technical' },
+    { name: 'Next.js', category: 'Technical' },
+    { name: 'Node.js', category: 'Technical' },
+    { name: 'Express', category: 'Technical' },
+    { name: 'MongoDB', category: 'Technical' },
+    { name: 'Tailwind CSS', category: 'Technical' },
+    { name: 'React Flow', category: 'Technical' },
+    { name: 'shadcn/ui', category: 'Technical' },
+    { name: 'React Query', category: 'Technical' },
+    { name: 'Material UI', category: 'Technical' },
+    { name: 'PWAs', category: 'Technical' },
+    { name: 'Web Interface Design', category: 'Technical' },
+    { name: 'Front-End Design', category: 'Technical' },
     { name: 'Git', category: 'Technical' },
     { name: 'GitHub', category: 'Technical' },
 
-    // Soft Skills
     { name: 'Problem Solving', category: 'Soft' },
     { name: 'Team Collaboration', category: 'Soft' },
     { name: 'Communication', category: 'Soft' },
@@ -102,32 +108,55 @@ export const resumeConfig: ResumeConfig = {
   ],
   workExperience: [
     {
-      company: 'Aventisia Technologies Private Limited',
-      title: 'Senior Software Developer',
-      duration: 'Sep 2024 - Present',
+      company: 'FluidFit.ai',
+      title: 'Sr. Software Developer',
+      duration: 'July 2025 - Present',
+      responsibilities: [
+        'Own and drive the frontend architecture at FluidFit.ai, building scalable, high-performance web applications.',
+        'Own the entire frontend codebase architecture, performance, scalability, and maintainability.',
+        'Design and build complex UI workflows using React.js, TypeScript, and modern frontend tooling.',
+        'Translate product and AI requirements into clean, reusable, production-ready components.',
+        'Optimize rendering, state management, and bundle size for real-world performance.',
+        'Collaborate directly with backend, AI, and product teams to ship features end-to-end.',
+        'Lead frontend decisions, set coding standards, and fix hard problems — performance bottlenecks, rendering issues, and edge cases.',
+        "Take responsibility for how the product feels, performs, and scales as the company grows.",
+      ],
+    },
+    {
+      company: 'Aventisia',
+      title: 'Senior Software Engineer',
+      duration: 'September 2024 - June 2025',
       responsibilities: [
         'Led the development of a digital trade financing platform, enabling seamless transactions between stakeholders in short-term trade finance.',
         'The project architecture follows a micro-frontend approach, where each feature is developed and deployed as an independent micro-frontend.',
         'Owned 90% of the frontend responsibilities, including new feature development, enhancements, and bug fixes.',
-        'Built and maintained key features such as user authentication, interactive dashboards, data-driven UI components and core features like trade, trade partner, etc...',
+        'Built and maintained key features such as user authentication, interactive dashboards, and data-driven UI components and core features like trade, trade partner, etc.',
         'Collaborated closely with cross-functional teams (backend and design) to define, design, and deliver high-quality features.',
         'Integrated RESTful APIs and third-party libraries to enhance platform functionality and streamline the user experience.',
         'Established and enforced frontend coding standards, implemented best practices, and led code review processes to ensure code quality and maintainability.',
       ],
     },
     {
-      company: 'Idexcel Technologies Private Limited',
-      title: 'Software Developer',
-      duration: 'Oct 2022 - Aug 2024',
+      company: 'Idexcel',
+      title: 'Software Engineer',
+      duration: 'October 2022 - August 2024',
       responsibilities: [
-        'Created responsive web applications using React and JavaScript',
+        'Created responsive web applications using React and JavaScript.',
         'Managed multiple environments (dev, test, demo, sandbox) for InferIQ, ensuring smooth deployment across all development stages.',
-        'Developed high-performance services including Extraction, Bank statement analysis, and Financial statement processing, achieving 90% improvement in speed and performance.',
+        'Developed high-performance services, including Extraction, Bank Statement Analysis, and Financial Statement Processing, achieving a 90% improvement in speed and performance.',
         'Handled 98% of frontend work, including enhancements and bug fixes.',
-        'Collaborated with cross-functional teams to define, design, and ship new features',
-        'Implemented state management solutions with Redux-toolkit and Zustand',
-        'Worked with RESTful APIs and integrated third-party libraries',
-        'Established coding standards, best practices, and code review processes',
+        'Collaborated with cross-functional teams to define, design, and ship new features.',
+        'Implemented state management solutions using Redux Toolkit and Zustand.',
+        'Worked with RESTful APIs and integrated third-party libraries.',
+        'Established coding standards, best practices, and led code review processes.',
+      ],
+    },
+    {
+      company: 'Test Yantra',
+      title: 'Software Engineer Intern',
+      duration: 'April 2022 - October 2022',
+      responsibilities: [
+        'Completed MERN stack internship and training, building foundational full-stack development skills.',
       ],
     },
   ],
@@ -145,9 +174,20 @@ export const resumeConfig: ResumeConfig = {
   ],
   education: [
     {
-      degree: 'B.Tech in Mechanical Engineering',
+      degree: 'Bachelor of Technology, Mechanical Engineering',
       university: 'Centurion University of Technology and Management',
       yearOfCompletion: 2020,
+      duration: 'June 2016 - April 2020',
+    },
+    {
+      degree: '+2, MPC',
+      university: 'Sri Chaitanya Junior College',
+      duration: '2015 - 2016',
+    },
+    {
+      degree: '4th Class to 10th Class',
+      university: 'Alluri Sita Ramaraju Public School, Araku Valley',
+      duration: '2008 - 2014',
     },
   ],
   Achievements: [
@@ -167,9 +207,10 @@ export const resumeConfig: ResumeConfig = {
       year: 2025,
     },
   ],
+  certifications: ['NamasteDev Node.js', 'MERN Stack', 'OWASP Proactive Controls'],
   languages: [
-    { language: 'English', proficiency: 'Full Professional Proficiency' },
-    { language: 'Hindi', proficiency: 'Speak' },
-    { language: 'Telegu', proficiency: 'Native' },
+    { language: 'Telugu', proficiency: 'Full Professional' },
+    { language: 'Hindi', proficiency: 'Professional Working' },
+    { language: 'English', proficiency: 'Professional Working' },
   ],
 };

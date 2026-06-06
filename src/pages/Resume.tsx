@@ -29,6 +29,7 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
     projects,
     education,
     Achievements,
+    certifications,
     languages,
   } = config;
 
@@ -84,7 +85,7 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
                 {personalInfo.fullName}
               </h1>
               <p className="text-sm md:text-base text-muted-foreground">{personalInfo.title}</p>
-              <p className="text-sm md:text-base text-muted-foreground">Bangalore/Hyderabad</p>
+              <p className="text-sm md:text-base text-muted-foreground">{personalInfo.location}</p>
             </div>
 
             {/* Contact Information */}
@@ -194,6 +195,24 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
                   ))}
                 </section>
               )}
+              {certifications && certifications.length > 0 && (
+                <section>
+                  <h2 className="text-xl md:text-2xl font-semibold text-foreground flex items-center mt-4 mb-4">
+                    <Award
+                      className="mr-2 flex-shrink-0"
+                      style={{ color: iconColors.sections.achievements }}
+                    />{' '}
+                    Certifications
+                  </h2>
+                  <div className="flex flex-wrap gap-2">
+                    {certifications.map((cert) => (
+                      <Badge key={cert} variant="outline" className="mb-2">
+                        {cert}
+                      </Badge>
+                    ))}
+                  </div>
+                </section>
+              )}
             </div>
           </div>
 
@@ -252,7 +271,8 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
                     {edu.degree}
                   </h3>
                   <p className="text-sm md:text-base text-muted-foreground">
-                    {edu.university} | {edu.yearOfCompletion}
+                    {edu.university}
+                    {edu.duration ? ` | ${edu.duration}` : edu.yearOfCompletion ? ` | ${edu.yearOfCompletion}` : ''}
                   </p>
                 </div>
               ))}
