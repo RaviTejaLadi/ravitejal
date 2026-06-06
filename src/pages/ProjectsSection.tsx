@@ -103,7 +103,11 @@ const ProjectsSection = () => {
 
                     <div className="flex flex-wrap gap-2 pt-2">
                       {project.tags.map((tag, tagIndex) => (
-                        <Badge key={tagIndex} variant={'outline'} className="border-primary/30 bg-primary/5">
+                        <Badge
+                          key={tagIndex}
+                          variant={'outline'}
+                          className="border-primary/30 bg-primary/5"
+                        >
                           {tag}
                         </Badge>
                       ))}
