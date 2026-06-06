@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { buttonVariants } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import profilePic from '../assets/avatar1.jpg';
+const profilePic = '/images/avatar.webp';
 import { cn } from '@/lib/utils';
 import { contactInfo } from '@/config/contact-config';
 

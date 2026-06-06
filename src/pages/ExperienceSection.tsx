@@ -66,7 +66,7 @@ const ExperienceSection = () => {
           <div className="glass-card canva-gradient-soft p-5 sm:p-7 lg:p-8">
             <div className="space-y-7">
               <div>
-                <h4 className="text-lg font-semibold">Sr. Software Developer</h4>
+                <h3 className="text-lg font-semibold">Sr. Software Developer</h3>
                 <p className="text-sm sm:text-base text-muted-foreground">FluidFit.ai • July 2025 - Present</p>
                 <p className="my-2 text-sm sm:text-base font-medium text-muted-foreground">About Product:</p>
                 <p className="text-sm sm:text-base text-muted-foreground">
@@ -103,7 +103,7 @@ const ExperienceSection = () => {
               </div>
               <Separator />
               <div>
-                <h4 className="text-lg font-semibold">Senior Software Engineer</h4>
+                <h3 className="text-lg font-semibold">Senior Software Engineer</h3>
                 <p className="text-sm sm:text-base text-muted-foreground">
                   Aventisia • September 2024 - June 2025
                 </p>
@@ -146,7 +146,7 @@ const ExperienceSection = () => {
               </div>
               <Separator />
               <div>
-                <h4 className="text-lg font-semibold">Software Engineer</h4>
+                <h3 className="text-lg font-semibold">Software Engineer</h3>
                 <p className="text-sm sm:text-base text-muted-foreground">Idexcel • October 2022 - August 2024</p>
                 <p className="my-2 text-sm sm:text-base font-medium text-muted-foreground">About Product:</p>
                 <p className="text-sm sm:text-base text-muted-foreground">
@@ -183,7 +183,7 @@ const ExperienceSection = () => {
               </div>
               <Separator />
               <div>
-                <h4 className="text-lg font-semibold">Software Engineer Intern</h4>
+                <h3 className="text-lg font-semibold">Software Engineer Intern</h3>
                 <p className="text-sm sm:text-base text-muted-foreground">Test Yantra • April 2022 - October 2022</p>
                 <p className="mt-2 tracking-wide text-sm sm:text-base text-muted-foreground flex flex-wrap items-center gap-2">
                   Tech stack:

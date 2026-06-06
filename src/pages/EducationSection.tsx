@@ -28,7 +28,7 @@ const EducationSection = () => {
         <div className="max-w-4xl mx-auto space-y-4">
           {education.map((item) => (
             <div key={item.institution} className="glass-card p-4 sm:p-5">
-              <h4 className="text-base sm:text-lg font-semibold">{item.degree}</h4>
+              <h3 className="text-base sm:text-lg font-semibold">{item.degree}</h3>
               <p className="text-sm sm:text-base text-muted-foreground">
                 {item.institution} • {item.duration}
               </p>

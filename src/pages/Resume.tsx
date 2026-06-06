@@ -179,9 +179,9 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
                   </h2>
                   {Achievements.map((cert, index) => (
                     <div key={index} className="mb-4">
-                      <h5 className="text-sm md:text-sm font-semibold text-foreground">
+                      <h3 className="text-sm md:text-sm font-semibold text-foreground">
                         {cert.name}
-                      </h5>
+                      </h3>
                       <p className="text-sm md:text-base text-muted-foreground">
                         {cert.issuedBy} | {cert.year}
                       </p>

@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { aboutConfig } from '@/config/about-config';
-import profilePic from '../assets/avatar1.jpg';
+const profilePic = '/images/avatar.webp';
 import GitHub from '@/assets/Icons/GitHub';
 import LinkedIn from '@/assets/Icons/LinkedIn';
 import { FileText } from 'lucide-react';
@@ -27,7 +27,11 @@ const AboutSection = () => {
             <img
               src={profilePic}
               alt="Profile"
-                className="h-44 w-44 sm:h-56 sm:w-56 lg:h-64 lg:w-64 object-cover rounded-full border-4 border-primary/30 shadow-xl shadow-secondary/20"
+              width={256}
+              height={256}
+              fetchPriority="high"
+              decoding="async"
+              className="h-44 w-44 sm:h-56 sm:w-56 lg:h-64 lg:w-64 object-cover rounded-full border-4 border-primary/30 shadow-xl shadow-secondary/20"
             />
               <div>
                 <h3 className="text-xl sm:text-2xl font-semibold mb-1">{aboutConfig.userName}</h3>
@@ -41,17 +45,19 @@ const AboutSection = () => {
                   variant="ghost"
                   onClick={handleGithub}
                   size="icon"
+                  aria-label="Visit GitHub profile"
                   className="rounded-full canva-gradient text-white shadow-md shadow-secondary/30 hover:brightness-105 hover:text-white"
                 >
-                  <GitHub className="h-5 w-5" />
+                  <GitHub className="h-5 w-5" aria-hidden="true" />
                 </Button>
                 <Button
                   variant="ghost"
                   onClick={handleLinkedIn}
                   size="icon"
+                  aria-label="Visit LinkedIn profile"
                   className="rounded-full canva-gradient text-white shadow-md shadow-secondary/30 hover:brightness-105 hover:text-white"
                 >
-                  <LinkedIn className="h-5 w-5" />
+                  <LinkedIn className="h-5 w-5" aria-hidden="true" />
                 </Button>
               </div>
             </div>

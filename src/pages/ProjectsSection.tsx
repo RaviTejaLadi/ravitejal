@@ -1,8 +1,8 @@
 import { Card, CardContent } from '../components/ui/card';
-import rue from '../assets/rue.png';
-import kalkiUi from '../assets/kalkiUi.png';
-import kalkiUiToast from '../assets/kalkiUiToast.png';
-import ruei from '../assets/ruei.png';
+const kalkiUi = '/images/kalkiUi.webp';
+const kalkiUiToast = '/images/kalkiUiToast.webp';
+const rue = '/images/rue.webp';
+const ruei = '/images/ruei.webp';
 import { ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Css, JavaScript, React, Tailwind, TypeScript } from '@/assets/technologies';
@@ -82,6 +82,10 @@ const ProjectsSection = () => {
                   <img
                     src={project.image}
                     alt={project.title}
+                    width={700}
+                    height={384}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4">

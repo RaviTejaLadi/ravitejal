@@ -77,7 +77,7 @@ const AchievementsSection = () => {
                         <HoverCardTrigger asChild>
                           <button
                             type="button"
-                            className="mt-3 text-primary text-sm font-medium inline-flex items-center rounded-md transition-colors hover:text-secondary"
+                            className="mt-3 text-link text-sm font-medium inline-flex items-center rounded-md transition-colors hover:text-secondary"
                           >
                             View certificate
                           </button>

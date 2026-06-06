@@ -10,8 +10,8 @@ const Jira = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) =>
     fill="#000000"
     {...props}
   >
-    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+    <g id="SVGRepo_bgCarrier" strokeWidth={0}></g>
+    <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
     <g id="SVGRepo_iconCarrier">
       {' '}
       <defs>
@@ -24,10 +24,10 @@ const Jira = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) =>
           id="linearGradient-1"
         >
           {' '}
-          <stop stop-color="#0052CC" offset="18%">
+          <stop stopColor="#0052CC" offset="18%">
             {' '}
           </stop>{' '}
-          <stop stop-color="#2684FF" offset="100%">
+          <stop stopColor="#2684FF" offset="100%">
             {' '}
           </stop>{' '}
         </linearGradient>{' '}
@@ -39,10 +39,10 @@ const Jira = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) =>
           id="linearGradient-2"
         >
           {' '}
-          <stop stop-color="#0052CC" offset="18%">
+          <stop stopColor="#0052CC" offset="18%">
             {' '}
           </stop>{' '}
-          <stop stop-color="#2684FF" offset="100%">
+          <stop stopColor="#2684FF" offset="100%">
             {' '}
           </stop>{' '}
         </linearGradient>{' '}

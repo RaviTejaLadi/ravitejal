@@ -2,8 +2,8 @@ import * as React from 'react';
 import { JSX } from 'react/jsx-runtime';
 const Vite = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none" {...props}>
-    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+    <g id="SVGRepo_bgCarrier" strokeWidth={0}></g>
+    <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
     <g id="SVGRepo_iconCarrier">
       <title>file_type_vite</title>
       <path
@@ -24,8 +24,8 @@ const Vite = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) =>
           gradientUnits="userSpaceOnUse"
           gradientTransform="matrix(.07142 0 0 .07142 1.3398 1.8944)"
         >
-          <stop stop-color="#41D1FF" id="stop38"></stop>
-          <stop offset="1" stop-color="#BD34FE" id="stop40"></stop>
+          <stop stopColor="#41D1FF" id="stop38"></stop>
+          <stop offset="1" stopColor="#BD34FE" id="stop40"></stop>
         </linearGradient>
         <linearGradient
           id="paint1_linear"
@@ -36,9 +36,9 @@ const Vite = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) =>
           gradientUnits="userSpaceOnUse"
           gradientTransform="matrix(.07142 0 0 .07142 1.3398 1.8944)"
         >
-          <stop stop-color="#FFEA83" id="stop43"></stop>
-          <stop offset=".0833" stop-color="#FFDD35" id="stop45"></stop>
-          <stop offset="1" stop-color="#FFA800" id="stop47"></stop>
+          <stop stopColor="#FFEA83" id="stop43"></stop>
+          <stop offset=".0833" stopColor="#FFDD35" id="stop45"></stop>
+          <stop offset="1" stopColor="#FFA800" id="stop47"></stop>
         </linearGradient>
       </defs>
     </g>

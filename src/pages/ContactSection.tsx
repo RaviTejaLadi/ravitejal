@@ -34,7 +34,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-muted-foreground mb-1">Email</h3>
-                <p className="text-sm sm:text-base text-primary hover:text-secondary hover:underline transition-colors break-all">
+                <p className="text-sm sm:text-base text-link hover:text-secondary hover:underline transition-colors break-all">
                   {contactInfo.email}
                 </p>
               </div>
@@ -51,7 +51,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-muted-foreground mb-1">Phone</h3>
-                <p className="text-sm sm:text-base text-primary hover:text-secondary hover:underline transition-colors">
+                <p className="text-sm sm:text-base text-link hover:text-secondary hover:underline transition-colors">
                   +91 {contactInfo.phone}
                 </p>
               </div>
@@ -67,7 +67,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-muted-foreground mb-1">LinkedIn</h3>
-                    <p className="text-primary hover:text-secondary hover:underline transition-colors">
+                    <p className="text-link hover:text-secondary hover:underline transition-colors">
                       View Profile
                     </p>
                   </div>
@@ -95,7 +95,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-muted-foreground mb-1">GitHub</h3>
-                <p className="text-sm sm:text-base text-primary hover:text-secondary hover:underline transition-colors">
+                <p className="text-sm sm:text-base text-link hover:text-secondary hover:underline transition-colors">
                   View Repositories
                 </p>
               </div>
