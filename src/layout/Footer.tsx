@@ -2,25 +2,19 @@ import { React, SchadCn, Tailwind, TypeScript, Vite } from '@/assets/technologie
 
 const Footer = () => {
   return (
-    <footer className="px-3 sm:px-6 pb-6 sm:pb-8 pt-2">
-      <div className="mx-auto max-w-6xl rounded-xl border border-primary/20 bg-background/85 shadow-lg shadow-secondary/10 backdrop-blur-md px-4 sm:px-6 py-4 sm:py-5">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="text-sm sm:text-base text-muted-foreground text-center md:text-left">
-            <p>© Designed and developed by Ravi Teja Ladi.</p>
-          </div>
-          <div className="text-sm sm:text-base text-muted-foreground text-center md:text-right">
-            <div className="flex flex-col sm:flex-row items-center gap-2">
-              <span className="bg-gradient-to-r from-primary via-sky-500 to-secondary bg-clip-text text-transparent font-medium">
-                Powered by
-              </span>
-              <div className="flex gap-2 items-center">
-                <React className="size-4" />
-                <TypeScript className="size-4" />
-                <Tailwind className="size-4" />
-                <SchadCn className="size-4" />
-                <Vite className="size-4" />
-              </div>
-            </div>
+    <footer className="px-4 pb-8 pt-2 sm:px-6 md:px-8">
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-3 border-t border-border py-4 sm:flex-row">
+        <p className="text-center text-sm text-muted-foreground sm:text-left">
+          © Designed and developed by Ravi Teja Ladi.
+        </p>
+        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+          <span>Powered by</span>
+          <div className="flex items-center gap-2">
+            <React className="size-4" />
+            <TypeScript className="size-4" />
+            <Tailwind className="size-4" />
+            <SchadCn className="size-4" />
+            <Vite className="size-4" />
           </div>
         </div>
       </div>

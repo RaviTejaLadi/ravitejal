@@ -3,8 +3,6 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -14,10 +12,25 @@
     content="Ravi Teja — Senior Software Engineer specializing in React, TypeScript, and full-stack JavaScript. Portfolio showcasing projects, experience, and open-source work." />
   <link rel="preload" as="image" href="/images/avatar.webp" type="image/webp" fetchpriority="high" />
   <title>Ravi Teja | Senior Software Engineer</title>
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('theme');
+        var dark = theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (dark) document.documentElement.classList.add('dark');
+      } catch (e) {}
+    })();
+  </script>
   <style>
+    html { background: #f3f3f3; }
+    html.dark { background: #202020; color-scheme: dark; }
     body {
-      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background: #f3f3f3;
+      color: #1b1b1b;
+      font-family: "Segoe UI Variable Text", "Segoe UI Variable", "Segoe UI", system-ui, sans-serif;
     }
+    html.dark body { background: #202020; color: #ffffff; }
   </style>
 </head>
 

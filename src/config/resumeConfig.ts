@@ -78,7 +78,7 @@ export const resumeConfig: ResumeConfig = {
   contact: {
     phone: '+91 8847819634',
     email: 'ladi.ravi884781@gmail.com',
-    linkedin: 'https://www.linkedin.com/in/ravi-teja-ladi/',
+    linkedin: 'https://www.linkedin.com/in/ravi-teja-ladi-%E2%9C%A8/',
     github: 'https://github.com/RaviTejaLadi',
     portfolio: 'https://ravitejaladi.vercel.app/',
   },

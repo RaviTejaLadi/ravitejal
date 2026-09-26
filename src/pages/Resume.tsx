@@ -36,22 +36,22 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
   // Define icon colors for different sections
   const iconColors = {
     contact: {
-      phone: '#3969e7',
-      mail: '#00c4cc',
-      linkedin: '#0077b5', // linkedin blue
-      github: '#7d2ae7',
+      phone: '#005FB8',
+      mail: '#0078D4',
+      linkedin: '#0A66C2',
+      github: '#1A1A1A',
     },
     skills: {
-      technical: '#3969e7',
-      soft: '#7d2ae7',
+      technical: '#005FB8',
+      soft: '#0078D4',
     },
     sections: {
-      languages: '#00c4cc',
-      achievements: '#7d2ae7',
-      summary: '#3969e7',
-      work: '#7d2ae7',
-      education: '#00c4cc',
-      projects: '#3969e7',
+      languages: '#0078D4',
+      achievements: '#005FB8',
+      summary: '#005FB8',
+      work: '#0078D4',
+      education: '#005FB8',
+      projects: '#0078D4',
     },
   };
 
@@ -66,7 +66,7 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
   };
 
   return (
-    <section id="resume" className="section-shell bg-muted/20">
+    <section id="resume" className="section-shell">
       <div className="section-container">
         <div className="section-heading">
           <h2 className="section-title">Resume</h2>
@@ -100,7 +100,7 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
                 <span className="break-all">{contact.email}</span>
               </div>
               {contact.linkedin && (
-                <div className="flex items-center text-muted-foreground text-sm md:text-base hover:text-sky-500 hover:underline hover:underline-offset-2">
+                <div className="flex items-center text-muted-foreground text-sm md:text-base hover:text-link hover:underline hover:underline-offset-2">
                   <Linkedin
                     className="mr-2 w-4 h-4 flex-shrink-0"
                     style={{ color: iconColors.contact.linkedin }}
@@ -116,7 +116,7 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
                 </div>
               )}
               {contact.github && (
-                <div className="flex items-center text-muted-foreground text-sm md:text-base hover:text-sky-500 hover:underline hover:underline-offset-2">
+                <div className="flex items-center text-muted-foreground text-sm md:text-base hover:text-link hover:underline hover:underline-offset-2">
                   <Github
                     className="mr-2 w-4 h-4 flex-shrink-0"
                     style={{ color: iconColors.contact.github }}

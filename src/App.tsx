@@ -21,9 +21,9 @@ const SectionFallback = () => (
 
 function App() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="win-app">
       <NavBar />
-      <main className="pt-24 sm:pt-28">
+      <main className="win-main">
         <AboutSection />
         <Suspense fallback={<SectionFallback />}>
           <TechnologiesSection />

@@ -11,7 +11,11 @@ const AboutSection = () => {
     window.location.href = 'https://github.com/RaviTejaLadi';
   };
   const handleLinkedIn = () => {
-    window.location.href = 'https://www.linkedin.com/in/ravi-teja-ladi/';
+    window.open(
+      'https://www.linkedin.com/in/ravi-teja-ladi-%E2%9C%A8/',
+      '_blank',
+      'noopener,noreferrer',
+    );
   };
   return (
     <section id="about" className="section-shell">
@@ -21,49 +25,54 @@ const AboutSection = () => {
           <div className="section-line" />
         </div>
 
-        <div className="glass-card canva-gradient-soft p-6 sm:p-8 lg:p-10">
-          <div className="flex flex-col gap-10 lg:flex-row lg:items-start">
-            <div className="flex-1 flex flex-col items-center gap-5 text-center lg:sticky lg:top-32">
-            <img
-              src={profilePic}
-              alt="Profile"
-              width={256}
-              height={256}
-              fetchPriority="high"
-              decoding="async"
-              className="h-44 w-44 sm:h-56 sm:w-56 lg:h-64 lg:w-64 object-cover rounded-full border-4 border-primary/30 shadow-xl shadow-secondary/20"
-            />
+        <div className="glass-card overflow-hidden">
+          <div className="flex flex-col lg:flex-row">
+            <div className="flex flex-col items-center gap-4 border-b border-border px-6 py-8 text-center lg:w-72 lg:border-b-0 lg:border-r lg:py-10">
+            <div className="relative">
+              <img
+                src={profilePic}
+                alt="Profile"
+                width={256}
+                height={256}
+                fetchPriority="high"
+                decoding="async"
+                className="h-36 w-36 rounded-full object-cover ring-1 ring-black/10 sm:h-40 sm:w-40 dark:ring-white/15"
+              />
+              <span className="absolute bottom-2 right-2 h-3.5 w-3.5 rounded-full border-2 border-white bg-[#0F7B0F] dark:border-[#2C2C2C] dark:bg-[#6CCB5F]" title="Available" />
+            </div>
               <div>
-                <h3 className="text-xl sm:text-2xl font-semibold mb-1">{aboutConfig.userName}</h3>
-                <p className="text-sm sm:text-base text-muted-foreground mb-1">{aboutConfig.designation}</p>
-                <p className="text-sm text-muted-foreground mb-1">{aboutConfig.company}</p>
-                <p className="text-sm sm:text-base text-muted-foreground">{aboutConfig.location}</p>
+                <h3 className="mb-1 text-[1.75rem] font-semibold leading-tight">{aboutConfig.userName}</h3>
+                <p className="mb-1 text-sm font-semibold text-link">{aboutConfig.designation}</p>
+                <p className="mb-1 text-sm text-muted-foreground">{aboutConfig.company}</p>
+                <p className="text-sm text-muted-foreground">{aboutConfig.location}</p>
               </div>
+              <span className="win-status">
+                <span className="size-1.5 rounded-full bg-current" />
+                Open to work
+              </span>
 
-              <div className="flex items-center justify-center gap-3">
+              <div className="flex items-center justify-center gap-2">
                 <Button
-                  variant="ghost"
+                  variant="outline"
                   onClick={handleGithub}
                   size="icon"
                   aria-label="Visit GitHub profile"
-                  className="rounded-full canva-gradient text-white shadow-md shadow-secondary/30 hover:brightness-105 hover:text-white"
                 >
                   <GitHub className="h-5 w-5" aria-hidden="true" />
                 </Button>
                 <Button
-                  variant="ghost"
+                  variant="outline"
                   onClick={handleLinkedIn}
                   size="icon"
                   aria-label="Visit LinkedIn profile"
-                  className="rounded-full canva-gradient text-white shadow-md shadow-secondary/30 hover:brightness-105 hover:text-white"
                 >
                   <LinkedIn className="h-5 w-5" aria-hidden="true" />
                 </Button>
               </div>
             </div>
 
-            <div className="flex-1">
-              <div className="max-w-2xl mx-auto space-y-5">
+            <div className="flex-1 px-6 py-8 sm:px-8 lg:py-10">
+              <div className="max-w-2xl space-y-5">
                 <div className="flex flex-wrap gap-2">
                   <span className="premium-chip">Frontend Architecture</span>
                   <span className="premium-chip">React + TypeScript</span>
@@ -80,20 +89,36 @@ const AboutSection = () => {
 
                 <ul className="space-y-2 pt-1">
                   {aboutConfig.highlights.map((item) => (
-                    <li key={item} className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                      {item}
+                    <li key={item} className="flex gap-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-[2px] bg-primary" />
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
 
-                <div>
-                  <a
-                    href="#resume"
-                    className="inline-flex items-center gap-2 rounded-md border border-primary/30 bg-background/70 px-4 py-2 text-sm sm:text-base font-medium transition-colors hover:bg-primary/10"
-                  >
-                    <FileText className="size-4" />
-                    <span>View Resume</span>
-                  </a>
+                <div className="flex flex-wrap gap-2">
+                  <Button asChild>
+                    <a href="#resume">
+                      <FileText className="size-4" />
+                      View Resume
+                    </a>
+                  </Button>
+                  <Button asChild variant="outline">
+                    <a href="#contact-info">Get in touch</a>
+                  </Button>
+                </div>
+
+                <div className="grid grid-cols-3 gap-2 pt-2">
+                  {[
+                    { label: 'Experience', value: '4+ yrs' },
+                    { label: 'Focus', value: 'Frontend' },
+                    { label: 'Based in', value: 'Bengaluru' },
+                  ].map((stat) => (
+                    <div key={stat.label} className="rounded-[8px] border border-border bg-[#F3F3F3] px-3 py-2.5 dark:bg-[#282828]">
+                      <p className="text-[11px] text-muted-foreground">{stat.label}</p>
+                      <p className="text-sm font-semibold sm:text-base">{stat.value}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

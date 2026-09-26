@@ -8,14 +8,14 @@ const TechnologiesSection = () => {
   const categorizedStack = technoConfig.tabContent.filter((item) => item.value !== 'mostUsed');
 
   return (
-    <section id="technologies" className="section-shell bg-muted/20">
+    <section id="technologies" className="section-shell">
       <div className="section-container">
         <div className="section-heading">
           <h2 className="section-title">{technoConfig.title}</h2>
           <div className="section-line" />
         </div>
 
-        <Separator className="h-px mb-6 bg-gradient-to-r from-primary/30 via-secondary/30 to-transparent" />
+        <Separator className="mb-5" />
 
         <div className="glass-card canva-gradient-soft p-4 sm:p-6 md:p-8">
           <p className="text-sm sm:text-base text-muted-foreground mb-5">
@@ -26,7 +26,7 @@ const TechnologiesSection = () => {
             {featuredStack.map((item) => (
               <Tooltip key={item.tooltip}>
                 <TooltipTrigger asChild>
-                  <div className="group rounded-xl border border-primary/20 bg-background/85 px-3 py-3 sm:py-4 flex flex-col items-center gap-2 transition-all hover:-translate-y-1 hover:border-primary/60 hover:shadow-lg hover:shadow-secondary/20">
+                  <div className="group flex flex-col items-center gap-2 rounded-lg border border-border bg-[#F3F3F3] px-3 py-3 transition-colors hover:bg-[#EBEBEB] sm:py-4 dark:bg-[#282828] dark:hover:bg-[#323232]">
                     <item.icon className="w-8 h-8 sm:w-10 sm:h-10" />
                     <span className="text-xs sm:text-sm font-medium text-muted-foreground group-hover:text-foreground">
                       {item.tooltip}
@@ -42,7 +42,7 @@ const TechnologiesSection = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {categorizedStack.map((category) => (
-              <div key={category.value} className="rounded-xl border border-border/80 bg-background/70 p-4">
+              <div key={category.value} className="rounded-lg border border-border bg-[#F3F3F3] p-4 dark:bg-[#282828]">
                 <h3 className="text-sm sm:text-base font-semibold mb-3 text-foreground">{category.label}</h3>
                 <div className="flex flex-wrap gap-2">
                   {category.content.map((item) => (

@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,157 +13,153 @@
 
 @layer base {
   :root {
-    /* Radix UI Gray (Light Mode) */
-    --background: 210 40% 98%;
-    --foreground: 226 45% 12%;
+    color-scheme: light;
+    /* WinUI light — SolidBackgroundFillColorBase #F3F3F3 */
+    --background: 0 0% 95.3%;
+    /* TextFillColorPrimary #E4000000 on white ≈ #1B1B1B */
+    --foreground: 0 0% 10.6%;
 
+    /* Layer / card surface #FFFFFF */
     --card: 0 0% 100%;
-    --card-foreground: 226 45% 12%;
+    --card-foreground: 0 0% 10.6%;
 
-    --muted: 220 35% 95%;
-    --muted-foreground: 223 16% 44%;
+    /* SolidBackgroundFillColorSecondary #EEEEEE */
+    --muted: 0 0% 93.3%;
+    /* TextFillColorSecondary #9E000000 ≈ #616161 */
+    --muted-foreground: 0 0% 38%;
 
-    --accent: 214 54% 94%;
-    --accent-foreground: 226 45% 12%;
+    /* Selected / subtle accent surface */
+    --accent: 209 70% 94%;
+    /* AccentTextFillColorPrimary light #003E92 */
+    --accent-foreground: 214.5 100% 28.6%;
 
-    /* Radix Blue (Light Mode) */
-    --primary: 183 100% 40%;
+    /* AccentFillColorDefault light = SystemAccentColorDark1 #005FB8 */
+    --primary: 209 100% 36.1%;
     --primary-foreground: 0 0% 100%;
-    --link: 185 85% 28%;
+    --link: 214.5 100% 28.6%;
 
-    --secondary: 262 85% 56%;
+    /* SystemAccentColor #0067C0 */
+    --secondary: 207.8 100% 37.6%;
     --secondary-foreground: 0 0% 100%;
 
-    /* Radix Teal/Green/Red/Amber/Cyan/Violet (Light Mode) */
-    --success: hsl(152 60% 40%);
-    /* green9 */
+    /* SystemFillColorSuccess #0F7B0F */
+    --success: hsl(120 78.3% 27.1%);
     --success-foreground: hsl(0 0% 100%);
-    /* white */
 
-    --danger: hsl(358 75% 59%);
-    /* red9 */
+    /* SystemFillColorCritical #C42B1C */
+    --danger: hsl(5.4 75% 43.9%);
     --danger-foreground: hsl(0 0% 100%);
-    /* white */
 
-    --warning: hsl(38 92% 50%);
-    /* amber9 */
+    /* SystemFillColorCaution #9D5D00 */
+    --warning: hsl(36 100% 30.8%);
     --warning-foreground: hsl(0 0% 100%);
-    /* white */
 
-    --info: hsl(192 85% 44%);
-    /* cyan9 */
+    --info: hsl(199 100% 36%);
     --info-foreground: hsl(0 0% 100%);
-    /* white */
 
     --help: hsl(264 74% 62%);
-    /* violet9 */
     --help-foreground: hsl(0 0% 100%);
-    /* white */
 
-    --light: hsl(220 14% 96%);
-    /* gray2 */
-    --light-foreground: hsl(220 9% 15%);
-    /* gray11 */
+    --light: hsl(0 0% 95.3%);
+    --light-foreground: hsl(0 0% 10.6%);
 
-    --dark: hsl(220 9% 15%);
-    /* gray11 */
+    --dark: hsl(0 0% 12.5%);
     --dark-foreground: hsl(0 0% 100%);
-    /* white */
 
-    --border: 217 34% 89%;
-    --input: 217 34% 89%;
-    --ring: 183 100% 40%;
+    /* CardStrokeColorDefaultSolid #EBEBEB */
+    --border: 0 0% 92.2%;
+    --input: 0 0% 92.2%;
+    --ring: 209 100% 36.1%;
 
+    /* OverlayCornerRadius 8px */
     --radius: 0.5rem;
-    --icon-color: hsl(223 14% 33%);
+    --icon-color: rgba(0, 0, 0, 0.606);
     --popover: 0 0% 100%;
-    --popover-foreground: 224 71.4% 4.1%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 20% 98%;
-    --chart-1: 183 100% 40%;
-    --chart-2: 262 84% 55%;
-    --chart-3: 202 100% 55%;
-    --chart-4: 343 95% 64%;
-    --chart-5: 38 100% 61%;
+    --popover-foreground: 0 0% 10.6%;
+    --destructive: 5.4 75% 43.9%;
+    --destructive-foreground: 0 0% 100%;
+    --chart-1: 209 100% 36.1%;
+    --chart-2: 207.8 100% 37.6%;
+    --chart-3: 198.9 100% 68.8%;
+    --chart-4: 353.5 100% 80%;
+    --chart-5: 36 100% 50%;
   }
 
   .dark {
-    --background: 225 29% 10%;
-    --foreground: 210 20% 98%;
+    color-scheme: dark;
+    /* WinUI dark — SolidBackgroundFillColorBase #202020 */
+    --background: 0 0% 12.5%;
+    /* TextFillColorPrimary #FFFFFF */
+    --foreground: 0 0% 100%;
 
-    --card: 228 34% 13%;
-    --card-foreground: 210 20% 98%;
+    /* SolidBackgroundFillColorQuarternary #2C2C2C */
+    --card: 0 0% 17.3%;
+    --card-foreground: 0 0% 100%;
 
-    --primary: 183 88% 53%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --link: 183 75% 65%;
+    /* AccentFillColorDefault dark = SystemAccentColorLight2 #60CDFF */
+    --primary: 198.9 100% 68.8%;
+    /* TextOnAccentFillColorPrimary dark #000000 */
+    --primary-foreground: 0 0% 0%;
+    /* AccentTextFillColorPrimary dark #99EBFF */
+    --link: 191.8 100% 80%;
 
-    --secondary: 262 89% 66%;
-    --secondary-foreground: 210 20% 98%;
+    --secondary: 198.9 90% 60%;
+    --secondary-foreground: 0 0% 0%;
 
-    /* Radix Teal/Green/Red/Amber/Cyan/Violet (Dark Mode) */
-    --success: hsl(151 55% 42%);
-    /* green10 */
-    --success-foreground: hsl(0 0% 100%);
-    /* white */
+    /* SystemFillColorSuccess #6CCB5F */
+    --success: hsl(112.8 50.9% 58.4%);
+    --success-foreground: hsl(0 0% 0%);
 
-    --danger: hsl(358 65% 55%);
-    /* red10 */
-    --danger-foreground: hsl(0 0% 100%);
-    /* white */
+    /* SystemFillColorCritical #FF99A4 */
+    --danger: hsl(353.5 100% 80%);
+    --danger-foreground: hsl(0 0% 0%);
 
-    --warning: hsl(32 94% 44%);
-    /* amber10 */
-    --warning-foreground: hsl(0 0% 100%);
-    /* white */
+    /* SystemFillColorCaution #FCE100 */
+    --warning: hsl(53 100% 49.4%);
+    --warning-foreground: hsl(0 0% 0%);
 
-    --info: hsl(193 82% 42%);
-    /* cyan10 */
-    --info-foreground: hsl(0 0% 100%);
-    /* white */
+    --info: hsl(198.9 100% 68.8%);
+    --info-foreground: hsl(0 0% 0%);
 
-    --help: hsl(264 70% 58%);
-    /* violet10 */
-    --help-foreground: hsl(0 0% 100%);
-    /* white */
+    --help: hsl(264 70% 72%);
+    --help-foreground: hsl(0 0% 0%);
 
-    --light: hsl(220 7% 10%);
-    /* gray10 */
+    --light: hsl(0 0% 17.3%);
     --light-foreground: hsl(0 0% 100%);
-    /* white */
 
-    --dark: hsl(220 9% 5%);
-    /* gray12 */
+    --dark: hsl(0 0% 3.9%);
     --dark-foreground: hsl(0 0% 100%);
-    /* white */
 
-    --muted: 227 23% 18%;
-    --muted-foreground: 219 12% 70%;
+    /* SolidBackgroundFillColorTertiary #282828 */
+    --muted: 0 0% 15.7%;
+    /* TextFillColorSecondary #C5FFFFFF on #202020 ≈ #CCCCCC */
+    --muted-foreground: 0 0% 80%;
 
-    --accent: 227 25% 20%;
-    --accent-foreground: 210 20% 98%;
+    --accent: 198.9 40% 22%;
+    --accent-foreground: 191.8 100% 80%;
 
-    --destructive: 0 62.8% 30.6%;
-    /* red11 */
-    --destructive-foreground: 210 20% 98%;
-    /* gray1 */
+    --destructive: 353.5 100% 80%;
+    --destructive-foreground: 0 0% 0%;
 
-    --border: 226 24% 24%;
-    --input: 226 24% 24%;
-    --ring: 183 88% 53%;
+    /* ControlStrokeColorDefault #12FFFFFF on #2C2C2C ≈ #3B3B3B */
+    --border: 0 0% 23.1%;
+    --input: 0 0% 23.1%;
+    --ring: 198.9 100% 68.8%;
 
-    --icon-color: hsl(218 22% 75%);
-    --popover: 228 34% 13%;
-    --popover-foreground: 210 20% 98%;
-    --chart-1: 183 88% 53%;
-    --chart-2: 262 89% 66%;
-    --chart-3: 202 100% 65%;
-    --chart-4: 343 95% 69%;
-    --chart-5: 38 100% 66%;
+    --icon-color: rgba(255, 255, 255, 0.786);
+    /* AcrylicBackgroundFillColorDefault #2C2C2C */
+    --popover: 0 0% 17.3%;
+    --popover-foreground: 0 0% 100%;
+    --chart-1: 198.9 100% 68.8%;
+    --chart-2: 191.8 100% 80%;
+    --chart-3: 209 100% 36.1%;
+    --chart-4: 353.5 100% 80%;
+    --chart-5: 53 100% 49.4%;
   }
 
   ::-webkit-scrollbar {
-    width: 5px;
+    width: 10px;
+    height: 10px;
   }
 
   ::-webkit-scrollbar-track {
@@ -172,25 +167,24 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: var(--icon-color);
-    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.45);
+    border: 3px solid transparent;
+    border-radius: 8px;
+    background-clip: padding-box;
   }
 
   * {
     scrollbar-width: thin;
-    scrollbar-color: var(--icon-color) transparent;
+    scrollbar-color: rgba(0, 0, 0, 0.45) transparent;
   }
 
-  @media (prefers-color-scheme: dark) {
-    ::-webkit-scrollbar-thumb {
-      background: hsl(215 14% 65%);
-      /* gray5 */
-    }
+  .dark ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.55);
+    background-clip: padding-box;
+  }
 
-    * {
-      scrollbar-color: hsl(215 14% 65%) transparent;
-      /* gray5 */
-    }
+  .dark * {
+    scrollbar-color: rgba(255, 255, 255, 0.45) transparent;
   }
 }
 
@@ -199,14 +193,60 @@
     @apply border-border;
   }
 
+  html {
+    scroll-padding-top: 4.25rem;
+    background-color: #f3f3f3;
+  }
+
+  .dark {
+    background-color: #202020;
+  }
+
+  h1,
+  h2,
+  h3,
+  .section-title {
+    font-family: 'Segoe UI Variable Display', 'Segoe UI Variable', 'Segoe UI', system-ui, sans-serif;
+  }
+
   body {
     @apply bg-background text-foreground antialiased;
-    background-image:
-      radial-gradient(circle at 8% 6%, hsl(var(--primary) / 0.16), transparent 30%),
-      radial-gradient(circle at 90% 12%, hsl(var(--secondary) / 0.16), transparent 28%),
-      radial-gradient(circle at 50% 92%, hsl(var(--chart-3) / 0.12), transparent 38%);
     min-height: 100vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Segoe UI Variable Text', 'Segoe UI Variable', 'Segoe UI', system-ui, sans-serif;
+    background-color: #f3f3f3;
+    background-image: none;
+  }
+
+  .dark body {
+    background-color: #202020;
+    background-image: none;
+  }
+
+  body::after {
+    content: '';
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.035;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+
+  #root {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background: #005fb8;
+    color: #ffffff;
+  }
+
+  .dark ::selection {
+    background: #60cdff;
+    color: #000000;
   }
 
   a,
@@ -216,8 +256,8 @@
   textarea,
   select {
     transition-property: color, background-color, border-color, box-shadow, transform, opacity;
-    transition-duration: 260ms;
-    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    transition-duration: 167ms;
+    transition-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
   }
 
   img,
@@ -229,52 +269,214 @@
 }
 
 @layer components {
+  .win-app {
+    min-height: 100vh;
+  }
+
+  .win-titlebar {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 50;
+    display: flex;
+    height: 48px;
+    align-items: center;
+    gap: 10px;
+    padding: 0 8px 0 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.0578);
+    background: rgba(243, 243, 243, 0.8);
+    backdrop-filter: blur(40px) saturate(1.25);
+  }
+
+  .dark .win-titlebar {
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+    background: rgba(32, 32, 32, 0.78);
+  }
+
+  .win-nav {
+    position: fixed;
+    top: 48px;
+    bottom: 0;
+    left: 0;
+    z-index: 40;
+    display: flex;
+    width: 232px;
+    flex-direction: column;
+    gap: 2px;
+    overflow: auto;
+    padding: 12px 12px 16px;
+  }
+
+  .win-nav-item {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    gap: 12px;
+    border-radius: 4px;
+    padding: 0 12px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.894);
+  }
+
+  .win-nav-item:hover {
+    background: rgba(0, 0, 0, 0.0373);
+    color: rgba(0, 0, 0, 0.894);
+  }
+
+  .win-nav-item.is-active {
+    background: #ffffff;
+    color: #003e92;
+    font-weight: 600;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.0578);
+  }
+
+  .dark .win-nav-item {
+    color: #ffffff;
+  }
+
+  .dark .win-nav-item:hover {
+    background: rgba(255, 255, 255, 0.0605);
+    color: #ffffff;
+  }
+
+  .dark .win-nav-item.is-active {
+    background: rgba(255, 255, 255, 0.08);
+    color: #99ebff;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  }
+
+  .win-main {
+    min-width: 0;
+    padding-top: 48px;
+  }
+
+  @media (min-width: 768px) {
+    .win-main {
+      padding-left: 232px;
+    }
+  }
+
+  .win-flyout {
+    border: 1px solid rgba(0, 0, 0, 0.0578);
+    background: rgba(249, 249, 249, 0.94);
+    backdrop-filter: blur(40px) saturate(1.4);
+    box-shadow:
+      0 8px 16px rgba(0, 0, 0, 0.14),
+      0 0 2px rgba(0, 0, 0, 0.12);
+  }
+
+  .dark .win-flyout {
+    border-color: rgba(255, 255, 255, 0.08);
+    background: rgba(44, 44, 44, 0.94);
+    box-shadow:
+      0 8px 16px rgba(0, 0, 0, 0.4),
+      0 0 2px rgba(0, 0, 0, 0.36);
+  }
+
   .section-shell {
-    @apply py-14 md:py-10 lg:py-10 px-4 sm:px-6;
+    @apply px-4 py-6 sm:px-6 md:px-8 md:py-7;
   }
 
   .section-container {
-    @apply container mx-auto max-w-6xl;
+    @apply mx-auto w-full max-w-6xl;
   }
 
   .section-heading {
-    @apply mb-8 md:mb-10 flex items-center gap-4;
+    @apply mb-4 flex items-end gap-4 md:mb-5;
   }
 
   .section-title {
-    @apply text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight;
-    background-image: linear-gradient(120deg, #00c4cc 0%, #3969e7 45%, #7d2ae7 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    @apply text-xl font-semibold tracking-normal text-foreground sm:text-[1.35rem];
   }
 
   .section-line {
-    @apply h-px flex-1 bg-gradient-to-r from-primary/40 to-transparent;
+    @apply mb-1 h-px flex-1;
+    background: rgba(0, 0, 0, 0.0803);
+  }
+
+  .dark .section-line {
+    background: rgba(255, 255, 255, 0.0837);
+  }
+
+  .mica {
+    border: 1px solid rgba(0, 0, 0, 0.0578);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(40px) saturate(1.25);
+  }
+
+  .dark .mica {
+    border-color: rgba(255, 255, 255, 0.08);
+    background: rgba(44, 44, 44, 0.72);
   }
 
   .glass-card {
-    @apply rounded-2xl border border-border/80 bg-card/80 backdrop-blur-md;
-    box-shadow:
-      0 8px 30px rgba(33, 57, 117, 0.08),
-      0 1px 1px rgba(0, 0, 0, 0.03);
-    transition-property: transform, box-shadow, border-color, background-color, opacity, filter;
-    transition-duration: 320ms;
-    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    @apply rounded-lg border text-card-foreground;
+    border-color: #ebebeb;
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    transition-property: background-color, border-color, box-shadow;
+    transition-duration: 120ms;
+    transition-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
+  }
+
+  .dark .glass-card {
+    border-color: rgba(255, 255, 255, 0.0837);
+    background: #2c2c2c;
+    box-shadow: none;
+  }
+
+  .win-card-interactive:hover {
+    background: #f6f6f6;
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .dark .win-card-interactive:hover {
+    background: #323232;
+    border-color: rgba(255, 255, 255, 0.14);
   }
 
   .premium-chip {
-    @apply rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs sm:text-sm font-medium text-link;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 95, 184, 0.28);
+    background: rgba(0, 95, 184, 0.08);
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #003e92;
+  }
+
+  .dark .premium-chip {
+    border-color: rgba(96, 205, 255, 0.32);
+    background: rgba(96, 205, 255, 0.12);
+    color: #99ebff;
+  }
+
+  .win-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 4px;
+    background: #dff6dd;
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #0f7b0f;
+  }
+
+  .dark .win-status {
+    background: #393d1b;
+    color: #6ccb5f;
   }
 
   .canva-gradient {
-    background-image: linear-gradient(135deg, #00c4cc 0%, #3969e7 46%, #7d2ae7 100%);
+    background-image: none;
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
   }
 
   .canva-gradient-soft {
-    background-image: linear-gradient(135deg, rgb(0 196 204 / 0.14), rgb(57 105 231 / 0.14), rgb(125 42 231 / 0.14));
+    background-image: none;
   }
-
 }
 
 @media (prefers-reduced-motion: reduce) {

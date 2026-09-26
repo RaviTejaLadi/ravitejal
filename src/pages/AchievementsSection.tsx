@@ -41,7 +41,7 @@ const AchievementsSection = () => {
     },
   ];
   return (
-    <section id="achievements" className="section-shell bg-muted/20">
+    <section id="achievements" className="section-shell">
       <div className="section-container">
         <div className="section-heading">
           <h2 className="section-title">Achievements</h2>
@@ -55,7 +55,7 @@ const AchievementsSection = () => {
               {company.accolades.map((award) => (
                 <div
                   key={award.id}
-                  className="glass-card canva-gradient-soft relative overflow-hidden transition-all duration-300 hover:-translate-y-0.5"
+                  className="glass-card relative overflow-hidden"
                 >
                   <div className="p-4 sm:p-5">
                     <div className="flex justify-between items-start mb-3">

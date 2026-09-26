@@ -9,10 +9,10 @@ export default function LinkedInProfileCard() {
   return (
     <Card className="overflow-hidden bg-muted/30 m-0 border-primary/20">
       {/* LinkedIn Header */}
-      <CardHeader className="canva-gradient py-3">
+      <CardHeader className="bg-[#0A66C2] py-3">
         <div className="flex items-center gap-2">
-          <div className="text-white font-bold text-lg">Linked</div>
-          <div className="bg-white/20 text-white px-1.5 py-0.5 rounded text-sm font-bold">in</div>
+          <div className="text-lg font-semibold text-white">Linked</div>
+          <div className="rounded-[4px] bg-white/15 px-1.5 py-0.5 text-sm font-semibold text-white">in</div>
         </div>
       </CardHeader>
 
@@ -27,7 +27,7 @@ export default function LinkedInProfileCard() {
         </div>
 
         <div className="text-start">
-          <h2 className="text-lg sm:text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <h2 className="text-lg font-semibold text-foreground sm:text-xl">
             Ravi Teja
           </h2>
         </div>

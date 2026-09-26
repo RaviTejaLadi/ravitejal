@@ -1,73 +1,90 @@
 import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { navConfig } from '@/config/nav-config';
 import { cn } from '@/lib/utils';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [active, setActive] = useState(navConfig.links[0]?.href ?? '#about');
+
+  useEffect(() => {
+    const ids = navConfig.links.map((link) => link.href.replace('#', ''));
+
+    const onScroll = () => {
+      let current = ids[0];
+      for (const id of ids) {
+        const section = document.getElementById(id);
+        if (section && section.getBoundingClientRect().top < 88) current = id;
+      }
+      setActive(`#${current}`);
+    };
+
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const renderLinks = (onNavigate?: () => void) =>
+    navConfig.links.map((link) => (
+      <a
+        href={link.href}
+        key={link.name}
+        onClick={onNavigate}
+        className={cn('win-nav-item', active === link.href && 'is-active')}
+      >
+        <link.icon className="size-4 shrink-0" />
+        <span>{link.name}</span>
+      </a>
+    ));
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 px-3 sm:px-6">
-      <div className="mx-auto mt-3 max-w-6xl rounded-xl border border-primary/20 bg-background/85 shadow-lg shadow-secondary/10 backdrop-blur-md">
-        <div className="flex items-center justify-between px-4 py-3 sm:px-5">
-          <span className="text-lg sm:text-xl font-semibold tracking-wide">
-            <a
-              className="badge-base__link LI-simple-link bg-gradient-to-r from-primary via-sky-500 to-secondary bg-clip-text text-transparent"
-              href="https://www.linkedin.com/in/ravi-teja-ladi/"
-            >
-              {navConfig.user}
-            </a>
-          </span>
-
-          <div className="hidden md:flex items-center gap-6 lg:gap-8">
-            {navConfig.links.map((link) => (
-              <a
-                href={link.href}
-                key={link.name}
-                className="group flex items-center gap-2 text-sm lg:text-base font-medium tracking-wide text-muted-foreground transition-colors duration-200 hover:text-primary"
-              >
-                <link.icon className="size-4 group-hover:text-primary" />
-                <span>{link.name}</span>
-              </a>
-            ))}
-            <ThemeToggle />
-          </div>
-
-          <div className="flex items-center gap-1 md:hidden">
-            <ThemeToggle />
-            <button
-              className="rounded-md p-2 transition-colors hover:bg-accent"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle Menu"
-            >
-              {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
-            </button>
-          </div>
-        </div>
-
-        <div
-          className={cn(
-            'overflow-hidden border-t border-border/60 transition-all md:hidden',
-            isMenuOpen ? 'max-h-96 py-3' : 'max-h-0 py-0',
-          )}
+    <>
+      <header className="win-titlebar">
+        <button
+          className="grid size-8 place-items-center rounded-[4px] hover:bg-black/[0.037] md:hidden dark:hover:bg-white/[0.06]"
+          onClick={() => setIsMenuOpen((open) => !open)}
+          aria-label="Toggle Menu"
+          aria-expanded={isMenuOpen}
         >
-          <div className="flex flex-col gap-1 px-3 pb-2">
-            {navConfig.mobileLinks.map((link) => (
-              <a
-                href={link.href}
-                key={link.name}
-                onClick={() => setIsMenuOpen(false)}
-                className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium tracking-wide text-muted-foreground transition-colors duration-200 hover:bg-accent hover:text-primary"
-              >
-                <link.icon className="size-4 text-[--icon-color]" />
-                <span>{link.name}</span>
-              </a>
-            ))}
-          </div>
+          {isMenuOpen ? <X size={16} /> : <Menu size={16} />}
+        </button>
+        <a href="#about" className="flex min-w-0 items-center gap-2.5">
+          <span className="grid h-6 w-6 shrink-0 place-items-center rounded-[4px] bg-primary text-[10px] font-semibold text-primary-foreground">
+            RT
+          </span>
+          <span className="truncate text-sm font-semibold">{navConfig.user}</span>
+        </a>
+        <div className="ml-auto">
+          <ThemeToggle />
         </div>
-      </div>
-    </nav>
+      </header>
+
+      <nav className="win-nav hidden md:flex" aria-label="Sections">
+        <p className="px-3 pb-1 pt-1 text-xs font-semibold text-muted-foreground">Portfolio</p>
+        {renderLinks()}
+        <a href="#open-to-work" className="win-status mx-3 mt-auto">
+          <span className="size-1.5 rounded-full bg-current" />
+          Open to work
+        </a>
+      </nav>
+
+      {isMenuOpen && (
+        <div className="win-flyout fixed inset-x-3 top-14 z-50 rounded-lg p-2 md:hidden">
+          <nav className="flex flex-col gap-0.5" aria-label="Sections">
+            {renderLinks(() => setIsMenuOpen(false))}
+            <a
+              href="#open-to-work"
+              onClick={() => setIsMenuOpen(false)}
+              className="win-status mx-3 my-2"
+            >
+              <span className="size-1.5 rounded-full bg-current" />
+              Open to work
+            </a>
+          </nav>
+        </div>
+      )}
+    </>
   );
 };
 

@@ -6,7 +6,7 @@ import { Mail, Phone, Github, Linkedin } from 'lucide-react';
 
 const ContactSection = () => {
   const cardClassName =
-    'glass-card flex items-center p-4 sm:p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10';
+    'glass-card win-card-interactive flex items-center p-4 sm:p-5';
 
   return (
     <section id="contact-info" className="section-shell">
@@ -16,7 +16,7 @@ const ContactSection = () => {
           <div className="section-line" />
         </div>
 
-        <div className="mb-6 rounded-xl border border-primary/20 bg-primary/5 px-4 py-3 sm:px-5 sm:py-4">
+        <div className="mica mb-6 rounded-lg px-4 py-3 sm:px-5 sm:py-4">
           <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
             Open to full-time frontend opportunities and impactful product teams. Reach out through
             email, phone, LinkedIn, or GitHub.
@@ -29,8 +29,8 @@ const ContactSection = () => {
               href={`mailto:${contactInfo.email}`}
               className={cardClassName}
             >
-              <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 canva-gradient rounded-lg mr-4 group-hover:scale-110 transition-transform">
-                <Mail className="w-6 h-6 text-white" />
+              <div className="mr-4 flex h-10 w-10 items-center justify-center rounded-md bg-primary text-primary-foreground sm:h-12 sm:w-12">
+                <Mail className="h-5 w-5" />
               </div>
               <div>
                 <h3 className="font-semibold text-muted-foreground mb-1">Email</h3>
@@ -46,8 +46,8 @@ const ContactSection = () => {
               href={`tel:+91${contactInfo.phone}`}
               className={cardClassName}
             >
-              <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 canva-gradient rounded-lg mr-4 group-hover:scale-110 transition-transform">
-                <Phone className="w-6 h-6 text-white" />
+              <div className="mr-4 flex h-10 w-10 items-center justify-center rounded-md bg-primary text-primary-foreground sm:h-12 sm:w-12">
+                <Phone className="h-5 w-5" />
               </div>
               <div>
                 <h3 className="font-semibold text-muted-foreground mb-1">Phone</h3>
@@ -60,10 +60,15 @@ const ContactSection = () => {
 
           <HoverCard openDelay={120} closeDelay={120}>
             <HoverCardTrigger asChild>
-              <div className="group">
+              <a
+                href={contactInfo.LinkedIn}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+              >
                 <div className={cardClassName}>
-                  <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 canva-gradient rounded-lg mr-4 group-hover:scale-110 transition-transform">
-                    <Linkedin className="w-6 h-6 text-white" />
+                  <div className="mr-4 flex h-10 w-10 items-center justify-center rounded-md bg-primary text-primary-foreground sm:h-12 sm:w-12">
+                    <Linkedin className="h-5 w-5" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-muted-foreground mb-1">LinkedIn</h3>
@@ -72,7 +77,7 @@ const ContactSection = () => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </a>
             </HoverCardTrigger>
             <HoverCardContent
               side="bottom"
@@ -90,8 +95,8 @@ const ContactSection = () => {
               rel="noopener noreferrer"
               className={cardClassName}
             >
-              <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 canva-gradient rounded-lg mr-4 group-hover:scale-110 transition-transform">
-                <Github className="w-6 h-6 text-white" />
+              <div className="mr-4 flex h-10 w-10 items-center justify-center rounded-md bg-primary text-primary-foreground sm:h-12 sm:w-12">
+                <Github className="h-5 w-5" />
               </div>
               <div>
                 <h3 className="font-semibold text-muted-foreground mb-1">GitHub</h3>

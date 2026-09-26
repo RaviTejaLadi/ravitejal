@@ -26,7 +26,7 @@ const ScrollTop = () => {
       <Button
         aria-label="Scroll To Top"
         onClick={handleScrollTop}
-        className="rounded-full canva-gradient p-2 text-white shadow-lg shadow-secondary/25 hover:brightness-105"
+        className="rounded-[4px] shadow-md"
         variant={'default'}
         size="icon"
       >

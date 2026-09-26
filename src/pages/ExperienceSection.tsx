@@ -1,4 +1,3 @@
-import { Separator } from '@/components/ui/separator';
 import {
   Accordion,
   AccordionContent,
@@ -55,17 +54,15 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" className="section-shell bg-muted/20">
+    <section id="experience" className="section-shell">
       <div className="section-container">
         <div className="section-heading">
           <h2 className="section-title">Experience</h2>
           <div className="section-line" />
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="glass-card canva-gradient-soft p-5 sm:p-7 lg:p-8">
-            <div className="space-y-7">
-              <div>
+        <div className="mx-auto flex max-w-4xl flex-col gap-4">
+              <article className="glass-card p-5 sm:p-7">
                 <h3 className="text-lg font-semibold">Sr. Software Developer</h3>
                 <p className="text-sm sm:text-base text-muted-foreground">FluidFit.ai • July 2025 - Present</p>
                 <p className="my-2 text-sm sm:text-base font-medium text-muted-foreground">About Product:</p>
@@ -100,9 +97,8 @@ const ExperienceSection = () => {
                   <JavaScript className="w-4 h-4" />
                   etc...
                 </p>
-              </div>
-              <Separator />
-              <div>
+              </article>
+              <article className="glass-card p-5 sm:p-7">
                 <h3 className="text-lg font-semibold">Senior Software Engineer</h3>
                 <p className="text-sm sm:text-base text-muted-foreground">
                   Aventisia • September 2024 - June 2025
@@ -143,9 +139,8 @@ const ExperienceSection = () => {
                   <Zustand className="w-4 h-4" />
                   etc...
                 </p>
-              </div>
-              <Separator />
-              <div>
+              </article>
+              <article className="glass-card p-5 sm:p-7">
                 <h3 className="text-lg font-semibold">Software Engineer</h3>
                 <p className="text-sm sm:text-base text-muted-foreground">Idexcel • October 2022 - August 2024</p>
                 <p className="my-2 text-sm sm:text-base font-medium text-muted-foreground">About Product:</p>
@@ -180,9 +175,8 @@ const ExperienceSection = () => {
                   <OpenAi className="w-4 h-4" />
                   <PostMan className="w-4 h-4" /> etc...
                 </p>
-              </div>
-              <Separator />
-              <div>
+              </article>
+              <article className="glass-card p-5 sm:p-7">
                 <h3 className="text-lg font-semibold">Software Engineer Intern</h3>
                 <p className="text-sm sm:text-base text-muted-foreground">Test Yantra • April 2022 - October 2022</p>
                 <p className="mt-2 tracking-wide text-sm sm:text-base text-muted-foreground flex flex-wrap items-center gap-2">
@@ -195,9 +189,7 @@ const ExperienceSection = () => {
                   <Node className="w-4 h-4" />
                   etc...
                 </p>
-              </div>
-            </div>
-          </div>
+              </article>
         </div>
       </div>
     </section>
