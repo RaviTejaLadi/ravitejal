@@ -119,7 +119,7 @@ export const resumeConfig: ResumeConfig = {
         'Optimize rendering, state management, and bundle size for real-world performance.',
         'Collaborate directly with backend, AI, and product teams to ship features end-to-end.',
         'Lead frontend decisions, set coding standards, and fix hard problems — performance bottlenecks, rendering issues, and edge cases.',
-        "Take responsibility for how the product feels, performs, and scales as the company grows.",
+        'Take responsibility for how the product feels, performs, and scales as the company grows.',
       ],
     },
     {

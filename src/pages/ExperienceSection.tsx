@@ -29,7 +29,7 @@ const ExperienceSection = () => {
     'Optimize rendering, state management, and bundle size for real-world performance.',
     'Collaborate directly with backend, AI, and product teams to ship features end-to-end.',
     'Lead frontend decisions, set coding standards, and fix hard problems — performance bottlenecks, rendering issues, and edge cases.',
-    "Take responsibility for how the product feels, performs, and scales as the company grows.",
+    'Take responsibility for how the product feels, performs, and scales as the company grows.',
   ];
 
   const AventisiaExp = [
@@ -62,134 +62,155 @@ const ExperienceSection = () => {
         </div>
 
         <div className="mx-auto flex max-w-4xl flex-col gap-4">
-              <article className="glass-card p-5 sm:p-7">
-                <h3 className="text-lg font-semibold">Sr. Software Developer</h3>
-                <p className="text-sm sm:text-base text-muted-foreground">FluidFit.ai • July 2025 - Present</p>
-                <p className="my-2 text-sm sm:text-base font-medium text-muted-foreground">About Product:</p>
-                <p className="text-sm sm:text-base text-muted-foreground">
-                  FluidFit.ai is an AI-powered platform where I own and drive the frontend
-                  architecture, building scalable, high-performance web applications that translate
-                  product and AI requirements into production-ready user experiences.
-                </p>
-                <Accordion type="single" collapsible className="w-full" defaultValue="item-1">
-                  <AccordionItem value="item-1">
-                    <AccordionTrigger>My Responsibilities at FluidFit.ai</AccordionTrigger>
-                    <AccordionContent>
-                      {FluidFitExp.map((item, index) => {
-                        return (
-                          <p className="mt-2 text-sm sm:text-base tracking-wide text-muted-foreground" key={index}>
-                            • {item}
-                          </p>
-                        );
-                      })}
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
+          <article className="glass-card p-5 sm:p-7">
+            <h3 className="text-lg font-semibold">Sr. Software Developer</h3>
+            <p className="text-sm sm:text-base text-muted-foreground">
+              FluidFit.ai • July 2025 - Present
+            </p>
+            <p className="my-2 text-sm sm:text-base font-medium text-muted-foreground">
+              About Product:
+            </p>
+            <p className="text-sm sm:text-base text-muted-foreground">
+              FluidFit.ai is an AI-powered platform where I own and drive the frontend architecture,
+              building scalable, high-performance web applications that translate product and AI
+              requirements into production-ready user experiences.
+            </p>
+            <Accordion type="single" collapsible className="w-full" defaultValue="item-1">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>My Responsibilities at FluidFit.ai</AccordionTrigger>
+                <AccordionContent>
+                  {FluidFitExp.map((item, index) => {
+                    return (
+                      <p
+                        className="mt-2 text-sm sm:text-base tracking-wide text-muted-foreground"
+                        key={index}
+                      >
+                        • {item}
+                      </p>
+                    );
+                  })}
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
 
-                <p className="mt-2 tracking-wide text-sm sm:text-base text-muted-foreground flex flex-wrap items-center gap-2">
-                  Tech stack:
-                  <React className="w-4 h-4" />
-                  <TypeScript className="w-4 h-4" />
-                  <Tailwind className="w-4 h-4" />
-                  <Zustand className="w-4 h-4" />
-                  <SchadCn className="w-4 h-4" />
-                  <Git className="w-4 h-4" />
-                  <JavaScript className="w-4 h-4" />
-                  etc...
-                </p>
-              </article>
-              <article className="glass-card p-5 sm:p-7">
-                <h3 className="text-lg font-semibold">Senior Software Engineer</h3>
-                <p className="text-sm sm:text-base text-muted-foreground">
-                  Aventisia • September 2024 - June 2025
-                </p>
-                <p className="my-2 text-sm sm:text-base font-medium text-muted-foreground">About Product:</p>
-                <p className="text-sm sm:text-base text-muted-foreground">
-                  Grapes Capital is a fintech firm focused on transforming global commerce by
-                  providing innovative trade finance solutions. Their platform aims to empower
-                  businesses of all sizes to unlock liquidity, mitigate risks, and accelerate growth
-                  through trust, transparency, and cutting-edge technology.
-                </p>
-                <Accordion type="single" collapsible className="w-full" defaultValue="item-1">
-                  <AccordionItem value="item-1">
-                    <AccordionTrigger>My Responsibilities at Aventisia</AccordionTrigger>
-                    <AccordionContent>
-                      {AventisiaExp.map((item, index) => {
-                        return (
-                          <p className="mt-2 text-sm sm:text-base tracking-wide text-muted-foreground" key={index}>
-                            • {item}
-                          </p>
-                        );
-                      })}
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
+            <p className="mt-2 tracking-wide text-sm sm:text-base text-muted-foreground flex flex-wrap items-center gap-2">
+              Tech stack:
+              <React className="w-4 h-4" />
+              <TypeScript className="w-4 h-4" />
+              <Tailwind className="w-4 h-4" />
+              <Zustand className="w-4 h-4" />
+              <SchadCn className="w-4 h-4" />
+              <Git className="w-4 h-4" />
+              <JavaScript className="w-4 h-4" />
+              etc...
+            </p>
+          </article>
+          <article className="glass-card p-5 sm:p-7">
+            <h3 className="text-lg font-semibold">Senior Software Engineer</h3>
+            <p className="text-sm sm:text-base text-muted-foreground">
+              Aventisia • September 2024 - June 2025
+            </p>
+            <p className="my-2 text-sm sm:text-base font-medium text-muted-foreground">
+              About Product:
+            </p>
+            <p className="text-sm sm:text-base text-muted-foreground">
+              Grapes Capital is a fintech firm focused on transforming global commerce by providing
+              innovative trade finance solutions. Their platform aims to empower businesses of all
+              sizes to unlock liquidity, mitigate risks, and accelerate growth through trust,
+              transparency, and cutting-edge technology.
+            </p>
+            <Accordion type="single" collapsible className="w-full" defaultValue="item-1">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>My Responsibilities at Aventisia</AccordionTrigger>
+                <AccordionContent>
+                  {AventisiaExp.map((item, index) => {
+                    return (
+                      <p
+                        className="mt-2 text-sm sm:text-base tracking-wide text-muted-foreground"
+                        key={index}
+                      >
+                        • {item}
+                      </p>
+                    );
+                  })}
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
 
-                <p className="mt-2 tracking-wide text-sm sm:text-base text-muted-foreground flex flex-wrap items-center gap-2">
-                  Tech stack:
-                  <Css className="w-4 h-4" />
-                  <Git className="w-4 h-4" />
-                  <JavaScript className="w-4 h-4" />
-                  <OpenAi className="w-4 h-4" />
-                  <PostMan className="w-4 h-4" />
-                  <React className="w-4 h-4" />
-                  <Tailwind className="w-4 h-4" />
-                  <TypeScript className="w-4 h-4" />
-                  <SchadCn className="w-4 h-4" />
-                  <Zustand className="w-4 h-4" />
-                  etc...
-                </p>
-              </article>
-              <article className="glass-card p-5 sm:p-7">
-                <h3 className="text-lg font-semibold">Software Engineer</h3>
-                <p className="text-sm sm:text-base text-muted-foreground">Idexcel • October 2022 - August 2024</p>
-                <p className="my-2 text-sm sm:text-base font-medium text-muted-foreground">About Product:</p>
-                <p className="text-sm sm:text-base text-muted-foreground">
-                  InferIQ is a Generative AI-powered Intelligent Document Processing (IDP) platform
-                  developed by Idexcel Inc., designed to automate the extraction and processing of
-                  unstructured data from various document types, including PDFs, handwritten forms,
-                  images, and scanned documents.
-                </p>
-                <Accordion type="single" collapsible className="w-full" defaultValue="item-1">
-                  <AccordionItem value="item-1">
-                    <AccordionTrigger>My Responsibilities at Idexcel</AccordionTrigger>
-                    <AccordionContent>
-                      {IdexcelExp.map((item, index) => {
-                        return (
-                          <p className="mt-2 text-sm sm:text-base tracking-wide text-muted-foreground" key={index}>
-                            • {item}
-                          </p>
-                        );
-                      })}
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
-                <p className="mt-2 tracking-wide text-sm sm:text-base text-muted-foreground flex flex-wrap items-center gap-2">
-                  Tech stack:
-                  <React className="w-4 h-4" />
-                  <ReduxToolKit className="w-4 h-4" />
-                  <Css className="w-4 h-4" />
-                  <Bootstrap className="w-4 h-4" />
-                  <Git className="w-4 h-4" />
-                  <JavaScript className="w-4 h-4" />
-                  <OpenAi className="w-4 h-4" />
-                  <PostMan className="w-4 h-4" /> etc...
-                </p>
-              </article>
-              <article className="glass-card p-5 sm:p-7">
-                <h3 className="text-lg font-semibold">Software Engineer Intern</h3>
-                <p className="text-sm sm:text-base text-muted-foreground">Test Yantra • April 2022 - October 2022</p>
-                <p className="mt-2 tracking-wide text-sm sm:text-base text-muted-foreground flex flex-wrap items-center gap-2">
-                  Tech stack:
-                  <React className="w-4 h-4" />
-                  <Css className="w-4 h-4" />
-                  <Bootstrap className="w-4 h-4" />
-                  <Git className="w-4 h-4" />
-                  <JavaScript className="w-4 h-4" />
-                  <Node className="w-4 h-4" />
-                  etc...
-                </p>
-              </article>
+            <p className="mt-2 tracking-wide text-sm sm:text-base text-muted-foreground flex flex-wrap items-center gap-2">
+              Tech stack:
+              <Css className="w-4 h-4" />
+              <Git className="w-4 h-4" />
+              <JavaScript className="w-4 h-4" />
+              <OpenAi className="w-4 h-4" />
+              <PostMan className="w-4 h-4" />
+              <React className="w-4 h-4" />
+              <Tailwind className="w-4 h-4" />
+              <TypeScript className="w-4 h-4" />
+              <SchadCn className="w-4 h-4" />
+              <Zustand className="w-4 h-4" />
+              etc...
+            </p>
+          </article>
+          <article className="glass-card p-5 sm:p-7">
+            <h3 className="text-lg font-semibold">Software Engineer</h3>
+            <p className="text-sm sm:text-base text-muted-foreground">
+              Idexcel • October 2022 - August 2024
+            </p>
+            <p className="my-2 text-sm sm:text-base font-medium text-muted-foreground">
+              About Product:
+            </p>
+            <p className="text-sm sm:text-base text-muted-foreground">
+              InferIQ is a Generative AI-powered Intelligent Document Processing (IDP) platform
+              developed by Idexcel Inc., designed to automate the extraction and processing of
+              unstructured data from various document types, including PDFs, handwritten forms,
+              images, and scanned documents.
+            </p>
+            <Accordion type="single" collapsible className="w-full" defaultValue="item-1">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>My Responsibilities at Idexcel</AccordionTrigger>
+                <AccordionContent>
+                  {IdexcelExp.map((item, index) => {
+                    return (
+                      <p
+                        className="mt-2 text-sm sm:text-base tracking-wide text-muted-foreground"
+                        key={index}
+                      >
+                        • {item}
+                      </p>
+                    );
+                  })}
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+            <p className="mt-2 tracking-wide text-sm sm:text-base text-muted-foreground flex flex-wrap items-center gap-2">
+              Tech stack:
+              <React className="w-4 h-4" />
+              <ReduxToolKit className="w-4 h-4" />
+              <Css className="w-4 h-4" />
+              <Bootstrap className="w-4 h-4" />
+              <Git className="w-4 h-4" />
+              <JavaScript className="w-4 h-4" />
+              <OpenAi className="w-4 h-4" />
+              <PostMan className="w-4 h-4" /> etc...
+            </p>
+          </article>
+          <article className="glass-card p-5 sm:p-7">
+            <h3 className="text-lg font-semibold">Software Engineer Intern</h3>
+            <p className="text-sm sm:text-base text-muted-foreground">
+              Test Yantra • April 2022 - October 2022
+            </p>
+            <p className="mt-2 tracking-wide text-sm sm:text-base text-muted-foreground flex flex-wrap items-center gap-2">
+              Tech stack:
+              <React className="w-4 h-4" />
+              <Css className="w-4 h-4" />
+              <Bootstrap className="w-4 h-4" />
+              <Git className="w-4 h-4" />
+              <JavaScript className="w-4 h-4" />
+              <Node className="w-4 h-4" />
+              etc...
+            </p>
+          </article>
         </div>
       </div>
     </section>

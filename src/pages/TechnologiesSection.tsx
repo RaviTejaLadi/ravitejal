@@ -42,8 +42,13 @@ const TechnologiesSection = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {categorizedStack.map((category) => (
-              <div key={category.value} className="rounded-lg border border-border bg-[#F3F3F3] p-4 dark:bg-[#282828]">
-                <h3 className="text-sm sm:text-base font-semibold mb-3 text-foreground">{category.label}</h3>
+              <div
+                key={category.value}
+                className="rounded-lg border border-border bg-[#F3F3F3] p-4 dark:bg-[#282828]"
+              >
+                <h3 className="text-sm sm:text-base font-semibold mb-3 text-foreground">
+                  {category.label}
+                </h3>
                 <div className="flex flex-wrap gap-2">
                   {category.content.map((item) => (
                     <Tooltip key={`${category.value}-${item.tooltip}`}>

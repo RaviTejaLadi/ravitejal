@@ -12,7 +12,9 @@ export default function LinkedInProfileCard() {
       <CardHeader className="bg-[#0A66C2] py-3">
         <div className="flex items-center gap-2">
           <div className="text-lg font-semibold text-white">Linked</div>
-          <div className="rounded-[4px] bg-white/15 px-1.5 py-0.5 text-sm font-semibold text-white">in</div>
+          <div className="rounded-[4px] bg-white/15 px-1.5 py-0.5 text-sm font-semibold text-white">
+            in
+          </div>
         </div>
       </CardHeader>
 
@@ -27,9 +29,7 @@ export default function LinkedInProfileCard() {
         </div>
 
         <div className="text-start">
-          <h2 className="text-lg font-semibold text-foreground sm:text-xl">
-            Ravi Teja
-          </h2>
+          <h2 className="text-lg font-semibold text-foreground sm:text-xl">Ravi Teja</h2>
         </div>
 
         {/* Job Title and Skills */}

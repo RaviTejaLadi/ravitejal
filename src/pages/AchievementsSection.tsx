@@ -49,20 +49,21 @@ const AchievementsSection = () => {
         </div>
         {awards.map((company, index) => (
           <div key={index} className="mb-8">
-            <h3 className="text-lg sm:text-xl font-semibold mb-4 text-foreground">{company.company}</h3>
+            <h3 className="text-lg sm:text-xl font-semibold mb-4 text-foreground">
+              {company.company}
+            </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {company.accolades.map((award) => (
-                <div
-                  key={award.id}
-                  className="glass-card relative overflow-hidden"
-                >
+                <div key={award.id} className="glass-card relative overflow-hidden">
                   <div className="p-4 sm:p-5">
                     <div className="flex justify-between items-start mb-3">
                       <div className="flex items-center gap-3">
                         <div className="p-2  rounded-full">{award.icon}</div>
                         <div>
-                          <h4 className="font-medium text-base sm:text-lg text-foreground">{award.title}</h4>
+                          <h4 className="font-medium text-base sm:text-lg text-foreground">
+                            {award.title}
+                          </h4>
                         </div>
                       </div>
                       <span className="text-xs font-medium px-2 py-1 rounded-full text-muted-foreground">
@@ -70,7 +71,9 @@ const AchievementsSection = () => {
                       </span>
                     </div>
 
-                    <p className="text-sm sm:text-base text-muted-foreground">{award.description}</p>
+                    <p className="text-sm sm:text-base text-muted-foreground">
+                      {award.description}
+                    </p>
 
                     {award.image && (
                       <HoverCard openDelay={120} closeDelay={120}>

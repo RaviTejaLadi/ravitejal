@@ -5,8 +5,7 @@ import { contactInfo } from '@/config/contact-config';
 import { Mail, Phone, Github, Linkedin } from 'lucide-react';
 
 const ContactSection = () => {
-  const cardClassName =
-    'glass-card win-card-interactive flex items-center p-4 sm:p-5';
+  const cardClassName = 'glass-card win-card-interactive flex items-center p-4 sm:p-5';
 
   return (
     <section id="contact-info" className="section-shell">
@@ -25,10 +24,7 @@ const ContactSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
           <div className="group">
-            <a
-              href={`mailto:${contactInfo.email}`}
-              className={cardClassName}
-            >
+            <a href={`mailto:${contactInfo.email}`} className={cardClassName}>
               <div className="mr-4 flex h-10 w-10 items-center justify-center rounded-md bg-primary text-primary-foreground sm:h-12 sm:w-12">
                 <Mail className="h-5 w-5" />
               </div>
@@ -42,10 +38,7 @@ const ContactSection = () => {
           </div>
 
           <div className="group">
-            <a
-              href={`tel:+91${contactInfo.phone}`}
-              className={cardClassName}
-            >
+            <a href={`tel:+91${contactInfo.phone}`} className={cardClassName}>
               <div className="mr-4 flex h-10 w-10 items-center justify-center rounded-md bg-primary text-primary-foreground sm:h-12 sm:w-12">
                 <Phone className="h-5 w-5" />
               </div>

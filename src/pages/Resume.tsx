@@ -263,7 +263,11 @@ const Resume: React.FC<ResumeProps> = ({ config = resumeConfig }) => {
                   </h3>
                   <p className="text-sm md:text-base text-muted-foreground">
                     {edu.university}
-                    {edu.duration ? ` | ${edu.duration}` : edu.yearOfCompletion ? ` | ${edu.yearOfCompletion}` : ''}
+                    {edu.duration
+                      ? ` | ${edu.duration}`
+                      : edu.yearOfCompletion
+                        ? ` | ${edu.yearOfCompletion}`
+                        : ''}
                   </p>
                 </div>
               ))}
